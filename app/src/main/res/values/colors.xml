@@ -8,4 +8,6 @@
     <color name="primary">#6C60E1</color>
     <color name="primary_dark">#3235AE</color>
     <color name="primary_light">#A18EFF</color>
+    <color name="grey">#ADA4A5</color>
+    <color name="red">#FF0000</color>
 </resources>
