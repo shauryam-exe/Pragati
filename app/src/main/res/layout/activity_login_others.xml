@@ -197,20 +197,26 @@
         app:layout_constraintEnd_toEndOf="@+id/cardPassLoginOthers"
         app:layout_constraintTop_toBottomOf="@+id/cardPassLoginOthers" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLoginOthers"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40sp"
         android:layout_marginStart="40dp"
+        android:letterSpacing="0.13"
         android:layout_marginTop="108dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/custom_button_2"
         android:fontFamily="@font/poppins"
         android:padding="8sp"
+        android:elevation="20sp"
+        android:shadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
         android:text="Login"
+        android:textColor="@color/white"
         android:textAllCaps="false"
-        android:textSize="17sp"
+        android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

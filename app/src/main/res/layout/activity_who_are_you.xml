@@ -7,37 +7,41 @@
     tools:context=".WhoAreYou">
 
     <TextView
+        android:id="@+id/tvWhatBring"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40sp"
+        android:layout_marginStart="25sp"
+        android:layout_marginTop="20sp"
         android:fontFamily="@font/poppins"
-        android:text="What brings you here?"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:gravity="end"
+        android:letterSpacing="0.13"
+        android:text="What\nbrings\nyou\nhere?"
+        android:textColor="@color/primary"
+        android:textSize="22sp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardInvest"
         android:layout_width="150sp"
-        android:layout_height="200sp"
+        android:layout_height="160sp"
+        android:layout_below="@id/tvWhatBring"
         android:layout_alignParentStart="true"
         android:layout_marginStart="40sp"
-        android:layout_marginTop="100sp"
+        android:layout_marginTop="20sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="20sp"
+        app:cardCornerRadius="14sp"
         app:cardElevation="20sp">
 
         <LinearLayout
+            android:id="@+id/llRupees"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="60sp"
+                android:layout_height="60sp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30sp"
                 android:outlineAmbientShadowColor="@color/black"
@@ -46,15 +50,17 @@
                 app:cardElevation="20sp">
 
                 <ImageView
+                    android:id="@+id/ivRupees"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="3sp"
+                    android:layout_marginStart="2sp"
                     android:src="@drawable/ic_rupees" />
 
             </androidx.cardview.widget.CardView>
 
             <TextView
+                android:id="@+id/tvRupees"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -62,8 +68,7 @@
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
                 android:text="Invest"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
         </LinearLayout>
 
@@ -72,25 +77,26 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardStartupPitch"
         android:layout_width="150sp"
-        android:layout_height="200sp"
+        android:layout_height="160sp"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="100sp"
+        android:layout_below="@id/tvWhatBring"
+        android:layout_marginTop="20sp"
         android:layout_marginEnd="40sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="20sp"
+        app:cardCornerRadius="14sp"
         app:cardElevation="20sp">
 
         <LinearLayout
+            android:id="@+id/llVideo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:background="@color/primary"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="60sp"
+                android:layout_height="60sp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30sp"
                 android:outlineAmbientShadowColor="@color/black"
@@ -99,6 +105,7 @@
                 app:cardElevation="20sp">
 
                 <ImageView
+                    android:id="@+id/ivVideo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -108,6 +115,7 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
+                android:id="@+id/tvVideo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -115,36 +123,35 @@
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
                 android:text="Startup Pitch"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardSearchStartupPitch"
+        android:id="@+id/cardExplore"
         android:layout_width="150sp"
-        android:layout_height="200sp"
+        android:layout_height="160sp"
         android:layout_below="@id/cardInvest"
         android:layout_alignParentStart="true"
         android:layout_marginStart="40sp"
-        android:layout_marginTop="40sp"
+        android:layout_marginTop="30sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="20sp"
+        app:cardCornerRadius="14sp"
         app:cardElevation="20sp">
 
         <LinearLayout
+            android:id="@+id/llSearch"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:background="@color/primary"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="60sp"
+                android:layout_height="60sp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30sp"
                 android:outlineAmbientShadowColor="@color/black"
@@ -153,24 +160,25 @@
                 app:cardElevation="20sp">
 
                 <ImageView
+                    android:id="@+id/ivSearch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="3sp"
+                    android:layout_marginStart="2sp"
                     android:src="@drawable/ic_search" />
 
             </androidx.cardview.widget.CardView>
 
             <TextView
+                android:id="@+id/tvSearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginVertical="20sp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="Startup Pitch"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:text="Just Explore"
+                android:textColor="@color/black" />
 
         </LinearLayout>
 
@@ -179,25 +187,26 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardUploadProblemStatement"
         android:layout_width="150sp"
-        android:layout_height="200sp"
+        android:layout_height="160sp"
         android:layout_below="@id/cardStartupPitch"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="40sp"
+        android:layout_marginTop="30sp"
         android:layout_marginEnd="40sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="20sp"
+        app:cardCornerRadius="14sp"
         app:cardElevation="20sp">
 
         <LinearLayout
+            android:id="@+id/llNote"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="60sp"
+                android:layout_height="60sp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30sp"
                 android:outlineAmbientShadowColor="@color/black"
@@ -206,15 +215,17 @@
                 app:cardElevation="20sp">
 
                 <ImageView
+                    android:id="@+id/ivNote"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="3sp"
+                    android:layout_marginStart="2sp"
                     android:src="@drawable/ic_note" />
 
             </androidx.cardview.widget.CardView>
 
             <TextView
+                android:id="@+id/tvNote"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -222,8 +233,7 @@
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
                 android:text="Upload a Problem Statement"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
         </LinearLayout>
 

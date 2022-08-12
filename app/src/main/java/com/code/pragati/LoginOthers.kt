@@ -2,16 +2,16 @@ package com.code.pragati
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatButton
 
 class LoginOthers : AppCompatActivity() {
 
     private lateinit var email : EditText
     private lateinit var password : EditText
     private lateinit var forgotPass : TextView
-    private lateinit var loginBtn : Button
+    private lateinit var loginBtn : AppCompatButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
