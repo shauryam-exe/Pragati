@@ -36,8 +36,8 @@ class OnBoardingAdapter() : RecyclerView.Adapter<OnBoardingAdapter.OnBoardingVie
             }
             2 -> {
                 holder.layout1.visibility = View.GONE
-                holder.layout2.visibility = View.VISIBLE
-                holder.layout3.visibility = View.GONE
+                holder.layout2.visibility = View.GONE
+                holder.layout3.visibility = View.VISIBLE
             }
         }
     }
