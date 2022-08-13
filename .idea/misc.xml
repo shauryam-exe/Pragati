@@ -5,15 +5,21 @@
       <map>
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/custom_button.xml" value="0.165" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/custom_button_2.xml" value="0.193" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_investor.xml" value="0.193" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_investor_black.xml" value="0.193" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_investor_black_clicked.xml" value="0.193" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_investor_clicked.xml" value="0.193" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_note.xml" value="0.193" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_note_clicked.xml" value="0.193" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_rupees.xml" value="0.193" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_rupees_clicked.xml" value="0.193" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_search.xml" value="0.193" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_search_clicked.xml" value="0.193" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_undraw_in_progress.xml" value="0.193" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_video.xml" value="0.193" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_video_clicked.xml" value="0.193" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_contact_us.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_invest.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_login_leyman.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_login_others.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_otpverification.xml" value="0.23229166666666667" />

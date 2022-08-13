@@ -10,14 +10,24 @@
         android:id="@+id/tvWhatBring"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25sp"
-        android:layout_marginTop="20sp"
+        android:layout_marginStart="100sp"
+        android:layout_marginTop="25sp"
         android:fontFamily="@font/poppins"
         android:gravity="end"
         android:letterSpacing="0.13"
         android:text="What\nbrings\nyou\nhere?"
         android:textColor="@color/primary"
         android:textSize="22sp" />
+
+    <ImageView
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_marginStart="32sp"
+        android:layout_marginTop="25sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_toEndOf="@id/tvWhatBring"
+        android:src="@drawable/ic_undraw_questions" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardInvest"
@@ -239,9 +249,20 @@
 
     </androidx.cardview.widget.CardView>
 
+    <ImageView
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_marginStart="32sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_below="@id/cardUploadProblemStatement"
+        android:layout_toStartOf="@id/btnContinueWhoAreYou"
+        android:src="@drawable/ic_undraw_prioritise" />
+
     <Button
         android:id="@+id/btnContinueWhoAreYou"
-        android:layout_width="180sp"
+        android:layout_width="160sp"
         android:layout_height="wrap_content"
         android:layout_below="@id/cardUploadProblemStatement"
         android:layout_alignParentEnd="true"

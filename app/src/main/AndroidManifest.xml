@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pragati">
         <activity
+            android:name=".WhoAreYou"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
             android:exported="false" />
         <activity
@@ -25,7 +28,7 @@
             android:name=".LoginLayman"
             android:exported="false" />
         <activity
-            android:name=".WhoAreYou"
+            android:name=".Invest"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
