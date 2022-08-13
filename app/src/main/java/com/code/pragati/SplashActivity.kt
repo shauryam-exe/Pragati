@@ -1,6 +1,7 @@
 package com.code.pragati
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -20,6 +21,7 @@ class SplashActivity : AppCompatActivity() {
     lateinit var bubbleBottom: ImageView
     lateinit var logo: ImageView
     lateinit var logoText: ImageView
+    lateinit var onBoardingScreen: SharedPreferences
 
     private val splashDisplayLength: Long = 4500
 
@@ -51,7 +53,21 @@ class SplashActivity : AppCompatActivity() {
 
 
         Handler().postDelayed({
-            startActivity(Intent(this,OnBoardingActivity::class.java))
+
+            onBoardingScreen = getSharedPreferences("onBoardingScreen", MODE_PRIVATE)
+            var isFirstTime = onBoardingScreen.getBoolean("firstTime", true)
+
+            if (isFirstTime) {
+
+                val editor = onBoardingScreen.edit()
+                editor.putBoolean("firstTime",false)
+                editor.commit()
+
+                startActivity(Intent(this, OnBoardingActivity::class.java))
+                finish()
+            } else {
+                //TODO
+            }
         }, splashDisplayLength)
     }
 }
