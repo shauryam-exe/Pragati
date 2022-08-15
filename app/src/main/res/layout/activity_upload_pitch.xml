@@ -15,7 +15,7 @@
         android:fontFamily="@font/poppins"
         android:gravity="end"
         android:letterSpacing="0.13"
-        android:text="What\nbrings\nyou\nhere?"
+        android:text="What\nbrings\nyou\nhere?\nfjgv"
         android:textColor="@color/primary"
         android:textSize="22sp" />
 
