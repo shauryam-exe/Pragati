@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/splashLayout1"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/intro_screen1_heading"
+            android:textSize="25sp"
+            android:layout_marginTop="65dp"
+            android:layout_marginStart="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/introScreen1Body"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/intro_screen1_body"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_intro_screen_1"
+            android:layout_marginTop="35dp"
+            app:layout_constraintTop_toBottomOf="@+id/introScreen1Body"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/splashLayout2"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/introScreen2Image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_intro_screen_2"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/introScreen2Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/intro_screen2_heading"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="50dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="25sp"
+            app:layout_constraintTop_toBottomOf="@id/introScreen2Image"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/intro_screen2_body"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/introScreen2Heading"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/splashLayout3"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/introScreen3Heaading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/intro_screen3_heaing"
+            android:fontFamily="@font/poppins"
+            android:textSize="25sp"
+            android:layout_marginTop="65dp"
+            android:layout_marginStart="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/introScreen3Body"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="@string/intro_screen3_body"
+            android:fontFamily="@font/poppins"
+            android:textSize="18sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="50dp"
+            app:layout_constraintTop_toBottomOf="@id/introScreen3Heaading"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_intro_screen_3"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/introScreen3Body"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
