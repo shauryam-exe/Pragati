@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pragati">
         <activity
+            android:name=".UploadPitch"
+            android:exported="false" />
+        <activity
+            android:name=".ProblemStatementActivity"
+            android:exported="false" />
+        <activity
             android:name=".WhoAreYou"
             android:exported="false" />
         <activity
@@ -39,6 +45,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
