@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadPitch">
+
+    <TextView
+        android:id="@+id/tvPitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100sp"
+        android:layout_marginTop="35sp"
+        android:fontFamily="@font/poppins"
+        android:gravity="end"
+        android:letterSpacing="0.13"
+        android:text="What\nbrings\nyou\nhere?"
+        android:textColor="@color/primary"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_marginStart="32sp"
+        android:layout_marginTop="35sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_toEndOf="@id/tvPitch"
+        android:src="@drawable/ic_undraw_all_the_data" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEntrepreneur"
+        android:layout_width="150sp"
+        android:layout_height="160sp"
+        android:layout_below="@id/tvPitch"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="30sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="14sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:id="@+id/llEntrepreneur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="200sp"
+                app:cardElevation="20sp">
+
+                <ImageView
+                    android:id="@+id/ivEntrepreneur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="2sp"
+                    android:src="@drawable/ic_investor_black" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvEntrepreneur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="20sp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="Entrepreneur"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardStartupFellows"
+        android:layout_width="150sp"
+        android:layout_height="160sp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvPitch"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="40sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="14sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:id="@+id/llStartupFellows"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="200sp"
+                app:cardElevation="20sp">
+
+                <ImageView
+                    android:id="@+id/ivStartupFellows"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3sp"
+                    android:src="@drawable/ic_startup" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvStartupFellows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="20sp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="Startup Fellows"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardStudent"
+        android:layout_width="150sp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="160sp"
+        android:layout_below="@id/cardEntrepreneur"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="30sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="14sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:id="@+id/llStudent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="200sp"
+                app:cardElevation="20sp">
+
+                <ImageView
+                    android:id="@+id/ivStudent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="2sp"
+                    android:src="@drawable/ic_student" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvStudent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="20sp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="Student"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnGetStartedPitch"
+        android:layout_width="160sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardStudent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40sp"
+        android:layout_marginEnd="40sp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/poppins"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:padding="8sp"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textSize="17sp" />
+
+</RelativeLayout>

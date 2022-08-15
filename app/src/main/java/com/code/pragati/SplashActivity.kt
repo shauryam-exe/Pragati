@@ -29,7 +29,6 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         window.statusBarColor = ContextCompat.getColor(this, R.color.primary_light)
 
-
         setContentView(R.layout.activity_splash)
 
         topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation)
@@ -51,22 +50,21 @@ class SplashActivity : AppCompatActivity() {
 //        logo.animation = topAnimation
 //        logoText.animation = bottomAnimation
 
-
         Handler().postDelayed({
 
             onBoardingScreen = getSharedPreferences("onBoardingScreen", MODE_PRIVATE)
-            var isFirstTime = onBoardingScreen.getBoolean("firstTime", true)
+            val isFirstTime = onBoardingScreen.getBoolean("firstTime", true)
 
             if (isFirstTime) {
 
                 val editor = onBoardingScreen.edit()
                 editor.putBoolean("firstTime",false)
-                editor.commit()
+                editor.apply()
 
                 startActivity(Intent(this, OnBoardingActivity::class.java))
                 finish()
             } else {
-                //TODO
+                startActivity(Intent(this, OnBoardingActivity::class.java))
             }
         }, splashDisplayLength)
     }

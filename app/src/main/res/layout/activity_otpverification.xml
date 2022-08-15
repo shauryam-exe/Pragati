@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".OTPVerification">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="50sp"
+        android:layout_marginBottom="20sp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="200sp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        app:cardElevation="20sp"
+        android:layout_width="100sp"
+        android:layout_height="100sp" >
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_marginStart="3sp"
+            android:src="@drawable/ic_group_18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins"
+        android:text="Verification Code"
+        android:textColor="@color/primary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginHorizontal="20sp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins"
+        android:text="Please check your inbox for One Time Password"
+        android:textColor="@color/grey" />
+
+    <TextView
+        android:id="@+id/tvIncorrectOTP"
+        android:layout_marginHorizontal="45sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginBottom="-20sp"
+        android:text="Incorrect OTP"
+        android:textColor="@color/red"
+        android:fontFamily="@font/poppins"
+        android:drawablePadding="10sp"
+        android:drawableLeft="@drawable/ic_cross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEmailLogin"
+        android:layout_marginTop="30sp"
+        android:layout_marginHorizontal="40sp"
+        android:layout_marginBottom="30sp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="15sp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        app:cardElevation="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="10sp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etEnterOTP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:background="@null"
+                android:fontFamily="@font/poppins"
+                android:hint="Enter the OTP"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="12sp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_gravity="end"
+        android:layout_marginEnd="40sp"
+        android:layout_marginTop="-15sp"
+        android:layout_marginBottom="20sp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:text="Didn't receive a OTP? "
+            android:textColor="@color/grey" />
+
+        <TextView
+            android:id="@+id/tvResendOTP"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:text="Resend"
+            android:textColor="@color/primary" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnVerifyOTP"
+        android:text="Verify"
+        android:elevation="40sp"
+        android:textAllCaps="false"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:layout_marginEnd="40sp"
+        android:layout_gravity="end"
+        android:background="@drawable/custom_button"
+        android:textSize="17sp"
+        android:fontFamily="@font/poppins"
+        android:padding="8sp"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="70sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins"
+        android:text="Did you enter your correct number?"
+        android:textColor="@color/grey" />
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:text="Change your number "
+            android:textColor="@color/grey" />
+
+        <TextView
+            android:id="@+id/tvChangeNumber"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:text="here"
+            android:textColor="@color/primary" />
+
+    </LinearLayout>
+
+</LinearLayout>
