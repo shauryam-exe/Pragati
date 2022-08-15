@@ -272,6 +272,7 @@
         android:fontFamily="@font/poppins"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
+        android:clickable="false"
         android:padding="8sp"
         android:text="Continue"
         android:textAllCaps="false"

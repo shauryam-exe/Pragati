@@ -1,6 +1,7 @@
 package com.code.pragati
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -53,26 +54,78 @@ class WhoAreYou : AppCompatActivity() {
         tvSearch = findViewById(R.id.tvSearch)
         tvNote = findViewById(R.id.tvNote)
 
+
+        continueBtn.alpha = 0.5f
+
         invest.setOnClickListener {
-            llRupees.setBackgroundColor(resources.getColor(R.color.primary))
-            ivRupees.setImageResource(R.drawable.ic_rupees_clicked)
-            tvRupees.setTextColor(resources.getColor(R.color.white))
+            if (!invest.isSelected) {
+                llRupees.setBackgroundColor(resources.getColor(R.color.primary))
+                ivRupees.setImageResource(R.drawable.ic_rupees_clicked)
+                tvRupees.setTextColor(resources.getColor(R.color.white))
+                invest.isSelected = true
+            } else {
+                llRupees.setBackgroundColor(resources.getColor(R.color.white))
+                ivRupees.setImageResource(R.drawable.ic_rupees)
+                tvRupees.setTextColor(resources.getColor(R.color.black))
+                invest.isSelected = false
+            }
+            continueBtn.isClickable = getClickability()
+            if (getClickability()) continueBtn.alpha = 1f else continueBtn.alpha = 0.5f
         }
         startupPitch.setOnClickListener {
-            llVideo.setBackgroundColor(resources.getColor(R.color.primary))
-            ivVideo.setImageResource(R.drawable.ic_video_clicked)
-            tvVideo.setTextColor(resources.getColor(R.color.white))
+            if (!startupPitch.isSelected) {
+                llVideo.setBackgroundColor(resources.getColor(R.color.primary))
+                ivVideo.setImageResource(R.drawable.ic_video_clicked)
+                tvVideo.setTextColor(resources.getColor(R.color.white))
+                startupPitch.isSelected = true
+            } else {
+                llVideo.setBackgroundColor(resources.getColor(R.color.white))
+                ivVideo.setImageResource(R.drawable.ic_video)
+                tvVideo.setTextColor(resources.getColor(R.color.black))
+                startupPitch.isSelected = false
+            }
+            continueBtn.isClickable = getClickability()
+            if (getClickability()) continueBtn.alpha = 1f else continueBtn.alpha = 0.5f
         }
         explore.setOnClickListener {
-            llSearch.setBackgroundColor(resources.getColor(R.color.primary))
-            ivSearch.setImageResource(R.drawable.ic_search_clicked)
-            tvSearch.setTextColor(resources.getColor(R.color.white))
+            if (!explore.isSelected) {
+                llSearch.setBackgroundColor(resources.getColor(R.color.primary))
+                ivSearch.setImageResource(R.drawable.ic_search_clicked)
+                tvSearch.setTextColor(resources.getColor(R.color.white))
+                explore.isSelected = true
+            } else {
+                llSearch.setBackgroundColor(resources.getColor(R.color.white))
+                ivSearch.setImageResource(R.drawable.ic_search)
+                tvSearch.setTextColor(resources.getColor(R.color.black))
+                explore.isSelected = false
+            }
+            continueBtn.isClickable = getClickability()
+            if (getClickability()) continueBtn.alpha = 1f else continueBtn.alpha = 0.5f
         }
         uploadProblemStatement.setOnClickListener {
-            llNote.setBackgroundColor(resources.getColor(R.color.primary))
-            ivNote.setImageResource(R.drawable.ic_note_clicked)
-            tvNote.setTextColor(resources.getColor(R.color.white))
+            if (!uploadProblemStatement.isSelected) {
+                llNote.setBackgroundColor(resources.getColor(R.color.primary))
+                ivNote.setImageResource(R.drawable.ic_note_clicked)
+                tvNote.setTextColor(resources.getColor(R.color.white))
+                uploadProblemStatement.isSelected = true
+            } else {
+                llNote.setBackgroundColor(resources.getColor(R.color.white))
+                ivNote.setImageResource(R.drawable.ic_note)
+                tvNote.setTextColor(resources.getColor(R.color.black))
+                uploadProblemStatement.isSelected = false
+            }
+            continueBtn.isClickable = getClickability()
+            if (getClickability()) continueBtn.alpha = 1f else continueBtn.alpha = 0.5f
         }
 
+        continueBtn.setOnClickListener {
+            //TODO
+        }
+
+    }
+
+    private fun getClickability(): Boolean {
+        return invest.isSelected || startupPitch.isSelected ||
+                uploadProblemStatement.isSelected || explore.isSelected
     }
 }
