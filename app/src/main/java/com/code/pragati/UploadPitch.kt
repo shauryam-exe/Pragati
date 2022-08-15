@@ -46,21 +46,49 @@ class UploadPitch : AppCompatActivity() {
         tvStudent = findViewById(R.id.tvStudent)
 
         entrepreneur.setOnClickListener {
+            setButtonsGray()
             llEntrepreneur.setBackgroundColor(resources.getColor(R.color.primary))
             ivEntrepreneur.setImageResource(R.drawable.ic_investor_black_clicked)
             tvEntrepreneur.setTextColor(resources.getColor(R.color.white))
+
+            getStartedBtn.isEnabled = true
+            getStartedBtn.alpha = 1f
         }
         startupFellow.setOnClickListener {
+            setButtonsGray()
             llStartupFellow.setBackgroundColor(resources.getColor(R.color.primary))
             ivStartupFellow.setImageResource(R.drawable.ic_startup_clicked)
             tvStartupFellow.setTextColor(resources.getColor(R.color.white))
+
+            getStartedBtn.isEnabled = true
+            getStartedBtn.alpha = 1f
         }
         student.setOnClickListener {
+            setButtonsGray()
             llStudent.setBackgroundColor(resources.getColor(R.color.primary))
             ivStudent.setImageResource(R.drawable.ic_student_clicked)
             tvStudent.setTextColor(resources.getColor(R.color.white))
+
+            getStartedBtn.isEnabled = true
+            getStartedBtn.alpha = 1f
         }
 
+        getStartedBtn.setOnClickListener {
+            //TODO
+        }
+    }
 
+    private fun setButtonsGray() {
+        llEntrepreneur.setBackgroundColor(resources.getColor(R.color.white))
+        ivEntrepreneur.setImageResource(R.drawable.ic_investor_black)
+        tvEntrepreneur.setTextColor(resources.getColor(R.color.black))
+
+        llStartupFellow.setBackgroundColor(resources.getColor(R.color.white))
+        ivStartupFellow.setImageResource(R.drawable.ic_startup)
+        tvStartupFellow.setTextColor(resources.getColor(R.color.black))
+
+        llStudent.setBackgroundColor(resources.getColor(R.color.white))
+        ivStudent.setImageResource(R.drawable.ic_student)
+        tvStudent.setTextColor(resources.getColor(R.color.black))
     }
 }
