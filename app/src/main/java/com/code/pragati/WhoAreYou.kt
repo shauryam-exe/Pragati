@@ -103,7 +103,7 @@ class WhoAreYou : AppCompatActivity() {
             when(selectedRole) {
                 "invest" -> startActivity(Intent(this,Invest::class.java))
                 "startup" -> startActivity(Intent(this,UploadPitch::class.java))
-                "explore" -> startActivity(Intent(this,OTPVerification::class.java))
+                "explore" -> startActivity(Intent(this,LoginLayman::class.java))
                 "problem" -> startActivity(Intent(this,ProblemStatementActivity::class.java))
             }
         }
