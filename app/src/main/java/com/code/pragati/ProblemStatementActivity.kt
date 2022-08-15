@@ -38,15 +38,36 @@ class ProblemStatementActivity : AppCompatActivity() {
         tvPrivate = findViewById(R.id.tvPrivate)
 
         govt.setOnClickListener {
+            setButtonsGray()
             llGovt.setBackgroundColor(resources.getColor(R.color.primary))
             ivGovt.setImageResource(R.drawable.ic_org_clicked)
             tvGovt.setTextColor(resources.getColor(R.color.white))
+
+            getStartedBtn.isEnabled = true
+            getStartedBtn.alpha = 1f
         }
         private.setOnClickListener {
+            setButtonsGray()
             llPrivate.setBackgroundColor(resources.getColor(R.color.primary))
             ivPrivate.setImageResource(R.drawable.ic_building_clicked)
             tvPrivate.setTextColor(resources.getColor(R.color.white))
+
+            getStartedBtn.isEnabled = true
+            getStartedBtn.alpha = 1f
         }
-        
+
+        getStartedBtn.setOnClickListener {
+            //TODO
+        }
+    }
+
+    private fun setButtonsGray() {
+        llGovt.setBackgroundColor(resources.getColor(R.color.white))
+        ivGovt.setImageResource(R.drawable.ic_org_black)
+        tvGovt.setTextColor(resources.getColor(R.color.black))
+
+        llPrivate.setBackgroundColor(resources.getColor(R.color.white))
+        ivPrivate.setImageResource(R.drawable.ic_building)
+        tvPrivate.setTextColor(resources.getColor(R.color.black))
     }
 }
