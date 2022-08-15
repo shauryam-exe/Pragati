@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.viewpager2.widget.ViewPager2
 import com.code.pragati.adapters.OnBoardingAdapter
 import android.R.attr.animation
+import android.content.Intent
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.Button
@@ -16,6 +17,7 @@ import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 
 import android.text.Html
+import android.util.Log
 import org.w3c.dom.Text
 
 
@@ -82,6 +84,11 @@ class OnBoardingActivity : AppCompatActivity() {
                 }
             } else if (position == 2){
                 letsGetStarted.text = "Get Started"
+                letsGetStarted.setOnClickListener{
+                    startActivity(Intent(this@OnBoardingActivity, WhoAreYou::class.java))
+                    finish()
+                    Log.d("check for errors","get started button working")
+                }
             }
         }
 

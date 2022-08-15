@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
@@ -58,15 +59,16 @@ class SplashActivity : AppCompatActivity() {
 
 
             if (isFirstTime) {
-
                 val editor = onBoardingScreen.edit()
                 editor.putBoolean("firstTime",false)
-                editor.commit()
+                editor.apply()
 
                 startActivity(Intent(this, OnBoardingActivity::class.java))
                 finish()
             } else {
-                //TODO
+                Log.d("check for errors","Else working in Splash")
+                startActivity(Intent(this, WhoAreYou::class.java))
+                finish()
             }
         }, splashDisplayLength)
     }
