@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProblemStatementActivity">
+
+    <TextView
+        android:id="@+id/tvPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100sp"
+        android:layout_marginTop="30sp"
+        android:fontFamily="@font/poppins"
+        android:gravity="end"
+        android:letterSpacing="0.13"
+        android:text="What\nbrings\nyou\nhere?\ndfhsb\nrttbtr"
+        android:textColor="@color/primary"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:layout_marginStart="32sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_toEndOf="@id/tvPS"
+        android:src="@drawable/ic_undraw_certification" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardGovt"
+        android:layout_width="150sp"
+        android:layout_height="180sp"
+        android:layout_below="@id/tvPS"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="40sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="14sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:id="@+id/llGovt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="200sp"
+                app:cardElevation="20sp">
+
+                <ImageView
+                    android:id="@+id/ivGovt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="2sp"
+                    android:src="@drawable/ic_org_black" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvGovt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="20sp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="GOvernment Organisation"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPrivate"
+        android:layout_width="150sp"
+        android:layout_height="180sp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvPS"
+        android:layout_marginTop="40sp"
+        android:layout_marginEnd="40sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="14sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:id="@+id/llPrivate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="200sp"
+                app:cardElevation="20sp">
+
+                <ImageView
+                    android:id="@+id/ivPrivate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3sp"
+                    android:src="@drawable/ic_building" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvPrivate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="20sp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="Private\nOrganisation"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:layout_below="@id/cardGovt"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:src="@drawable/ic_undraw_updated_resume" />
+
+    <Button
+        android:id="@+id/btnGetStartedPS"
+        android:layout_width="160sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40sp"
+        android:layout_marginEnd="40sp"
+        android:layout_marginBottom="80sp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/poppins"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:padding="8sp"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textSize="17sp" />
+
+</RelativeLayout>

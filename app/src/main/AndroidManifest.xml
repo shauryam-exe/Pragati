@@ -9,14 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pragati">
+        
         <activity
             android:name=".WhoAreYou" 
             android:exported="false" />
         <activity
+            android:name=".UploadPitch"
+            android:exported="false" />
+        <activity
+            android:name=".ProblemStatementActivity"
+            android:exported="false" />          
+            
+        <activity
             android:name=".OnBoardingActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Invest"
             android:exported="false" />
         <activity
             android:name=".LoginOthers"
@@ -31,7 +39,7 @@
             android:name=".LoginLayman"
             android:exported="false" />
         <activity
-            android:name=".Invest"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -29,7 +29,6 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         window.statusBarColor = ContextCompat.getColor(this, R.color.primary_light)
 
-
         setContentView(R.layout.activity_splash)
 
         topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation)
@@ -56,6 +55,7 @@ class SplashActivity : AppCompatActivity() {
 
             onBoardingScreen = getSharedPreferences("onBoardingScreen", MODE_PRIVATE)
             var isFirstTime = onBoardingScreen.getBoolean("firstTime", true)
+
 
             if (isFirstTime) {
 
