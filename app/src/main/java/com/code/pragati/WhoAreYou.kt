@@ -31,7 +31,7 @@ class WhoAreYou : AppCompatActivity() {
     private lateinit var tvSearch: TextView
     private lateinit var tvNote: TextView
 
-    private lateinit var selectedRole: String
+    private var selectedRole: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,7 +56,6 @@ class WhoAreYou : AppCompatActivity() {
         tvSearch = findViewById(R.id.tvSearch)
         tvNote = findViewById(R.id.tvNote)
 
-
         continueBtn.alpha = 0.5f
 
         invest.setOnClickListener {
@@ -66,7 +65,7 @@ class WhoAreYou : AppCompatActivity() {
                 tvRupees.setTextColor(resources.getColor(R.color.white))
                 selectedRole = "invest"
 
-            continueBtn.isClickable = true
+            continueBtn.isEnabled = true
             continueBtn.alpha = 1f
         }
         startupPitch.setOnClickListener {
@@ -76,7 +75,7 @@ class WhoAreYou : AppCompatActivity() {
                 tvVideo.setTextColor(resources.getColor(R.color.white))
                 selectedRole = "startup"
 
-            continueBtn.isClickable = true
+            continueBtn.isEnabled = true
             continueBtn.alpha = 1f
         }
         explore.setOnClickListener {
@@ -86,7 +85,7 @@ class WhoAreYou : AppCompatActivity() {
                 tvSearch.setTextColor(resources.getColor(R.color.white))
                 selectedRole = "explore"
 
-            continueBtn.isClickable = true
+            continueBtn.isEnabled = true
             continueBtn.alpha = 1f
         }
         uploadProblemStatement.setOnClickListener {
@@ -96,7 +95,7 @@ class WhoAreYou : AppCompatActivity() {
                 tvNote.setTextColor(resources.getColor(R.color.white))
                 selectedRole = "problem"
 
-            continueBtn.isClickable = true
+            continueBtn.isEnabled = true
             continueBtn.alpha = 1f
         }
 
