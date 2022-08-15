@@ -50,21 +50,23 @@ class SplashActivity : AppCompatActivity() {
 //        logo.animation = topAnimation
 //        logoText.animation = bottomAnimation
 
+
         Handler().postDelayed({
 
             onBoardingScreen = getSharedPreferences("onBoardingScreen", MODE_PRIVATE)
-            val isFirstTime = onBoardingScreen.getBoolean("firstTime", true)
+            var isFirstTime = onBoardingScreen.getBoolean("firstTime", true)
+
 
             if (isFirstTime) {
 
                 val editor = onBoardingScreen.edit()
                 editor.putBoolean("firstTime",false)
-                editor.apply()
+                editor.commit()
 
                 startActivity(Intent(this, OnBoardingActivity::class.java))
                 finish()
             } else {
-                startActivity(Intent(this, OnBoardingActivity::class.java))
+                //TODO
             }
         }, splashDisplayLength)
     }
