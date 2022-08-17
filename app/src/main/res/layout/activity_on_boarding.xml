@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/round_button_bg"
             android:text="Get Started"
-            android:textAllCaps="true"
+            android:textAllCaps="false"
             android:fontFamily="@font/poppins"
             android:layout_marginEnd="50dp"
             android:visibility="visible"

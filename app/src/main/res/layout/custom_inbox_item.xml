@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardInbox"
+    android:layout_marginTop="10sp"
+    android:layout_marginHorizontal="10sp"
+    android:layout_marginBottom="5sp"
+    app:cardCornerRadius="15sp"
+    android:backgroundTint="@color/lightGrey"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivOnlineOffline"
+            android:tag="Online"
+            android:src="@drawable/ic_green_online"
+            android:layout_toEndOf="@id/civPhotoInbox"
+            android:layout_marginStart="-35sp"
+            android:layout_marginTop="8sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civPhotoInbox"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:layout_marginVertical="10sp"
+            android:layout_marginStart="8sp"
+            android:layout_marginEnd="15sp"
+            android:elevation="15sp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:src="@drawable/pic" />
+
+        <TextView
+            android:id="@+id/tvNameInbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:layout_toEndOf="@id/civPhotoInbox"
+            android:fontFamily="@font/poppins"
+            android:text="Kate Carnegie"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvUserTypeInbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNameInbox"
+            android:layout_marginTop="-3sp"
+            android:layout_toEndOf="@id/civPhotoInbox"
+            android:fontFamily="@font/poppins"
+            android:text="User Type"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvMessageInbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvUserTypeInbox"
+            android:layout_marginVertical="8sp"
+            android:layout_marginEnd="20sp"
+            android:layout_toEndOf="@id/civPhotoInbox"
+            android:fontFamily="@font/poppins"
+            android:maxLines="1"
+            android:text="Can we schedule a meet today?"
+            android:textColor="?android:textColorPrimary" />
+
+        <TextView
+            android:id="@+id/tvTimeInbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="10sp"
+            android:layout_marginVertical="10sp"
+            android:drawableLeft="@drawable/ic_eye"
+            android:drawablePadding="8sp"
+            android:fontFamily="@font/poppins"
+            android:text="2 mins ago" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
