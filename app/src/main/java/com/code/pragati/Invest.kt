@@ -38,16 +38,37 @@ class Invest : AppCompatActivity() {
         tvCapitalist = findViewById(R.id.tvCapitalist)
 
         angelInvestor.setOnClickListener {
+            setGrayButton()
             llAngel.setBackgroundColor(resources.getColor(R.color.primary))
             ivAngel.setImageResource(R.drawable.ic_investor_clicked)
             tvAngel.setTextColor(resources.getColor(R.color.white))
+
+            getStartedBtn.isEnabled = true
+            getStartedBtn.alpha = 1f
         }
         capitalist.setOnClickListener {
+            setGrayButton()
             llCapitalist.setBackgroundColor(resources.getColor(R.color.primary))
             ivCapitalist.setImageResource(R.drawable.ic_investor_black_clicked)
             tvCapitalist.setTextColor(resources.getColor(R.color.white))
+
+            getStartedBtn.isEnabled = true
+            getStartedBtn.alpha = 1f
         }
 
+        getStartedBtn.setOnClickListener {
+            //TODO
+        }
 
+    }
+
+    private fun setGrayButton() {
+        llAngel.setBackgroundColor(resources.getColor(R.color.white))
+        ivAngel.setImageResource(R.drawable.ic_investor)
+        tvAngel.setTextColor(resources.getColor(R.color.black))
+
+        llCapitalist.setBackgroundColor(resources.getColor(R.color.white))
+        ivCapitalist.setImageResource(R.drawable.ic_investor_black)
+        tvCapitalist.setTextColor(resources.getColor(R.color.black))
     }
 }
