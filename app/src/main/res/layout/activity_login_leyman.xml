@@ -7,8 +7,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".LoginLayman">
 
+    <ImageView
+        android:id="@+id/ivBackLoginLayman"
+        android:layout_margin="20sp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <androidx.cardview.widget.CardView
-        android:layout_marginTop="50sp"
         android:layout_marginBottom="20sp"
         android:layout_gravity="center"
         app:cardCornerRadius="200sp"
@@ -188,7 +194,7 @@
             <ImageView
                 android:layout_gravity="center"
                 android:layout_marginStart="3sp"
-                android:src="@drawable/ic_social"
+                android:src="@drawable/ic_twitter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
