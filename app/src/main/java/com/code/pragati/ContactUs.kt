@@ -2,6 +2,7 @@ package com.code.pragati
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 
@@ -11,6 +12,7 @@ class ContactUs : AppCompatActivity() {
     private lateinit var instagram : CardView
     private lateinit var linkedIn : CardView
     private lateinit var social : CardView
+    private lateinit var back : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +22,11 @@ class ContactUs : AppCompatActivity() {
         instagram = findViewById(R.id.cardContactViaInstagram)
         linkedIn = findViewById(R.id.cardContactViaLinkedIn)
         social = findViewById(R.id.cardContactViaSocial)
+        back = findViewById(R.id.ivBackContactUs)
+
+        back.setOnClickListener{
+            onBackPressed()
+        }
 
     }
 }

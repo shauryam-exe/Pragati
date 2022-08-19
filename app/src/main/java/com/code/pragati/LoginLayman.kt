@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.google.firebase.FirebaseException
@@ -21,6 +22,7 @@ class LoginLayman : AppCompatActivity() {
     private lateinit var google : CardView
     private lateinit var linkedIn : CardView
     private lateinit var social : CardView
+    private lateinit var back : ImageView
 
     private lateinit var auth: FirebaseAuth
     private val TAG = "check"
@@ -35,6 +37,11 @@ class LoginLayman : AppCompatActivity() {
         google = findViewById(R.id.cardLoginWithGoogle)
         linkedIn = findViewById(R.id.cardLoginWithLinkedIn)
         social = findViewById(R.id.cardLoginWithSocial)
+        back = findViewById(R.id.ivBackLoginLayman)
+
+        back.setOnClickListener{
+            onBackPressed()
+        }
 
         auth = FirebaseAuth.getInstance()
 
