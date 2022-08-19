@@ -85,7 +85,7 @@ class OnBoardingActivity : AppCompatActivity() {
             } else if (position == 2){
                 letsGetStarted.text = "Get Started"
                 letsGetStarted.setOnClickListener{
-                    startActivity(Intent(this@OnBoardingActivity, WhoAreYou::class.java))
+                    startActivity(Intent(this@OnBoardingActivity, LoginOthers::class.java))
                     finish()
                     Log.d("check for errors","get started button working")
                 }

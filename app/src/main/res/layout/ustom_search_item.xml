@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="10sp"
+    android:layout_marginVertical="8sp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivOnlineOfflineSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-35sp"
+        android:layout_marginTop="8sp"
+        android:layout_toEndOf="@id/civPhotoSearch"
+        android:src="@drawable/ic_green_online"
+        android:tag="Online" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civPhotoSearch"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_marginVertical="10sp"
+        android:layout_marginStart="8sp"
+        android:layout_marginEnd="15sp"
+        android:elevation="15sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:src="@drawable/pic" />
+
+    <TextView
+        android:id="@+id/tvNameSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_toEndOf="@id/civPhotoSearch"
+        android:fontFamily="@font/poppins"
+        android:text="Kate Carnegie"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvUserTypeSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNameSearch"
+        android:layout_marginTop="-3sp"
+        android:layout_toEndOf="@id/civPhotoSearch"
+        android:fontFamily="@font/poppins"
+        android:text="User Type"
+        android:textSize="13sp" />
+
+</RelativeLayout>

@@ -56,8 +56,50 @@
         android:textColor="@color/grey" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardEmailLogin"
+        android:id="@+id/cardNameLoginLeyman"
         android:layout_marginTop="30sp"
+        android:layout_marginHorizontal="40sp"
+        android:layout_marginBottom="15sp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="15sp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        app:cardElevation="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_marginEnd="7sp"
+                android:layout_marginStart="13sp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etNameLoginLeyMan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:fontFamily="@font/poppins"
+                android:hint="Full Name"
+                android:background="@null"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="12sp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardNumberLoginLaymen"
         android:layout_marginHorizontal="40sp"
         android:layout_marginBottom="30sp"
         android:layout_gravity="center"
@@ -118,7 +160,7 @@
         android:layout_width="wrap_content"
         android:textSize="16sp"
         android:gravity="center"
-        android:layout_marginTop="70sp"
+        android:layout_marginTop="40sp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="@font/poppins"

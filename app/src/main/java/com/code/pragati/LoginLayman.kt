@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit
 class LoginLayman : AppCompatActivity() {
 
     private lateinit var number : EditText
+    private lateinit var name : EditText
     private lateinit var getOTP : Button
     private lateinit var google : CardView
     private lateinit var linkedIn : CardView
@@ -29,6 +30,7 @@ class LoginLayman : AppCompatActivity() {
         setContentView(R.layout.activity_login_leyman)
 
         number = findViewById(R.id.etNumberLogin)
+        name = findViewById(R.id.etNameLoginLeyMan)
         getOTP = findViewById(R.id.btnGetOTP)
         google = findViewById(R.id.cardLoginWithGoogle)
         linkedIn = findViewById(R.id.cardLoginWithLinkedIn)
@@ -36,12 +38,10 @@ class LoginLayman : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-
-
-
         getOTP.setOnClickListener {
             val phoneNumber = number.text.toString().trim()
-            if (phoneNumber.isNotEmpty()) {
+            val nameText = name.text.toString().trim()
+            if (phoneNumber.isNotEmpty() && nameText.isNotEmpty()) {
                 if (phoneNumber.length == 10) {
 
                     //ProgressBar enable. Button Disable
@@ -84,7 +84,7 @@ class LoginLayman : AppCompatActivity() {
                     }
 
                     val options = PhoneAuthOptions.newBuilder(auth)
-                        .setPhoneNumber("+91$phoneNumber")       // Phone number to verify
+                        .setPhoneNumber("+91$phoneNumber") // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(this)                 // Activity (for callback binding)
                         .setCallbacks(callbacks)          // OnVerificationStateChangedCallbacks
@@ -95,7 +95,7 @@ class LoginLayman : AppCompatActivity() {
                     Toast.makeText(this,"Please enter correct mobile number",Toast.LENGTH_SHORT).show()
                 }
             } else {
-                Toast.makeText(this,"Enter mobile number",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Fields can't be empty",Toast.LENGTH_SHORT).show()
             }
         }
     }
