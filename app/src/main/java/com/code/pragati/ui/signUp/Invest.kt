@@ -24,6 +24,8 @@ class Invest : AppCompatActivity() {
     private lateinit var tvAngel: TextView
     private lateinit var tvCapitalist: TextView
 
+    private lateinit var selectedRole: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_invest)
@@ -49,6 +51,8 @@ class Invest : AppCompatActivity() {
             ivAngel.setImageResource(R.drawable.ic_investor_clicked)
             tvAngel.setTextColor(resources.getColor(R.color.white))
 
+            selectedRole = "angel"
+
             getStartedBtn.isEnabled = true
             getStartedBtn.alpha = 1f
         }
@@ -58,12 +62,17 @@ class Invest : AppCompatActivity() {
             ivCapitalist.setImageResource(R.drawable.ic_investor_black_clicked)
             tvCapitalist.setTextColor(resources.getColor(R.color.white))
 
+            selectedRole = "capitalist"
+
             getStartedBtn.isEnabled = true
             getStartedBtn.alpha = 1f
         }
 
         getStartedBtn.setOnClickListener {
-            //TODO
+            when(selectedRole) {
+                "angel" -> {}
+                "capitalist" -> {}
+            }
         }
 
     }

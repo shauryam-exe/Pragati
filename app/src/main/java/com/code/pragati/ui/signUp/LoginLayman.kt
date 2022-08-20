@@ -13,6 +13,7 @@ import com.code.pragati.R
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.*
 import java.util.concurrent.TimeUnit
+import com.code.pragati.R
 
 class LoginLayman : AppCompatActivity() {
 
@@ -86,6 +87,7 @@ class LoginLayman : AppCompatActivity() {
 
                             val intent = Intent(this@LoginLayman, OTPVerification::class.java)
                             intent.putExtra("otp",verificationId)
+                            intent.putExtra("username",nameText)
                             startActivity(intent)
                         }
                     }
