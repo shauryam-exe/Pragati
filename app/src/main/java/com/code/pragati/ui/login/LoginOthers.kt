@@ -1,4 +1,4 @@
-package com.code.pragati
+package com.code.pragati.ui.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
+import com.code.pragati.R
+import com.code.pragati.ui.signUp.WhoAreYou
 
 class LoginOthers : AppCompatActivity() {
 

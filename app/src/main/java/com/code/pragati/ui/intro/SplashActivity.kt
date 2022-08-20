@@ -1,4 +1,4 @@
-package com.code.pragati
+package com.code.pragati.ui.intro
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -10,6 +10,8 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
+import com.code.pragati.R
+import com.code.pragati.ui.signUp.WhoAreYou
 
 class SplashActivity : AppCompatActivity() {
 

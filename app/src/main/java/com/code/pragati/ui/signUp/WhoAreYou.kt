@@ -1,4 +1,4 @@
-package com.code.pragati
+package com.code.pragati.ui.signUp
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.code.pragati.R
 
 class WhoAreYou : AppCompatActivity() {
 
@@ -101,10 +102,10 @@ class WhoAreYou : AppCompatActivity() {
 
         continueBtn.setOnClickListener {
             when(selectedRole) {
-                "invest" -> startActivity(Intent(this,Invest::class.java))
-                "startup" -> startActivity(Intent(this,UploadPitch::class.java))
-                "explore" -> startActivity(Intent(this,LoginLayman::class.java))
-                "problem" -> startActivity(Intent(this,ProblemStatementActivity::class.java))
+                "invest" -> startActivity(Intent(this, Invest::class.java))
+                "startup" -> startActivity(Intent(this, UploadPitch::class.java))
+                "explore" -> startActivity(Intent(this, LoginLayman::class.java))
+                "problem" -> startActivity(Intent(this, ProblemStatementActivity::class.java))
             }
         }
 

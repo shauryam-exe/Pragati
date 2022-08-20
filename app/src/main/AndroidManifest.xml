@@ -34,34 +34,34 @@
             android:name=".ChatInside"
             android:exported="false" />
         <activity
-            android:name=".WhoAreYou"
+            android:name=".ui.signUp.WhoAreYou"
             android:exported="false" />
         <activity
-            android:name=".UploadPitch"
+            android:name=".ui.signUp.UploadPitch"
             android:exported="false" />
         <activity
-            android:name=".ProblemStatementActivity"
+            android:name=".ui.signUp.ProblemStatementActivity"
             android:exported="false" />
         <activity
-            android:name=".OnBoardingActivity"
+            android:name=".ui.intro.OnBoardingActivity"
             android:exported="false" />
         <activity
-            android:name=".Invest"
+            android:name=".ui.signUp.Invest"
             android:exported="false" />
         <activity
-            android:name=".LoginOthers"
+            android:name=".ui.login.LoginOthers"
             android:exported="false" />
         <activity
             android:name=".ContactUs"
             android:exported="false" />
         <activity
-            android:name=".OTPVerification"
+            android:name=".ui.signUp.OTPVerification"
             android:exported="false" />
         <activity
-            android:name=".LoginLayman"
+            android:name=".ui.signUp.LoginLayman"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.intro.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
