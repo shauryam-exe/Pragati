@@ -10,6 +10,7 @@ import android.widget.TextView
 import com.code.pragati.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
+import com.google.firebase.auth.UserProfileChangeRequest
 
 class OTPVerification : AppCompatActivity() {
 
@@ -19,7 +20,10 @@ class OTPVerification : AppCompatActivity() {
     private lateinit var otp : EditText
     private lateinit var verifyOtp : Button
 
+    private lateinit var auth: FirebaseAuth
+
     lateinit var backendOTP: String
+    lateinit var name: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,19 +35,25 @@ class OTPVerification : AppCompatActivity() {
         otp = findViewById(R.id.etEnterOTP)
         verifyOtp = findViewById(R.id.btnVerifyOTP)
 
-        incorrectOTP.visibility = View.INVISIBLE
+        auth = FirebaseAuth.getInstance()
+
+        incorrectOTP.visibility = View.GONE
 
         backendOTP = intent.getStringExtra("otp").toString()
+        name = intent.getStringExtra("username").toString()
 
 
         verifyOtp.setOnClickListener {
             val userOTP = otp.text.toString().trim()
             val phoneAuthCredential = PhoneAuthProvider.getCredential(backendOTP, userOTP)
-            FirebaseAuth.getInstance().signInWithCredential(phoneAuthCredential)
+            auth.signInWithCredential(phoneAuthCredential)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Log.d("check","FirebaseAuth credentials verified")
-                        incorrectOTP.visibility = View.INVISIBLE
+                        val user = auth.currentUser
+                        val profileUpdates = UserProfileChangeRequest.Builder().setDisplayName(name).build()
+                        user!!.updateProfile(profileUpdates)
+                        incorrectOTP.visibility = View.GONE
                     } else {
                         Log.d("check","Enter correct otp")
                         incorrectOTP.visibility = View.VISIBLE

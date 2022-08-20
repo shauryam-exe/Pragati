@@ -86,6 +86,7 @@ class LoginLayman : AppCompatActivity() {
 
                             val intent = Intent(this@LoginLayman, OTPVerification::class.java)
                             intent.putExtra("otp",verificationId)
+                            intent.putExtra("username",nameText)
                             startActivity(intent)
                         }
                     }
