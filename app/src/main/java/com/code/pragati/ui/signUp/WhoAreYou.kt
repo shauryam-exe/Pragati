@@ -102,10 +102,10 @@ class WhoAreYou : AppCompatActivity() {
 
         continueBtn.setOnClickListener {
             when(selectedRole) {
-                "invest" -> startActivity(Intent(this,Invest::class.java))
-                "startup" -> startActivity(Intent(this,UploadPitch::class.java))
-                "explore" -> startActivity(Intent(this,LoginLayman::class.java))
-                "problem" -> startActivity(Intent(this,ProblemStatementActivity::class.java))
+                "invest" -> startActivity(Intent(this, Invest::class.java))
+                "startup" -> startActivity(Intent(this, UploadPitch::class.java))
+                "explore" -> startActivity(Intent(this, LoginLayman::class.java))
+                "problem" -> startActivity(Intent(this, ProblemStatementActivity::class.java))
             }
         }
 
