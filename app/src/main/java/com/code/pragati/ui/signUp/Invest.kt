@@ -1,4 +1,4 @@
-package com.code.pragati
+package com.code.pragati.ui.signUp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import com.code.pragati.R
 
 class Invest : AppCompatActivity() {
 
