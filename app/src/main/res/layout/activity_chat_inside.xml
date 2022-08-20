@@ -89,17 +89,35 @@
             android:backgroundTint="@color/lightGrey"
             app:cardCornerRadius="15sp">
 
-            <EditText
-                android:id="@+id/etTypeMessageChat"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@null"
-                android:fontFamily="@font/poppins"
-                android:hint="Type a message"
-                android:padding="10sp"
-                android:textColor="?android:textColorPrimary"
-                android:textColorHint="@color/grey" />
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etTypeMessageChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toStartOf="@id/ivSendChat"
+                    android:background="@null"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Type a message"
+                    android:padding="10sp"
+                    android:textColor="?android:textColorPrimary"
+                    android:textColorHint="@color/grey" />
+
+                <ImageView
+                    android:id="@+id/ivSendChat"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="7sp"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_send" />
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 

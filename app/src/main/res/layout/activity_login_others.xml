@@ -126,8 +126,8 @@
                 android:id="@+id/etEmailLoginOthers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="15"
                 android:background="@null"
+                android:ems="15"
                 android:fontFamily="@font/poppins"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
@@ -172,10 +172,10 @@
                 android:id="@+id/etPassLoginOthers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:ems="15"
                 android:fontFamily="@font/poppins"
                 android:hint="Password"
-                android:background="@null"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:padding="12sp"
@@ -203,23 +203,55 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40sp"
         android:layout_marginStart="40dp"
-        android:letterSpacing="0.13"
         android:layout_marginTop="108dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/custom_button_2"
-        android:fontFamily="@font/poppins"
-        android:padding="8sp"
         android:elevation="20sp"
-        android:shadowColor="@color/black"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.13"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
+        android:padding="8sp"
+        android:shadowColor="@color/black"
         android:text="Login"
-        android:textColor="@color/white"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardPassLoginOthers" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="7dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/btnLoginOthers"
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginOthers">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="Are you a new User? "
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="Sign up"
+            android:textColor="#A18EFF" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

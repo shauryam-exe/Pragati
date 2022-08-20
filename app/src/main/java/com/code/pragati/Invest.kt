@@ -13,6 +13,7 @@ class Invest : AppCompatActivity() {
     private lateinit var angelInvestor: CardView
     private lateinit var capitalist: CardView
     private lateinit var getStartedBtn: Button
+    private lateinit var back : ImageView
 
     //For UI Effects...
     private lateinit var llAngel: LinearLayout
@@ -36,7 +37,11 @@ class Invest : AppCompatActivity() {
         ivCapitalist = findViewById(R.id.ivCapitalist)
         tvAngel = findViewById(R.id.tvAngel)
         tvCapitalist = findViewById(R.id.tvCapitalist)
+        back = findViewById(R.id.ivBackInvest)
 
+        back.setOnClickListener{
+            onBackPressed()
+        }
         angelInvestor.setOnClickListener {
             setGrayButton()
             llAngel.setBackgroundColor(resources.getColor(R.color.primary))

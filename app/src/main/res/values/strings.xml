@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Pragati</string>
-    <string name="ReachOut">Our pool of students and entrepreneurs are actively looking for their next startup ideas. If you\'re a private or government organisation, Reach Us Out</string>
+    <string name="ReachOut">Great!!!\nWe have all your basic details now.\nYou are just one step away.\nWe are verifying your details and soon your credentials will be sent your registered email address.\nThank You</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="intro_screen1_heading">Staring Up &#128640;</string>
+    <string name="intro_screen1_heading">Starting Up &#128640;</string>
     <string name="intro_screen1_body">Helping you take your startup idea off the ground</string>
     <string name="intro_screen2_heading">Ideate Innovate Build</string>
     <string name="intro_screen2_body">Mentorship, Funding, Feedback, your future Co-founders - ALL IN ONE PLACE</string>

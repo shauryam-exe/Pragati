@@ -1,5 +1,6 @@
 package com.code.pragati
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -13,6 +14,7 @@ class ProblemStatementActivity : AppCompatActivity() {
     private lateinit var govt: CardView
     private lateinit var private: CardView
     private lateinit var getStartedBtn: Button
+    private lateinit var back: ImageView
 
     //For UI Effects...
     private lateinit var llGovt: LinearLayout
@@ -36,7 +38,11 @@ class ProblemStatementActivity : AppCompatActivity() {
         ivPrivate = findViewById(R.id.ivPrivate)
         tvGovt = findViewById(R.id.tvGovt)
         tvPrivate = findViewById(R.id.tvPrivate)
+        back = findViewById(R.id.ivBackProblemStatement)
 
+        back.setOnClickListener{
+            onBackPressed()
+        }
         govt.setOnClickListener {
             setButtonsGray()
             llGovt.setBackgroundColor(resources.getColor(R.color.primary))
@@ -58,6 +64,7 @@ class ProblemStatementActivity : AppCompatActivity() {
 
         getStartedBtn.setOnClickListener {
             //TODO
+            startActivity(Intent(this, ContactUs::class.java))
         }
     }
 

@@ -14,6 +14,7 @@ class UploadPitch : AppCompatActivity() {
     private lateinit var startupFellow: CardView
     private lateinit var student: CardView
     private lateinit var getStartedBtn: Button
+    private lateinit var back : ImageView
 
     //For UI Effects...
     private lateinit var llEntrepreneur: LinearLayout
@@ -44,7 +45,11 @@ class UploadPitch : AppCompatActivity() {
         tvEntrepreneur = findViewById(R.id.tvEntrepreneur)
         tvStartupFellow = findViewById(R.id.tvStartupFellows)
         tvStudent = findViewById(R.id.tvStudent)
+        back = findViewById(R.id.ivBackPitch)
 
+        back.setOnClickListener{
+            onBackPressed()
+        }
         entrepreneur.setOnClickListener {
             setButtonsGray()
             llEntrepreneur.setBackgroundColor(resources.getColor(R.color.primary))

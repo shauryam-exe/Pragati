@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
 
 class OTPVerification : AppCompatActivity() {
@@ -43,8 +42,10 @@ class OTPVerification : AppCompatActivity() {
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Log.d("check","FirebaseAuth credentials verified")
+                        incorrectOTP.visibility = View.INVISIBLE
                     } else {
                         Log.d("check","Enter correct otp")
+                        incorrectOTP.visibility = View.VISIBLE
                     }
                 }
         }
