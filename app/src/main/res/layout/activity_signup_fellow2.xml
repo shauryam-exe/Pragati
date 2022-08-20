@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary"
+    tools:context=".ui.signUp.SignupFellow2">
+
+    <ImageView
+        android:id="@+id/bubbleTopLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/bubble_top"/>
+
+    <ImageView
+        android:layout_alignParentEnd="true"
+        android:id="@+id/bubbleTopRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="106dp"
+        android:elevation="32dp"
+        android:src="@drawable/bubble_top" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-40sp"
+        android:src="@drawable/curve_top_left" />
+
+    <ImageView
+        android:layout_marginTop="-30sp"
+        android:layout_marginEnd="-20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/curve_top_right" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_wave" />
+
+    <ImageView
+        android:id="@+id/bubbleBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bubble_bottom_right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-8dp" />
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bubbleBottomLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="52dp"
+        android:src="@drawable/bubble_bottom" />
+
+    <ImageView
+        android:id="@+id/bubbleBottomRightO"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="48dp"
+        android:src="@drawable/bubble_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60sp"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.06"
+        android:text="Acceptance Letter"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCreate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCreate"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins"
+        android:text="Please upload your letter"
+        android:textColor="@color/white" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardUploadLetter"
+        android:layout_below="@id/tvCreate2"
+        android:layout_marginTop="50sp"
+        android:layout_marginHorizontal="60sp"
+        app:cardCornerRadius="20sp"
+        android:elevation="10sp"
+        android:layout_centerHorizontal="true"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:layout_width="250sp"
+        android:layout_height="300sp" >
+
+        <LinearLayout
+            android:layout_margin="10sp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_marginTop="15sp"
+                android:src="@drawable/ic_phone_1"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Click to upload"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:textColor="?android:textColorPrimary"
+                android:fontFamily="@font/poppins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="(.png, .jpg and .pdf supported)"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="?android:textColorPrimary"
+                android:fontFamily="@font/poppins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignFellow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/imageView"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/custom_button_2"
+        android:elevation="20sp"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.13"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:padding="8sp"
+        android:shadowColor="@color/black"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+
+</RelativeLayout>

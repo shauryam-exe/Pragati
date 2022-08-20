@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="@font/poppins"
-        android:text="or continue with"
+        android:text="@string/also_connect_with_us_on"
         android:textColor="@color/grey" />
 
     <LinearLayout

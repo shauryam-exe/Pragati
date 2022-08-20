@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary"
+    tools:context=".ui.signUp.SignupAngels">
+
+    <ImageView
+        android:id="@+id/bubbleTopLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/bubble_top"/>
+
+    <ImageView
+        android:layout_alignParentEnd="true"
+        android:id="@+id/bubbleTopRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="106dp"
+        android:elevation="32dp"
+        android:src="@drawable/bubble_top" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-40sp"
+        android:src="@drawable/curve_top_left" />
+
+    <ImageView
+        android:layout_marginTop="-30sp"
+        android:layout_marginEnd="-20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/curve_top_right" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-15dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_wave" />
+
+    <ImageView
+        android:id="@+id/bubbleBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bubble_bottom_right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-8dp" />
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bubbleBottomLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="48dp"
+        android:src="@drawable/bubble_bottom" />
+
+    <TextView
+        android:id="@+id/tvCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60sp"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.07"
+        android:text="Create Account"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCreate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCreate"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins"
+        android:text="Please enter your details"
+        android:textColor="@color/white" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFullNameAngels"
+        android:layout_below="@id/tvCreate2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="80sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="15sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13sp"
+                android:layout_marginEnd="10sp"
+                android:src="@drawable/ic_person" />
+
+            <EditText
+                android:id="@+id/etFullNameAngels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="15"
+                android:fontFamily="@font/poppins"
+                android:hint="Full Name"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:padding="12sp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEmailAngels"
+        android:layout_below="@id/cardFullNameAngels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="30sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="15sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13sp"
+                android:layout_marginEnd="10sp"
+                android:src="@drawable/ic_message" />
+
+            <EditText
+                android:id="@+id/etEmailAngels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="15"
+                android:fontFamily="@font/poppins"
+                android:hint="Official Email Address"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textSize="16sp"
+                android:padding="12sp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardGSTAngels"
+        android:layout_below="@id/cardEmailAngels"
+        android:layout_width="190sp"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="30sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="15sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13sp"
+                android:layout_marginEnd="10sp"
+                android:src="@drawable/ic_taxes" />
+
+            <EditText
+                android:id="@+id/etGSTAngels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="15"
+                android:fontFamily="@font/poppins"
+                android:hint="GSTIN Number"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingVertical="12sp"
+                android:paddingHorizontal="6sp"
+                android:textSize="16sp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPANAngels"
+        android:layout_below="@id/cardEmailAngels"
+        android:layout_alignParentEnd="true"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="30sp"
+        android:layout_marginTop="30sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="15sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13sp"
+                android:layout_marginEnd="5sp"
+                android:src="@drawable/ic_cards" />
+
+            <EditText
+                android:id="@+id/etPanAngels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="15"
+                android:fontFamily="@font/poppins"
+                android:hint="PAN Card"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingVertical="12sp"
+                android:paddingHorizontal="6sp"
+                android:textSize="16sp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinueSignAngels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/imageView"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/custom_button_2"
+        android:elevation="20sp"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.13"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:padding="8sp"
+        android:shadowColor="@color/black"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+
+</RelativeLayout>

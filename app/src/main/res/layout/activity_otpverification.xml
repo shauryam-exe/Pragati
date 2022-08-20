@@ -58,7 +58,7 @@
         android:textColor="@color/red"
         android:fontFamily="@font/poppins"
         android:drawablePadding="10sp"
-        android:drawableLeft="@drawable/ic_cross"
+        android:drawableLeft="@drawable/ic_cross_red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

@@ -10,6 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pragati">
         <activity
+            android:name=".ui.signUp.SignupAngels"
+            android:exported="false" />
+        <activity
+            android:name=".ui.signUp.SignupFellow2"
+            android:exported="false" />
+        <activity
+            android:name=".ui.signUp.SignupStartupFellow"
+            android:exported="false" />
+        <activity
+            android:name=".ui.signUp.SignupVC"
+            android:exported="false" />
+        <activity
+            android:name=".ui.signUp.SignupEntrepreneur"
+            android:exported="false" />
+        <activity
+            android:name=".FellowCredentials"
+            android:exported="false" />
+        <activity
+            android:name=".ui.signUp.SignupStudent"
+            android:exported="false" />
+        <activity
             android:name=".ChatInside"
             android:exported="false" />
         <activity
