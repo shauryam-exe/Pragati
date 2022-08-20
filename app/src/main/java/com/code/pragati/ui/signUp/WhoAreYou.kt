@@ -125,7 +125,7 @@ class WhoAreYou : AppCompatActivity() {
         startupPitch.isSelected = false
 
         llSearch.setBackgroundColor(resources.getColor(R.color.white))
-        ivSearch.setImageResource(R.drawable.ic_search)
+        ivSearch.setImageResource(R.drawable.ic_search_better)
         tvSearch.setTextColor(resources.getColor(R.color.black))
         explore.isSelected = false
 

@@ -71,7 +71,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="2sp"
                     android:src="@drawable/ic_org_black" />
 
             </androidx.cardview.widget.CardView>
@@ -84,7 +83,7 @@
                 android:layout_marginVertical="20sp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="GOvernment Organisation"
+                android:text="Government Organisation"
                 android:textColor="@color/black" />
 
         </LinearLayout>
@@ -126,7 +125,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="3sp"
                     android:src="@drawable/ic_building" />
 
             </androidx.cardview.widget.CardView>

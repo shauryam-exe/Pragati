@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "906719505543-bacsh2rdejdp0lrrjulcbsnu4dp4f5c8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.code.pragati",
+            "certificate_hash": "915c07c31caf8037bece89068b46d90210d0daf6"
+          }
+        },
+        {
           "client_id": "906719505543-2mo2cuat8sqcl7nbddbb1270btbak9h5.apps.googleusercontent.com",
           "client_type": 3
         }
