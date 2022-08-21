@@ -175,7 +175,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="2sp"
-                    android:src="@drawable/ic_search" />
+                    android:src="@drawable/ic_search_better" />
 
             </androidx.cardview.widget.CardView>
 

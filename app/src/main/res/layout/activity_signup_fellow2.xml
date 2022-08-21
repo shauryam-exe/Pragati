@@ -120,11 +120,12 @@
             android:layout_height="wrap_content" >
 
             <ImageView
-                android:layout_marginTop="15sp"
-                android:src="@drawable/ic_phone_1"
+                android:layout_marginTop="40sp"
+                android:layout_marginBottom="25sp"
+                android:src="@drawable/ic_upload"
                 android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
 
             <TextView
                 android:text="Click to upload"
