@@ -9,10 +9,13 @@
 
     <ImageView
         android:id="@+id/ivBackLoginLayman"
-        android:layout_margin="20sp"
-        android:src="@drawable/ic_baseline_arrow_back_24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:src="@drawable/ic_baseline_arrow_back_24" />
 
     <androidx.cardview.widget.CardView
         android:layout_marginBottom="20sp"
@@ -20,7 +23,7 @@
         app:cardCornerRadius="200sp"
         android:outlineSpotShadowColor="@color/black"
         android:outlineAmbientShadowColor="@color/black"
-        app:cardElevation="20sp"
+        app:cardElevation="10sp"
         android:layout_width="100sp"
         android:layout_height="100sp" >
 
@@ -64,7 +67,7 @@
         app:cardCornerRadius="15sp"
         android:outlineSpotShadowColor="@color/black"
         android:outlineAmbientShadowColor="@color/black"
-        app:cardElevation="20sp"
+        app:cardElevation="9sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
@@ -78,7 +81,7 @@
                 android:layout_marginStart="13sp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_person"
-                android:layout_width="wrap_content"
+                android:layout_width="15dp"
                 android:layout_height="wrap_content" />
 
             <EditText
@@ -88,6 +91,8 @@
                 android:ems="15"
                 android:fontFamily="@font/poppins"
                 android:hint="Full Name"
+                android:textSize="16sp"
+                android:autofillHints="name"
                 android:background="@null"
                 android:inputType="text"
                 android:maxLines="1"
@@ -107,7 +112,7 @@
         app:cardCornerRadius="15sp"
         android:outlineSpotShadowColor="@color/black"
         android:outlineAmbientShadowColor="@color/black"
-        app:cardElevation="20sp"
+        app:cardElevation="9sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
@@ -132,6 +137,8 @@
                 android:fontFamily="@font/poppins"
                 android:hint="+91 XXX XXX XXXX"
                 android:background="@null"
+                android:textSize="16sp"
+                android:autofillHints="phone"
                 android:inputType="phone"
                 android:maxLines="1"
                 android:padding="12sp"
@@ -181,11 +188,11 @@
             app:cardCornerRadius="200sp"
             android:layout_weight="1"
             android:layout_marginStart="30sp"
-            android:layout_marginEnd="10sp"
+            android:layout_marginEnd="-10sp"
             android:layout_marginVertical="10sp"
             android:outlineSpotShadowColor="@color/black"
             android:outlineAmbientShadowColor="@color/black"
-            app:cardElevation="20sp"
+            app:cardElevation="9sp"
             android:layout_width="50sp"
             android:layout_height="50sp" >
 
@@ -193,32 +200,28 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="3sp"
                 android:src="@drawable/ic_google"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="70sp"
+                android:layout_height="70sp" />
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardLoginWithLinkedIn"
+        <ImageButton
+            android:id="@+id/ibLoginWithLinkedIn"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
             android:layout_gravity="center"
-            app:cardCornerRadius="200sp"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="10sp"
+            android:foregroundGravity="center_horizontal"
             android:layout_marginVertical="10sp"
-            android:outlineSpotShadowColor="@color/black"
+            android:layout_marginStart="30sp"
+            android:layout_marginEnd="10sp"
+            android:layout_weight="1"
+            android:elevation="9sp"
+            android:paddingStart="3sp"
+            android:background="@drawable/round_button_bg"
+            android:backgroundTint="#0288D1"
             android:outlineAmbientShadowColor="@color/black"
-            app:cardElevation="20sp"
-            android:layout_width="50sp"
-            android:layout_height="50sp" >
-
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_marginStart="2sp"
-                android:src="@drawable/ic_linkedin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </androidx.cardview.widget.CardView>
+            android:outlineSpotShadowColor="@color/black"
+            android:src="@drawable/ic_linkedin" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardLoginWithSocial"
@@ -230,7 +233,7 @@
             android:layout_marginVertical="10sp"
             android:outlineSpotShadowColor="@color/black"
             android:outlineAmbientShadowColor="@color/black"
-            app:cardElevation="20sp"
+            app:cardElevation="9sp"
             android:layout_width="50sp"
             android:layout_height="50sp" >
 
@@ -238,8 +241,8 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="3sp"
                 android:src="@drawable/ic_twitter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="60sp"
+                android:layout_height="60sp" />
 
         </androidx.cardview.widget.CardView>
 

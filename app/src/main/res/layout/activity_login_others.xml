@@ -48,12 +48,24 @@
         android:layout_width="150sp"
         android:layout_height="150sp"
         android:src="@drawable/ic_icon"
+        android:elevation="9sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.137" />
+
+    <ImageView
+        android:id="@+id/logoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pragati_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoO"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageViewO"
@@ -100,14 +112,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginHorizontal="40sp"
-        android:layout_marginTop="40sp"
+        android:layout_marginTop="50sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
         app:cardCornerRadius="15sp"
         app:cardElevation="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoO">
+        app:layout_constraintTop_toBottomOf="@+id/logoText">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -115,8 +127,8 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="13sp"
                 android:layout_marginEnd="10sp"
@@ -130,6 +142,8 @@
                 android:ems="15"
                 android:fontFamily="@font/poppins"
                 android:hint="Email"
+                android:textSize="16sp"
+                android:autofillHints="emailAddress"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:padding="12sp"
@@ -146,7 +160,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginHorizontal="40sp"
-        android:layout_marginVertical="30sp"
+        android:layout_marginVertical="20sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
         app:cardCornerRadius="15sp"
@@ -161,8 +175,8 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="13sp"
                 android:layout_marginEnd="10sp"
@@ -176,6 +190,8 @@
                 android:ems="15"
                 android:fontFamily="@font/poppins"
                 android:hint="Password"
+                android:textSize="16sp"
+                android:autofillHints="password"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:padding="12sp"
@@ -190,7 +206,7 @@
         android:id="@+id/tvForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
         android:text="Forgot Password?"
         android:textColor="@color/white"

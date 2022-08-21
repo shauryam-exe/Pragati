@@ -4,33 +4,38 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.code.pragati.ui.login.LoginOthers
 
 
 class ContactUs : AppCompatActivity() {
 
     private lateinit var email : TextView
-    private lateinit var instagram : CardView
-    private lateinit var linkedIn : CardView
+    private lateinit var instagram : ImageButton
+    private lateinit var linkedIn : ImageButton
     private lateinit var social : CardView
     private lateinit var back : ImageView
+    private lateinit var proceedToLogin : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_us)
 
         email = findViewById(R.id.tvContactViaMail)
-        instagram = findViewById(R.id.cardContactViaInstagram)
-        linkedIn = findViewById(R.id.cardContactViaLinkedIn)
+        instagram = findViewById(R.id.ibContactViaInstagram)
+        linkedIn = findViewById(R.id.ibContactViaLinkedIn)
         social = findViewById(R.id.cardContactViaSocial)
         back = findViewById(R.id.ivBackContactUs)
+        proceedToLogin = findViewById(R.id.btnProceedToLogin)
 
         back.setOnClickListener{
             onBackPressed()
+        }
+
+        proceedToLogin.setOnClickListener {
+            startActivity(Intent(this, LoginOthers::class.java))
         }
 
         instagram.setOnClickListener {

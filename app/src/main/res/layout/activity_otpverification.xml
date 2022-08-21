@@ -14,7 +14,7 @@
         app:cardCornerRadius="200sp"
         android:outlineSpotShadowColor="@color/black"
         android:outlineAmbientShadowColor="@color/black"
-        app:cardElevation="20sp"
+        app:cardElevation="10sp"
         android:layout_width="100sp"
         android:layout_height="100sp" >
 
@@ -71,7 +71,7 @@
         app:cardCornerRadius="15sp"
         android:outlineSpotShadowColor="@color/black"
         android:outlineAmbientShadowColor="@color/black"
-        app:cardElevation="20sp"
+        app:cardElevation="9sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
@@ -94,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:ems="15"
                 android:background="@null"
+                android:textSize="16sp"
                 android:fontFamily="@font/poppins"
                 android:hint="Enter the OTP"
                 android:inputType="number"

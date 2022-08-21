@@ -65,8 +65,9 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:fontFamily="@font/poppins"
-                    android:textColor="@color/grey"
-                    android:text="Mark all as Read" />
+                    android:text="mark all as read"
+                    android:textSize="12sp"
+                    android:textColor="@color/grey" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvTodayNotifications"

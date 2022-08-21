@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
+import com.code.pragati.HomeActivity
 import com.code.pragati.R
 import com.code.pragati.ui.signUp.WhoAreYou
 
@@ -29,6 +30,10 @@ class LoginOthers : AppCompatActivity() {
 
         signUp.setOnClickListener {
             startActivity(Intent(this, WhoAreYou::class.java))
+        }
+
+        loginBtn.setOnClickListener{
+            startActivity(Intent(this, HomeActivity::class.java))
         }
 
     }

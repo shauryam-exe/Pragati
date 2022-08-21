@@ -5,17 +5,15 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.cardview.widget.CardView
+import com.code.pragati.ui.login.LoginOthers
 
 class FellowCredentials : AppCompatActivity() {
 
     private lateinit var email : TextView
-    private lateinit var instagram : CardView
-    private lateinit var linkedIn : CardView
+    private lateinit var instagram : ImageButton
+    private lateinit var linkedIn : ImageButton
     private lateinit var social : CardView
     private lateinit var back : ImageView
     private lateinit var proceedToLogin : Button
@@ -25,8 +23,8 @@ class FellowCredentials : AppCompatActivity() {
         setContentView(R.layout.activity_fellow_credentials)
 
         email = findViewById(R.id.tvContactViaMailFellow)
-        instagram = findViewById(R.id.cardContactViaInstagramFellow)
-        linkedIn = findViewById(R.id.cardContactViaLinkedInFellow)
+        instagram = findViewById(R.id.ibContactViaInstagramFellow)
+        linkedIn = findViewById(R.id.ibContactViaLinkedInFellow)
         social = findViewById(R.id.cardContactViaSocialFellow)
         back = findViewById(R.id.ivBackFellow)
         proceedToLogin = findViewById(R.id.btnProceedToLoginFellow)
@@ -50,6 +48,11 @@ class FellowCredentials : AppCompatActivity() {
         email.setOnClickListener {
             openApp(Uri.parse("mailto:" + email.text))
         }
+
+        proceedToLogin.setOnClickListener {
+            startActivity(Intent(this, LoginOthers::class.java))
+        }
+
     }
 
     //To open a certain app on click.

@@ -10,21 +10,22 @@
         android:id="@+id/tvWhatBring"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100sp"
-        android:layout_marginTop="25sp"
+        android:layout_marginStart="80sp"
+        android:layout_marginTop="45sp"
         android:fontFamily="@font/poppins"
         android:gravity="end"
         android:letterSpacing="0.13"
         android:text="What\nbrings\nyou\nhere?"
         android:textColor="@color/primary"
-        android:textSize="22sp" />
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:layout_width="150sp"
         android:layout_height="150sp"
         android:layout_marginStart="32sp"
-        android:layout_marginTop="25sp"
-        android:layout_marginEnd="20sp"
+        android:layout_marginTop="45sp"
+        android:layout_marginEnd="40sp"
         android:layout_marginBottom="20sp"
         android:layout_toEndOf="@id/tvWhatBring"
         android:src="@drawable/ic_undraw_questions" />
@@ -35,12 +36,12 @@
         android:layout_height="160sp"
         android:layout_below="@id/tvWhatBring"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="40sp"
-        android:layout_marginTop="20sp"
+        android:layout_marginStart="37sp"
+        android:layout_marginTop="40sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="14sp"
-        app:cardElevation="20sp">
+        app:cardCornerRadius="10sp"
+        app:cardElevation="9sp">
 
         <LinearLayout
             android:id="@+id/llRupees"
@@ -56,8 +57,7 @@
                 android:layout_marginTop="30sp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="200sp"
-                app:cardElevation="20sp">
+                app:cardCornerRadius="200sp">
 
                 <ImageView
                     android:id="@+id/ivRupees"
@@ -90,12 +90,12 @@
         android:layout_height="160sp"
         android:layout_alignParentEnd="true"
         android:layout_below="@id/tvWhatBring"
-        android:layout_marginTop="20sp"
-        android:layout_marginEnd="40sp"
+        android:layout_marginEnd="37sp"
+        android:layout_marginTop="40sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="14sp"
-        app:cardElevation="20sp">
+        app:cardCornerRadius="10sp"
+        app:cardElevation="9sp">
 
         <LinearLayout
             android:id="@+id/llVideo"
@@ -111,8 +111,7 @@
                 android:layout_marginTop="30sp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="200sp"
-                app:cardElevation="20sp">
+                app:cardCornerRadius="200sp">
 
                 <ImageView
                     android:id="@+id/ivVideo"
@@ -145,12 +144,12 @@
         android:layout_height="160sp"
         android:layout_below="@id/cardInvest"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="40sp"
-        android:layout_marginTop="30sp"
+        android:layout_marginStart="37sp"
+        android:layout_marginTop="17sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="14sp"
-        app:cardElevation="20sp">
+        app:cardCornerRadius="10sp"
+        app:cardElevation="9sp">
 
         <LinearLayout
             android:id="@+id/llSearch"
@@ -166,8 +165,7 @@
                 android:layout_marginTop="30sp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="200sp"
-                app:cardElevation="20sp">
+                app:cardCornerRadius="200sp">
 
                 <ImageView
                     android:id="@+id/ivSearch"
@@ -200,12 +198,12 @@
         android:layout_height="160sp"
         android:layout_below="@id/cardStartupPitch"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="30sp"
-        android:layout_marginEnd="40sp"
+        android:layout_marginEnd="37sp"
+        android:layout_marginTop="17sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="14sp"
-        app:cardElevation="20sp">
+        app:cardCornerRadius="10sp"
+        app:cardElevation="9sp">
 
         <LinearLayout
             android:id="@+id/llNote"
@@ -221,8 +219,7 @@
                 android:layout_marginTop="30sp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="200sp"
-                app:cardElevation="20sp">
+                app:cardCornerRadius="200sp">
 
                 <ImageView
                     android:id="@+id/ivNote"
@@ -252,11 +249,11 @@
     <ImageView
         android:layout_width="150sp"
         android:layout_height="150sp"
+        android:layout_below="@id/cardUploadProblemStatement"
         android:layout_marginStart="32sp"
         android:layout_marginTop="20sp"
-        android:layout_marginEnd="20sp"
+        android:layout_marginEnd="30sp"
         android:layout_marginBottom="20sp"
-        android:layout_below="@id/cardUploadProblemStatement"
         android:layout_toStartOf="@id/btnContinueWhoAreYou"
         android:src="@drawable/ic_undraw_prioritise" />
 
@@ -266,13 +263,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/cardUploadProblemStatement"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="40sp"
+        android:layout_marginTop="60sp"
         android:layout_marginEnd="40sp"
         android:background="@drawable/custom_button"
+        android:enabled="false"
         android:fontFamily="@font/poppins"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        android:enabled="false"
         android:padding="8sp"
         android:text="Continue"
         android:textAllCaps="false"

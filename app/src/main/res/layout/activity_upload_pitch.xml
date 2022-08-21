@@ -8,30 +8,34 @@
 
     <ImageView
         android:id="@+id/ivBackPitch"
-        android:layout_margin="20sp"
-        android:src="@drawable/ic_baseline_arrow_back_24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:src="@drawable/ic_baseline_arrow_back_24" />
 
     <TextView
         android:id="@+id/tvPitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100sp"
-        android:layout_marginTop="35sp"
+        android:layout_marginStart="80sp"
+        android:layout_marginTop="75sp"
         android:fontFamily="@font/poppins"
         android:gravity="end"
         android:letterSpacing="0.13"
         android:text="What\nbrings\nyou\nhere?"
         android:textColor="@color/primary"
-        android:textSize="22sp" />
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:layout_width="150sp"
         android:layout_height="150sp"
         android:layout_marginStart="32sp"
-        android:layout_marginTop="35sp"
-        android:layout_marginEnd="20sp"
+        android:layout_marginTop="75sp"
+        android:layout_marginEnd="40sp"
         android:layout_marginBottom="20sp"
         android:layout_toEndOf="@id/tvPitch"
         android:src="@drawable/ic_undraw_all_the_data" />
@@ -42,12 +46,12 @@
         android:layout_height="160sp"
         android:layout_below="@id/tvPitch"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="40sp"
-        android:layout_marginTop="30sp"
+        android:layout_marginStart="37sp"
+        android:layout_marginTop="40sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="14sp"
-        app:cardElevation="20sp">
+        app:cardCornerRadius="10sp"
+        app:cardElevation="9sp">
 
         <LinearLayout
             android:id="@+id/llEntrepreneur"
@@ -63,8 +67,7 @@
                 android:layout_marginTop="30sp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="200sp"
-                app:cardElevation="20sp">
+                app:cardCornerRadius="200sp">
 
                 <ImageView
                     android:id="@+id/ivEntrepreneur"
@@ -84,6 +87,7 @@
                 android:layout_marginVertical="20sp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
+                android:letterSpacing="0.05"
                 android:text="Entrepreneur"
                 android:textColor="@color/black" />
 
@@ -97,12 +101,12 @@
         android:layout_height="160sp"
         android:layout_alignParentEnd="true"
         android:layout_below="@id/tvPitch"
-        android:layout_marginTop="30sp"
-        android:layout_marginEnd="40sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginEnd="37sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="14sp"
-        app:cardElevation="20sp">
+        app:cardCornerRadius="10sp"
+        app:cardElevation="9sp">
 
         <LinearLayout
             android:id="@+id/llStartupFellows"
@@ -118,15 +122,13 @@
                 android:layout_marginTop="30sp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="200sp"
-                app:cardElevation="20sp">
+                app:cardCornerRadius="200sp">
 
                 <ImageView
                     android:id="@+id/ivStartupFellows"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="3sp"
                     android:src="@drawable/ic_startup" />
 
             </androidx.cardview.widget.CardView>
@@ -139,6 +141,7 @@
                 android:layout_marginVertical="20sp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
+                android:letterSpacing="0.05"
                 android:text="Startup Fellows"
                 android:textColor="@color/black" />
 
@@ -153,11 +156,11 @@
         android:layout_height="160sp"
         android:layout_below="@id/cardEntrepreneur"
         android:layout_marginStart="40sp"
-        android:layout_marginTop="30sp"
+        android:layout_marginTop="17sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="14sp"
-        app:cardElevation="20sp">
+        app:cardCornerRadius="10sp"
+        app:cardElevation="9sp">
 
         <LinearLayout
             android:id="@+id/llStudent"
@@ -173,15 +176,13 @@
                 android:layout_marginTop="30sp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="200sp"
-                app:cardElevation="20sp">
+                app:cardCornerRadius="200sp">
 
                 <ImageView
                     android:id="@+id/ivStudent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="2sp"
                     android:src="@drawable/ic_student" />
 
             </androidx.cardview.widget.CardView>
@@ -195,6 +196,7 @@
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
                 android:text="Student"
+                android:letterSpacing="0.05"
                 android:textColor="@color/black" />
 
         </LinearLayout>
@@ -209,9 +211,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="40sp"
         android:layout_marginEnd="40sp"
-        android:enabled="false"
         android:alpha="0.5"
         android:background="@drawable/custom_button"
+        android:enabled="false"
         android:fontFamily="@font/poppins"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
