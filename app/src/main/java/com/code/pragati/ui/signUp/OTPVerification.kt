@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import com.code.pragati.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
@@ -22,7 +23,7 @@ class OTPVerification : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
 
-    lateinit var backendOTP: String
+    private lateinit var backendOTP: String
     lateinit var name: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,9 +55,16 @@ class OTPVerification : AppCompatActivity() {
                         val profileUpdates = UserProfileChangeRequest.Builder().setDisplayName(name).build()
                         user!!.updateProfile(profileUpdates)
                         incorrectOTP.visibility = View.GONE
+                        Toast.makeText(this, "correct otp", Toast.LENGTH_SHORT).show()
+                        //                TODO("Handle UI")
+//                val intent = Intent(this, ChatInside::class.java)
+//                startActivity(intent)
+//                finish()
+
                     } else {
                         Log.d("check","Enter correct otp")
                         incorrectOTP.visibility = View.VISIBLE
+                        Toast.makeText(this, "Enter correct otp", Toast.LENGTH_SHORT).show()
                     }
                 }
         }
