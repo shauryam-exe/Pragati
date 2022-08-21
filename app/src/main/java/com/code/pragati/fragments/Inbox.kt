@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.code.pragati.R
@@ -51,6 +52,7 @@ class Inbox : Fragment() {
         savedText = layout.findViewById(R.id.tvSavedAlone)
 
         recentText.setOnClickListener {
+            Toast.makeText(context, "OOoo pencho...recent aaa..kukkad murge paado", Toast.LENGTH_SHORT).show()
             recentCard.visibility = View.VISIBLE
             rvRecent.visibility = View.VISIBLE
             savedText.visibility = View.VISIBLE
@@ -60,6 +62,7 @@ class Inbox : Fragment() {
         }
 
         savedText.setOnClickListener {
+            Toast.makeText(context, "Saved Aagya Beere", Toast.LENGTH_SHORT).show()
             savedCard.visibility = View.VISIBLE
             rvSaved.visibility = View.VISIBLE
             recentText.visibility = View.VISIBLE

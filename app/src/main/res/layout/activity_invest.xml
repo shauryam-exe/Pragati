@@ -8,30 +8,34 @@
 
     <ImageView
         android:id="@+id/ivBackInvest"
-        android:layout_margin="20sp"
-        android:src="@drawable/ic_baseline_arrow_back_24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:src="@drawable/ic_baseline_arrow_back_24" />
 
     <TextView
         android:id="@+id/tvInvest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100sp"
-        android:layout_marginTop="30sp"
+        android:layout_marginStart="80sp"
+        android:layout_marginTop="75sp"
         android:fontFamily="@font/poppins"
         android:gravity="end"
         android:letterSpacing="0.13"
         android:text="What\nbrings\nyou\nhere?\ndfhsb\nrttbtr"
         android:textColor="@color/primary"
-        android:textSize="22sp" />
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:layout_width="200sp"
         android:layout_height="200sp"
         android:layout_marginStart="32sp"
-        android:layout_marginTop="30sp"
-        android:layout_marginEnd="20sp"
+        android:layout_marginTop="75sp"
+        android:layout_marginEnd="40sp"
         android:layout_marginBottom="20sp"
         android:layout_toEndOf="@id/tvInvest"
         android:src="@drawable/ic_undraw_investment" />
@@ -42,12 +46,12 @@
         android:layout_height="160sp"
         android:layout_below="@id/tvInvest"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="40sp"
+        android:layout_marginStart="37sp"
         android:layout_marginTop="40sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="14sp"
-        app:cardElevation="20sp">
+        app:cardCornerRadius="10sp"
+        app:cardElevation="9sp">
 
         <LinearLayout
             android:id="@+id/llAngel"
@@ -63,8 +67,7 @@
                 android:layout_marginTop="30sp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="200sp"
-                app:cardElevation="20sp">
+                app:cardCornerRadius="200sp">
 
                 <ImageView
                     android:id="@+id/ivAngel"
@@ -97,12 +100,12 @@
         android:layout_height="160sp"
         android:layout_alignParentEnd="true"
         android:layout_below="@id/tvInvest"
+        android:layout_marginEnd="37sp"
         android:layout_marginTop="40sp"
-        android:layout_marginEnd="40sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="14sp"
-        app:cardElevation="20sp">
+        app:cardCornerRadius="10sp"
+        app:cardElevation="9sp">
 
         <LinearLayout
             android:id="@+id/llCapitalist"
@@ -118,8 +121,7 @@
                 android:layout_marginTop="30sp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="200sp"
-                app:cardElevation="20sp">
+                app:cardCornerRadius="200sp">
 
                 <ImageView
                     android:id="@+id/ivCapitalist"
@@ -151,6 +153,7 @@
         android:layout_height="250sp"
         android:layout_below="@id/cardAngelInvestor"
         android:layout_marginStart="32sp"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="20sp"
         android:layout_marginEnd="20sp"
         android:layout_marginBottom="20sp"
@@ -164,7 +167,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="40sp"
         android:layout_marginEnd="40sp"
-        android:layout_marginBottom="100sp"
+        android:layout_marginBottom="90sp"
         android:alpha="0.5"
         android:background="@drawable/custom_button"
         android:enabled="false"

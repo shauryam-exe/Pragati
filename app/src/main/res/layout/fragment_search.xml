@@ -44,6 +44,7 @@
                     android:layout_toStartOf="@id/ivSearchFragment"
                     android:background="@null"
                     android:fontFamily="@font/poppins"
+                    android:textSize="16sp"
                     android:hint="Search"
                     android:padding="10sp"
                     android:textColor="?android:textColorPrimary"
@@ -51,8 +52,8 @@
 
                 <ImageView
                     android:id="@+id/ivSearchFragment"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="7sp"
@@ -72,25 +73,26 @@
         android:layout_height="wrap_content" >
 
         <TextView
-            android:textSize="16sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:fontFamily="@font/poppins"
             android:text="Recent Searches"
-            android:textColor="@color/grey" />
+            android:textColor="@color/grey"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvClearAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:layout_centerInParent="true"
             android:layout_alignParentEnd="true"
             android:drawableLeft="@drawable/ic_cross_primary"
             android:drawablePadding="5sp"
             android:fontFamily="@font/poppins"
-            android:text="Clear all"
-            android:textColor="@color/primary" />
+            android:text="clear all"
+            android:textColor="@color/primary"
+            android:textSize="12sp" />
 
     </RelativeLayout>
 

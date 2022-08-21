@@ -1,5 +1,6 @@
 package com.code.pragati.ui.signUp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -70,8 +71,11 @@ class Invest : AppCompatActivity() {
 
         getStartedBtn.setOnClickListener {
             when(selectedRole) {
-                "angel" -> {}
-                "capitalist" -> {}
+                "angel" -> {
+                    startActivity(Intent(this, SignupAngels::class.java))
+                }
+                "capitalist" -> {
+                    startActivity(Intent(this, SignupVC::class.java))}
             }
         }
 

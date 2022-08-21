@@ -4,10 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.Toast
+import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -28,7 +25,7 @@ class LoginLayman : AppCompatActivity() {
     private lateinit var name: EditText
     private lateinit var getOTP: Button
     private lateinit var google: CardView
-    private lateinit var linkedIn: CardView
+    private lateinit var linkedIn: ImageButton
     private lateinit var social: CardView
     private lateinit var back: ImageView
 
@@ -45,7 +42,7 @@ class LoginLayman : AppCompatActivity() {
         name = findViewById(R.id.etNameLoginLeyMan)
         getOTP = findViewById(R.id.btnGetOTP)
         google = findViewById(R.id.cardLoginWithGoogle)
-        linkedIn = findViewById(R.id.cardLoginWithLinkedIn)
+        linkedIn = findViewById(R.id.ibLoginWithLinkedIn)
         social = findViewById(R.id.cardLoginWithSocial)
         back = findViewById(R.id.ivBackLoginLayman)
 
