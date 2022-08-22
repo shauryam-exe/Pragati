@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary"
+    tools:context=".ui.upload.ApplicantDetails">
+
+    <ImageView
+        android:id="@+id/bubbleTopLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/bubble_top"/>
+
+    <ImageView
+        android:layout_alignParentEnd="true"
+        android:id="@+id/bubbleTopRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="80dp"
+        android:elevation="32dp"
+        android:src="@drawable/bubble_top" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-40sp"
+        android:src="@drawable/curve_top_left" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-30sp"
+        android:layout_marginEnd="-20sp"
+        android:src="@drawable/curve_top_right" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-15dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_wave" />
+
+    <ImageView
+        android:id="@+id/bubbleBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bubble_bottom_right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-8dp" />
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bubbleBottomLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="48dp"
+        android:src="@drawable/bubble_bottom" />
+
+    <TextView
+        android:id="@+id/tvCreateApplicant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="60sp"
+        android:drawableRight="@drawable/ic_drop_up"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:letterSpacing="0.07"
+        android:text="Applicant Details"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCreate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCreateApplicant"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins"
+        android:text="Please fill this form to continue"
+        android:textColor="@color/white" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardApplicantDetails"
+        android:layout_below="@id/tvCreate2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="110sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="15sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13sp"
+                android:layout_marginEnd="10sp"
+                android:src="@drawable/ic_person" />
+
+            <EditText
+                android:id="@+id/etApplicantDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="15"
+                android:fontFamily="@font/poppins"
+                android:hint="Applicant Details"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:padding="12sp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardIdeaApplicant"
+        android:layout_below="@id/cardApplicantDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="30sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="15sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13sp"
+                android:layout_marginEnd="10sp"
+                android:src="@drawable/ic_idea" />
+
+            <EditText
+                android:id="@+id/etIdeaApplicant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="15"
+                android:fontFamily="@font/poppins"
+                android:hint="Idea name / Business name"
+                android:inputType="text"
+                android:scrollHorizontally="true"
+                android:maxLines="1"
+                android:textSize="16sp"
+                android:padding="12sp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+   <androidx.cardview.widget.CardView
+        android:id="@+id/cardWebsiteURLApplicant"
+        android:layout_below="@id/cardIdeaApplicant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="30sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="15sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13sp"
+                android:layout_marginEnd="10sp"
+                android:src="@drawable/ic_link" />
+
+            <EditText
+                android:id="@+id/etWesbiteURLApplicant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="15"
+                android:fontFamily="@font/poppins"
+                android:hint="Website URL (if any)"
+                android:inputType="text"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:textSize="16sp"
+                android:padding="12sp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinueApplicant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/imageView"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/custom_button_2"
+        android:elevation="20sp"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.13"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:padding="8sp"
+        android:shadowColor="@color/black"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+
+</RelativeLayout>
