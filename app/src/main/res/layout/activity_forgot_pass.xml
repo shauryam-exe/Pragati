@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.signUp.OTPVerification">
+
+    <ImageView
+        android:id="@+id/ivBackForgot"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20sp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="200sp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        app:cardElevation="10sp"
+        android:layout_width="100sp"
+        android:layout_height="100sp" >
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_marginStart="3sp"
+            android:src="@drawable/ic_mail_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins"
+        android:text="A six digit One-Time Password has been sent to your regsitered email address."
+        android:textColor="@color/grey" />
+
+    <TextView
+        android:id="@+id/tvIncorrectOTPForgot"
+        android:layout_marginHorizontal="45sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginBottom="-10sp"
+        android:text="Incorrect OTP"
+        android:textColor="@color/red"
+        android:fontFamily="@font/poppins"
+        android:drawablePadding="10sp"
+        android:drawableLeft="@drawable/ic_cross_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardOTPForgot"
+        android:layout_marginTop="15sp"
+        android:layout_marginStart="30sp"
+        android:layout_marginEnd="15sp"
+        android:layout_marginBottom="15sp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="15sp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        app:cardElevation="9sp"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/btnVerifyOTPForgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/ivStart"
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="10sp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_key"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etEnterOTPForgot"
+                android:layout_toEndOf="@id/ivStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:maxLength="6"
+                android:background="@null"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppins"
+                android:hint="Enter the OTP"
+                android:inputType="number"
+                android:layout_toStartOf="@id/ivCorrectOTPForgot"
+                android:maxLines="1"
+                android:padding="12dp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+            <ImageView
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/ivCorrectOTPForgot"
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="10sp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_green_tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnVerifyOTPForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="30sp"
+            android:background="@drawable/custom_button"
+            android:elevation="40sp"
+            android:fontFamily="@font/poppins"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:padding="8sp"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardNewPassForgot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginBottom="15sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="15sp"
+        app:cardElevation="9sp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13sp"
+                android:layout_marginEnd="10sp"
+                android:src="@drawable/ic_lock" />
+
+            <EditText
+                android:id="@+id/etNewPassForgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="15"
+                android:fontFamily="@font/poppins"
+                android:hint="New Password"
+                android:autofillHints="password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textSize="16sp"
+                android:padding="12sp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardConfirmPassForgot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginBottom="30sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="15sp"
+        app:cardElevation="9sp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13sp"
+                android:layout_marginEnd="10sp"
+                android:src="@drawable/ic_lock" />
+
+            <EditText
+                android:id="@+id/etConfirmPassForgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="15"
+                android:fontFamily="@font/poppins"
+                android:autofillHints="password"
+                android:hint="Re-enter new Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="12sp"
+                android:textSize="16sp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinueLoginForgot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30sp"
+        android:background="@drawable/custom_button"
+        android:elevation="20sp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.13"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:padding="8dp"
+        android:shadowColor="@color/black"
+        android:text="Continue to Login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+
+</LinearLayout>

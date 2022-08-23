@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/custom_button.xml" value="0.199" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/custom_button_2.xml" value="0.199" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_add.xml" value="0.2005" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.193" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_cross.xml" value="0.2015" />
@@ -28,11 +30,15 @@
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_send.xml" value="0.2005" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_student.xml" value="0.2015" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/round_button_bg.xml" value="0.2015" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_applicant_details.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_chat_inside.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_contact_us.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_fellow_credentials.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_fellow_credentials2.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_forgot_pass.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_founder_details.xml" value="0.21822916666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_home.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_idea_details.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_invest.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_login_leyman.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_login_others.xml" value="0.23229166666666667" />
@@ -47,6 +53,8 @@
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_signup_vc.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_splash.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_upload_pitch.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_upload_pitch_final.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_upload_your_pitch.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_who_are_you.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/custom_inbox_item.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/custom_message_item.xml" value="0.23229166666666667" />

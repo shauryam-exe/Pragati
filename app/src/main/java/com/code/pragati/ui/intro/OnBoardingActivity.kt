@@ -12,6 +12,7 @@ import android.widget.Button
 
 import android.text.Html
 import android.util.Log
+import androidx.appcompat.widget.AppCompatButton
 import com.code.pragati.R
 import com.code.pragati.ui.signUp.WhoAreYou
 
@@ -22,7 +23,7 @@ class OnBoardingActivity : AppCompatActivity() {
     private lateinit var dotsLayout: LinearLayout
     private lateinit var sliderAdapter: OnBoardingAdapter
     private lateinit var dots: Array<TextView?>
-    private lateinit var letsGetStarted: Button
+    private lateinit var letsGetStarted: AppCompatButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

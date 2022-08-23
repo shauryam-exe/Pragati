@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary"
+    tools:context=".ui.upload.UploadYourPitch">
+
+    <ImageView
+        android:id="@+id/bubbleTopLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/bubble_top"/>
+
+    <ImageView
+        android:layout_alignParentEnd="true"
+        android:id="@+id/bubbleTopRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="106dp"
+        android:elevation="32dp"
+        android:src="@drawable/bubble_top" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-40sp"
+        android:src="@drawable/curve_top_left" />
+
+    <ImageView
+        android:layout_marginTop="-30sp"
+        android:layout_marginEnd="-20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/curve_top_right" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_wave" />
+
+    <ImageView
+        android:id="@+id/bubbleBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bubble_bottom_right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-8dp" />
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bubbleBottomLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="52dp"
+        android:src="@drawable/bubble_bottom" />
+
+    <ImageView
+        android:id="@+id/bubbleBottomRightO"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="48dp"
+        android:src="@drawable/bubble_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60sp"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.06"
+        android:text="Upload Your Pitch"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCreate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCreate"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins"
+        android:text="Please fill this form to continue"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvApplicantDetails"
+            android:text="Applicant Details"
+            android:textColor="@color/white"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="40dp"
+            android:textSize="27sp"
+            android:drawableRight="@drawable/ic_drop_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvBusinessDetails"
+            android:text="Business Details"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="40dp"
+            android:textSize="27sp"
+            android:drawableRight="@drawable/ic_drop_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvFounderDetails"
+            android:text="Founder Details"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="40dp"
+            android:textSize="27sp"
+            android:drawableRight="@drawable/ic_drop_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvVideoPresent"
+            android:layout_marginTop="10dp"
+            android:text="Video Presentation"
+            android:textColor="@color/white"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="40dp"
+            android:textSize="27sp"
+            android:drawableRight="@drawable/ic_drop_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnShareIdea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/imageView"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/custom_button_2"
+        android:elevation="20sp"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.13"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:padding="8sp"
+        android:shadowColor="@color/black"
+        android:text="Share Your Idea"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+
+</RelativeLayout>

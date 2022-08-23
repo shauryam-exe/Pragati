@@ -36,5 +36,9 @@ class LoginOthers : AppCompatActivity() {
             startActivity(Intent(this, HomeActivity::class.java))
         }
 
+        forgotPass.setOnClickListener {
+            startActivity(Intent(this, ForgotPass::class.java))
+        }
+
     }
 }
