@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EditProfile">
+
+    <ImageView
+        android:id="@+id/ivBackEdit"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/ivBackEdit"
+        android:fontFamily="@font/poppins"
+        android:text="Edit Profile"
+        android:layout_marginHorizontal="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civProfile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/ivBackEdit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:alpha="0.4"
+        android:src="@drawable/pic"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="3dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabChangeProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/civProfile"
+        android:enabled="false"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="-50dp"
+        android:layout_toEndOf="@id/civProfile"
+        android:src="@drawable/ic_vector_5"
+        app:borderWidth="3dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fabChangeProfile"
+        android:layout_marginVertical="40dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="15sp"
+            android:layout_marginEnd="30sp"
+            android:layout_marginBottom="15sp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            app:cardCornerRadius="15sp"
+            app:cardElevation="9sp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_lock" />
+
+                <EditText
+                    android:id="@+id/etEnterCurrentPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/ivCorrectPass"
+                    android:layout_toEndOf="@id/ivStart"
+                    android:autofillHints="password"
+                    android:background="@null"
+                    android:ems="15"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Enter your current password"
+                    android:inputType="text"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:textColor="@color/grey"
+                    android:textColorHint="@color/grey"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivCorrectPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_green_tick" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginBottom="15sp"
+            android:alpha="0.4"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            app:cardCornerRadius="15sp"
+            app:cardElevation="9sp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="13sp"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_person" />
+
+                <EditText
+                    android:id="@+id/etUsernameEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="username"
+                    android:background="@null"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="12sp"
+                    android:textColor="@color/grey"
+                    android:textColorHint="@color/grey"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginBottom="15sp"
+            android:alpha="0.4"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            app:cardCornerRadius="15sp"
+            app:cardElevation="9sp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="13sp"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_message" />
+
+                <EditText
+                    android:id="@+id/etEmailEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="emailAddress"
+                    android:background="@null"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:padding="12sp"
+                    android:textColor="@color/grey"
+                    android:textColorHint="@color/grey"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginBottom="30sp"
+            android:alpha="0.4"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            app:cardCornerRadius="15sp"
+            app:cardElevation="9sp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="13sp"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_lock" />
+
+                <EditText
+                    android:id="@+id/etNewPassEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:fontFamily="@font/poppins"
+                    android:hint="New Password"
+                    android:autofillHints="password"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textSize="16sp"
+                    android:padding="12sp"
+                    android:textColor="@color/grey"
+                    android:textColorHint="@color/grey" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveNewDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="80dp"
+        android:alpha="0.3"
+        android:background="@drawable/custom_button"
+        android:elevation="20sp"
+        android:enabled="false"
+        android:fontFamily="@font/poppins"
+        android:letterSpacing="0.13"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:padding="8dp"
+        android:shadowColor="@color/black"
+        android:text="Save New Details"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+
+</RelativeLayout>

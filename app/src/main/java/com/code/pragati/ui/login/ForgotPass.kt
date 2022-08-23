@@ -3,10 +3,11 @@ package com.code.pragati.ui.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
+import android.telephony.SmsManager
+import android.text.Editable
+import android.text.TextWatcher
+import android.view.View
+import android.widget.*
 import androidx.appcompat.widget.AppCompatButton
 import com.code.pragati.R
 
@@ -19,7 +20,6 @@ class ForgotPass : AppCompatActivity() {
     private lateinit var newPass : EditText
     private lateinit var confirmPass : EditText
     private lateinit var continueLogin : AppCompatButton
-    private lateinit var verify : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +32,9 @@ class ForgotPass : AppCompatActivity() {
         newPass = findViewById(R.id.etNewPassForgot)
         confirmPass = findViewById(R.id.etConfirmPassForgot)
         continueLogin = findViewById(R.id.btnContinueLoginForgot)
-        verify = findViewById(R.id.btnVerifyOTPForgot)
+
+        correctOtp.visibility = View.INVISIBLE
+        incorrectOtp.visibility = View.INVISIBLE
 
         back.setOnClickListener{
             onBackPressed()
@@ -42,13 +44,39 @@ class ForgotPass : AppCompatActivity() {
             startActivity(Intent(this, LoginOthers::class.java))
         }
 
-        verify.setOnClickListener {
-            verifyOtp()
-        }
+//        val otp = intent.getStringExtra("otp")
+//        verifyOtp(otp!!)
+//        Toast.makeText(this, "OTP after intent is : $otp", Toast.LENGTH_LONG).show()
 
     }
 
-    private fun verifyOtp() {
+    private fun verifyOtp(otp : String) {
+
+        enterOtp.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+//                TODO("Not yet implemented")
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+//                TODO("Not yet implemented")
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                if(p0?.length == 6){
+                    if (p0.equals(otp)){
+                        newPass.isEnabled = true
+                        newPass.alpha = 1f
+                        confirmPass.alpha = 1f
+                        continueLogin.alpha = 1f
+                        confirmPass.isEnabled = true
+                        continueLogin.isEnabled = true
+                        correctOtp.visibility = View.VISIBLE
+                    } else {
+                        incorrectOtp.visibility = View.VISIBLE
+                    }
+                }
+            }
+        })
 
     }
 }
