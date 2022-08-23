@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".EditProfile">
 
     <ImageView
@@ -18,14 +18,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="15dp"
         android:layout_toEndOf="@id/ivBackEdit"
         android:fontFamily="@font/poppins"
         android:text="Edit Profile"
-        android:layout_marginHorizontal="20dp"
-        android:textStyle="bold"
         android:textColor="@color/black"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civProfile"
@@ -39,22 +39,22 @@
         app:civ_border_color="@color/white"
         app:civ_border_width="3dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabChangeProfile"
+    <ImageButton
+        android:id="@+id/ibChangeProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/civProfile"
-        android:enabled="false"
+        android:background="@drawable/ic_edit_circled"
+        android:alpha="0.4"
         android:layout_marginStart="-50dp"
         android:layout_marginTop="-50dp"
         android:layout_toEndOf="@id/civProfile"
-        android:src="@drawable/ic_vector_5"
         app:borderWidth="3dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/fabChangeProfile"
+        android:layout_below="@id/ibChangeProfile"
         android:layout_marginVertical="40dp"
         android:orientation="vertical">
 
@@ -133,14 +133,16 @@
             app:cardCornerRadius="15sp"
             app:cardElevation="9sp">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/second"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
                     android:layout_gravity="center"
                     android:layout_marginStart="13sp"
                     android:layout_marginEnd="10sp"
@@ -150,6 +152,8 @@
                     android:id="@+id/etUsernameEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/ivChangeUsername"
+                    android:layout_toEndOf="@id/second"
                     android:autofillHints="username"
                     android:background="@null"
                     android:ems="15"
@@ -163,7 +167,18 @@
                     android:textColorHint="@color/grey"
                     android:textSize="16sp" />
 
-            </LinearLayout>
+                <ImageView
+                    android:id="@+id/ivChangeUsername"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_edit_circled" />
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -179,14 +194,16 @@
             app:cardCornerRadius="15sp"
             app:cardElevation="9sp">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/third"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
                     android:layout_gravity="center"
                     android:layout_marginStart="13sp"
                     android:layout_marginEnd="10sp"
@@ -196,6 +213,8 @@
                     android:id="@+id/etEmailEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/ivChangeMail"
+                    android:layout_toEndOf="@id/third"
                     android:autofillHints="emailAddress"
                     android:background="@null"
                     android:ems="15"
@@ -209,7 +228,18 @@
                     android:textColorHint="@color/grey"
                     android:textSize="16sp" />
 
-            </LinearLayout>
+                <ImageView
+                    android:id="@+id/ivChangeMail"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_edit_circled" />
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -225,14 +255,16 @@
             app:cardCornerRadius="15sp"
             app:cardElevation="9sp">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/fourth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
                     android:layout_gravity="center"
                     android:layout_marginStart="13sp"
                     android:layout_marginEnd="10sp"
@@ -242,21 +274,33 @@
                     android:id="@+id/etNewPassEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/ivChangePass"
+                    android:layout_toEndOf="@id/fourth"
+                    android:autofillHints="password"
                     android:background="@null"
                     android:ems="15"
                     android:enabled="false"
                     android:fontFamily="@font/poppins"
                     android:hint="New Password"
-                    android:autofillHints="password"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:textSize="16sp"
                     android:padding="12sp"
                     android:textColor="@color/grey"
-                    android:textColorHint="@color/grey" />
+                    android:textColorHint="@color/grey"
+                    android:textSize="16sp" />
 
-            </LinearLayout>
+                <ImageView
+                    android:id="@+id/ivChangePass"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_edit_circled" />
 
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>

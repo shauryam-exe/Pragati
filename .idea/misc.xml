@@ -10,6 +10,7 @@
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.199" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_cross.xml" value="0.2015" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_cross_primary.xml" value="0.2015" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_drawer.xml" value="0.199" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_ellipse_19.xml" value="0.104" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_green_online.xml" value="0.193" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_grey_offline.xml" value="0.193" />
@@ -63,9 +64,12 @@
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/custom_notification_item.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/fragment_inbox.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/fragment_notification.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/fragment_profile.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/fragment_search.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/intro_screen_container.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/ustom_search_item.xml" value="0.1905982905982906" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/menu/bottom_menu.xml" value="0.1905982905982906" />
+        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/menu/drawer_menu.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/drawable/bubble_bottom_left.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/drawable/bubble_bottom_right.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/drawable/curve_top_left.xml" value="0.26614583333333336" />

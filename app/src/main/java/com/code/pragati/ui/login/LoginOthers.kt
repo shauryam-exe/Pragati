@@ -37,8 +37,8 @@ class LoginOthers : AppCompatActivity() {
             startActivity(Intent(this, HomeActivity::class.java))
         }
 
-//        forgotPass.setOnClickListener {
-//
+        forgotPass.setOnClickListener {
+
 //            val otp = (100000..999999).random().toString()
 //            Toast.makeText(this, "OTP is : $otp", Toast.LENGTH_SHORT).show()
 //
@@ -53,11 +53,11 @@ class LoginOthers : AppCompatActivity() {
 //            )
 //            intent.type = "message/rfc882"
 //            startActivity(intent)
-//
-//            val intent2 = Intent(this, ForgotPass::class.java)
+
+            val intent2 = Intent(this, ForgotPass::class.java)
 //            intent2.putExtra("otp", otp)
-//            startActivity(intent2)
-//        }
+            startActivity(intent2)
+        }
 
     }
 }

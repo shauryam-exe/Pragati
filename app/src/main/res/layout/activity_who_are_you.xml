@@ -7,18 +7,31 @@
     tools:context=".ui.signUp.WhoAreYou">
 
     <TextView
-        android:id="@+id/tvWhatBring"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvWhatBring2"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80sp"
+        android:layout_marginStart="40sp"
         android:layout_marginTop="45sp"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:letterSpacing="0.13"
+        android:text="WELCOME,"
+        android:textColor="@color/primary"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvWhatBring"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWhatBring2"
+        android:layout_marginStart="40sp"
         android:fontFamily="@font/poppins"
         android:gravity="end"
         android:letterSpacing="0.13"
-        android:text="What\nbrings\nyou\nhere?"
+        android:text="What\nbrings you\nto Pragati?"
         android:textColor="@color/primary"
-        android:textSize="26sp"
-        android:textStyle="bold" />
+        android:textSize="20sp" />
 
     <ImageView
         android:layout_width="150sp"
@@ -128,10 +141,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginVertical="20sp"
+                android:layout_marginVertical="15dp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="Startup Pitch"
+                android:text="Share My Idea Pitch"
                 android:textColor="@color/black" />
 
         </LinearLayout>

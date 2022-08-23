@@ -26,6 +26,7 @@ class Search : Fragment() {
 
     private lateinit var search : EditText
     private lateinit var searchIcon : ImageView
+    private lateinit var crossIcon : ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,13 +36,16 @@ class Search : Fragment() {
 
         search = layout.findViewById(R.id.etSearch)
         searchIcon = layout.findViewById(R.id.ivSearchFragment)
+        crossIcon = layout.findViewById(R.id.ivSearchFragmentCross)
 
         //To change the image
         search.setOnFocusChangeListener { _, hasFocus ->
             if (hasFocus){
-                searchIcon.setImageResource(R.drawable.ic_cross)
+                searchIcon.visibility = View.GONE
+                crossIcon.visibility = View.VISIBLE
             } else {
-                searchIcon.setImageResource(R.drawable.ic_baseline_arrow_back_24)
+                searchIcon.visibility = View.VISIBLE
+                crossIcon.visibility = View.GONE
             }
         }
 

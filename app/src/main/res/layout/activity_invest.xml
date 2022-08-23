@@ -20,21 +20,20 @@
         android:id="@+id/tvInvest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80sp"
-        android:layout_marginTop="75sp"
+        android:layout_marginStart="55sp"
+        android:layout_marginTop="55sp"
         android:fontFamily="@font/poppins"
         android:gravity="end"
         android:letterSpacing="0.13"
-        android:text="What\nbrings\nyou\nhere?\ndfhsb\nrttbtr"
+        android:text="Help Us\nKnow\nMore\nAbout\nYou"
         android:textColor="@color/primary"
-        android:textSize="26sp"
-        android:textStyle="bold" />
+        android:textSize="26sp" />
 
     <ImageView
         android:layout_width="200sp"
         android:layout_height="200sp"
         android:layout_marginStart="32sp"
-        android:layout_marginTop="75sp"
+        android:layout_marginTop="45sp"
         android:layout_marginEnd="40sp"
         android:layout_marginBottom="20sp"
         android:layout_toEndOf="@id/tvInvest"
