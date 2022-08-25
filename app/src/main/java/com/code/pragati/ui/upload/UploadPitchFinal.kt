@@ -35,7 +35,6 @@ class UploadPitchFinal : AppCompatActivity() {
             val videoInfo = intent.getParcelableExtra<VideoInfo>("videoInfo")
             val video = intent.getParcelableExtra<Video>("video")
             video!!.uri = videoUri
-
             val intent = Intent(this, UploadYourPitch::class.java)
             intent.putExtra("videoInfo",videoInfo)
             intent.putExtra("video",video)
