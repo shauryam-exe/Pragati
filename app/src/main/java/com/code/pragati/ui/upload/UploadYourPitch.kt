@@ -1,14 +1,27 @@
 package com.code.pragati.ui.upload
 
+import android.app.ProgressDialog
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.webkit.MimeTypeMap
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
-import com.cloudinary.android.MediaManager
 import com.code.pragati.R
+import com.code.pragati.model.Video
+import com.google.android.gms.tasks.OnFailureListener
+import com.google.android.gms.tasks.OnSuccessListener
+import com.google.android.gms.tasks.Task
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.UploadTask
+import java.lang.Exception
+
 
 class UploadYourPitch : AppCompatActivity() {
 
@@ -17,6 +30,8 @@ class UploadYourPitch : AppCompatActivity() {
     private lateinit var ideaDetails: TextView
     private lateinit var uploadPitchFinal: TextView
     private lateinit var shareIdea: AppCompatButton
+
+    private lateinit var progressDialog: ProgressDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +46,11 @@ class UploadYourPitch : AppCompatActivity() {
         ideaDetails = findViewById(R.id.tvBusinessDetails)
         uploadPitchFinal = findViewById(R.id.tvVideoPresent)
         shareIdea = findViewById(R.id.btnShareIdea)
+
+        progressDialog = ProgressDialog(this)
+        progressDialog.setTitle("Please Wait")
+        progressDialog.setMessage("Video Uploading")
+        progressDialog.setCanceledOnTouchOutside(false)
 
         applicantDetails.setOnClickListener {
             startActivity(Intent(this, ApplicantDetails::class.java))
@@ -49,21 +69,100 @@ class UploadYourPitch : AppCompatActivity() {
 //            startActivity(Intent(this, UploadPitchFinal::class.java))
 //        }
 
-        val intent = intent.extras
-        if (intent != null){
-            applicantDetails.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_white_tick, 0)
-            founderDetails.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_white_tick, 0)
-            uploadPitchFinal.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_white_tick, 0)
+        val intent1 = intent.extras
+        if (intent1 != null) {
+            applicantDetails.setCompoundDrawablesWithIntrinsicBounds(
+                0,
+                0,
+                R.drawable.ic_white_tick,
+                0
+            )
+            founderDetails.setCompoundDrawablesWithIntrinsicBounds(
+                0,
+                0,
+                R.drawable.ic_white_tick,
+                0
+            )
+            uploadPitchFinal.setCompoundDrawablesWithIntrinsicBounds(
+                0,
+                0,
+                R.drawable.ic_white_tick,
+                0
+            )
             ideaDetails.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_white_tick, 0)
             shareIdea.visibility = View.VISIBLE
 
+
+            val video = intent.getParcelableExtra<Video>("video")
+
             shareIdea.isEnabled = true
             shareIdea.setOnClickListener {
-                Toast.makeText(this,"Sharing your idea with the world",Toast.LENGTH_SHORT).show()
+
+                Toast.makeText(this, "Sharing your idea with the world", Toast.LENGTH_SHORT).show()
+                uploadVideo(video!!)
             }
         } else {
             shareIdea.visibility = View.GONE
         }
 
+    }
+
+    private fun uploadVideo(video: Video) {
+        progressDialog.show()
+
+        val timestamp = System.currentTimeMillis()
+
+        val filePath = "Videos/video_$timestamp"
+
+//        val storageReference = FirebaseStorage.getInstance().getReference(filePath)
+//        storageReference.putFile(video.uri!!)
+//            .addOnSuccessListener(object: OnSuccessListener<UploadTask.TaskSnapshot> {
+//                override fun onSuccess(p0: UploadTask.TaskSnapshot?) {
+//                   Log.d("done", "done")
+//                }
+//            }).addOnFailureListener(object: OnFailureListener{
+//                override fun onFailure(p0: Exception) {
+//                    Log.d("done", "done")
+//                }
+//
+//            })
+
+        val reference = FirebaseStorage.getInstance()
+            .reference.child("/videos/" + System.currentTimeMillis() + "." + getfiletype(video.uri))
+//        reference.putFile(video.uri!!).addOnSuccessListener {
+            reference.putFile(video.uri!!).addOnSuccessListener { taskSnapshot ->
+                val uriTask: Task<Uri> = taskSnapshot.storage.downloadUrl
+//                while (!uriTask.isSuccessful);
+                // get the link of video
+                val downloadUri: String = uriTask.result.toString()
+                val reference1 = FirebaseDatabase.getInstance().getReference("Video")
+                val map: HashMap<String, String> = HashMap()
+                map["videolink"] = downloadUri
+                reference1.child("" + System.currentTimeMillis()).setValue(map)
+                // Video uploaded successfully
+                // Dismiss dialog
+                progressDialog.dismiss()
+                Toast.makeText(this@UploadYourPitch, "Video Uploaded!!", Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener { e -> // Error, Image not uploaded
+                progressDialog.dismiss()
+                Toast.makeText(this@UploadYourPitch, "Failed " + e.message, Toast.LENGTH_SHORT)
+                    .show()
+            }.addOnProgressListener { taskSnapshot ->
+                // Progress Listener for loading
+                // percentage on the dialog box
+                // show the progress bar
+                val progress = 100.0 * taskSnapshot.bytesTransferred / taskSnapshot.totalByteCount
+                progressDialog.setMessage("Uploaded " + progress.toInt() + "%")
+                progressDialog.dismiss()
+            }
+//        }
+    }
+
+    private fun getfiletype(uri: Uri?): String {
+        val r = contentResolver
+        // get the file type ,in this case its mp4
+        // get the file type ,in this case its mp4
+        val mimeTypeMap = MimeTypeMap.getSingleton()
+        return mimeTypeMap.getExtensionFromMimeType(r.getType(uri!!))!!
     }
 }

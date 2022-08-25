@@ -10,6 +10,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
+import com.cloudinary.android.MediaManager
 import com.code.pragati.R
 import com.code.pragati.ui.signUp.WhoAreYou
 
@@ -31,6 +32,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.statusBarColor = ContextCompat.getColor(this, R.color.primary_light)
+        MediaManager.init(this)
 
         setContentView(R.layout.activity_splash)
 
