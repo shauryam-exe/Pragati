@@ -32,7 +32,7 @@ class ApplicantDetails : AppCompatActivity() {
         continueBtn.setOnClickListener {
             getDetails()
             val videoInfo = VideoInfo(website = website)
-            val video = Video(name = idea)
+            val video = Video(ideaName = idea)
             intent = Intent(this,IdeaDetails::class.java)
             intent.putExtra("videoInfo",videoInfo)
             intent.putExtra("video",video)

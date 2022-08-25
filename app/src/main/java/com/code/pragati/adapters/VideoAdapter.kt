@@ -40,7 +40,6 @@ class VideoAdapter(val videoItems: ArrayList<VideoItem>) :
 
     var list = arrayListOf<VideoItem>()
 
-
     class VideoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val videoView = itemView.findViewById<VideoView>(R.id.pitchVideo)
         val ideaName = itemView.findViewById<TextView>(R.id.ideaName)
