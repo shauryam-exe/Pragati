@@ -50,7 +50,6 @@
                 <TextView
                     android:id="@+id/tvTypeProfile"
                     android:text="Investor"
-                    android:textColor="?android:textColorPrimary"
                     android:textStyle="bold"
                     android:textSize="15sp"
                     android:layout_width="wrap_content"
@@ -79,9 +78,9 @@
                         <ImageView
                             android:layout_gravity="center"
                             android:layout_marginEnd="3sp"
-                            android:src="@drawable/ic_google"
-                            android:layout_width="30sp"
-                            android:layout_height="30sp" />
+                            android:src="@drawable/ic_calendly"
+                            android:layout_width="40sp"
+                            android:layout_height="40sp" />
 
                     </androidx.cardview.widget.CardView>
 
@@ -143,10 +142,10 @@
 
             <HorizontalScrollView
                 android:id="@+id/scrollTabs"
-                android:layoutDirection="ltr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/civPhotoProfile">
+                android:layout_below="@id/civPhotoProfile"
+                android:layoutDirection="ltr">
 
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/tabs"

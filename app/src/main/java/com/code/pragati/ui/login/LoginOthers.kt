@@ -1,15 +1,19 @@
 package com.code.pragati.ui.login
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.code.pragati.HomeActivity
 import com.code.pragati.R
 import com.code.pragati.ui.signUp.WhoAreYou
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginOthers : AppCompatActivity() {
 
@@ -18,6 +22,7 @@ class LoginOthers : AppCompatActivity() {
     private lateinit var forgotPass: TextView
     private lateinit var signUp: TextView
     private lateinit var loginBtn: AppCompatButton
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,13 +33,14 @@ class LoginOthers : AppCompatActivity() {
         forgotPass = findViewById(R.id.tvForgotPassword)
         signUp = findViewById(R.id.tvSignup)
         loginBtn = findViewById(R.id.btnLoginOthers)
+        firebaseAuth = FirebaseAuth.getInstance()
 
         signUp.setOnClickListener {
             startActivity(Intent(this, WhoAreYou::class.java))
         }
 
         loginBtn.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
+            loginUser()
         }
 
         forgotPass.setOnClickListener {
@@ -60,4 +66,37 @@ class LoginOthers : AppCompatActivity() {
         }
 
     }
+
+    private fun loginUser() {
+        val emailText = email.text.toString().trim()
+        val passwordText = password.text.toString().trim()
+
+        if (TextUtils.isEmpty(emailText) || TextUtils.isEmpty(passwordText)) {
+            val alert = AlertDialog.Builder(this)
+            alert.setTitle("Login failed!!")
+                .setMessage("Fill all credentials first.")
+                .setPositiveButton("Okay"){_,_-> }
+                .create()
+                .show()
+        } else {
+            val progressBar = ProgressDialog(this)
+            progressBar.setMessage("Logging in..")
+            progressBar.show()
+
+            firebaseAuth.signInWithEmailAndPassword(emailText, passwordText).addOnCompleteListener { task ->
+                progressBar.dismiss()
+                if(task.isSuccessful) {
+                    if(firebaseAuth.currentUser!!.isEmailVerified){
+                        startActivity(Intent(this, HomeActivity::class.java))
+                    } else {
+                        Toast.makeText(this, "Email is not verified yet.", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    Toast.makeText(this, task.exception?.message.toString(), Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
+    }
+
 }

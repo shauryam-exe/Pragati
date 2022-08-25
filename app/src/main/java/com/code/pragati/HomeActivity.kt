@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.code.pragati.fragments.Inbox
-import com.code.pragati.fragments.NotificationFragment
-import com.code.pragati.fragments.Profile
-import com.code.pragati.fragments.Search
+import com.code.pragati.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -24,15 +21,13 @@ class HomeActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> {
-                    selectorFragment = Search()
+                    selectorFragment = HomeFragment()
                 }
                 R.id.message -> {
                     selectorFragment = Inbox()
                 }
                 R.id.pitch -> {
-                    Toast.makeText(this, "pitch hai", Toast.LENGTH_SHORT).show()
-                    selectorFragment = Inbox()
-//                    TODO("change")
+                    selectorFragment = PitchFragment()
                 }
                 R.id.notification -> {
                     selectorFragment = NotificationFragment()
