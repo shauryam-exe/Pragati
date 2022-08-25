@@ -92,9 +92,7 @@ class SignupStudent : AppCompatActivity() {
                                 .addOnCompleteListener { task1 ->
                                     progressBar.dismiss()
                                     if (task1.isSuccessful) {
-                                        Toast.makeText(this, "Hogya bhau", Toast.LENGTH_SHORT).show()
                                         sendVerificationMail()
-
                                     } else {
                                         Toast.makeText(
                                             this,

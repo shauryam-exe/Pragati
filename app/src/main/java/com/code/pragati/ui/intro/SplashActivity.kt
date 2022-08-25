@@ -11,6 +11,7 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import com.code.pragati.R
+import com.code.pragati.ui.login.LoginOthers
 import com.code.pragati.ui.signUp.WhoAreYou
 
 class SplashActivity : AppCompatActivity() {
@@ -57,8 +58,7 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed({
 
             onBoardingScreen = getSharedPreferences("onBoardingScreen", MODE_PRIVATE)
-            var isFirstTime = onBoardingScreen.getBoolean("firstTime", true)
-
+            val isFirstTime = onBoardingScreen.getBoolean("firstTime", true)
 
             if (isFirstTime) {
                 val editor = onBoardingScreen.edit()
@@ -68,8 +68,7 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(this, OnBoardingActivity::class.java))
                 finish()
             } else {
-                Log.d("check for errors","Else working in Splash")
-                startActivity(Intent(this, WhoAreYou::class.java))
+                startActivity(Intent(this, LoginOthers::class.java))
                 finish()
             }
         }, splashDisplayLength)
