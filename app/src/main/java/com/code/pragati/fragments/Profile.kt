@@ -5,20 +5,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.HorizontalScrollView
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.Toast
+import android.widget.*
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.code.pragati.EditProfile
 import com.code.pragati.R
+import com.code.pragati.model.User
+import com.code.pragati.ui.login.LoginOthers
 import com.code.pragati.ui.upload.UploadPSFinal
 import com.code.pragati.ui.upload.UploadYourPitch
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -45,6 +49,9 @@ class Profile : Fragment() {
     private lateinit var uploadPS: FloatingActionButton
     private lateinit var uploadPitch: FloatingActionButton
     private lateinit var linearLayout: LinearLayout
+    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var name : TextView
+    private lateinit var type : TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -61,6 +68,9 @@ class Profile : Fragment() {
         linearLayout = layout.findViewById(R.id.llLayoutProfile)
         uploadPS = layout.findViewById(R.id.fabUploadPS)
         uploadPitch = layout.findViewById(R.id.fabUploadPitch)
+        firebaseAuth = FirebaseAuth.getInstance()
+        name = layout.findViewById(R.id.tvNameProfile)
+        type = layout.findViewById(R.id.tvTypeProfile)
 
         linearLayout.tag = "close"
 
@@ -113,11 +123,8 @@ class Profile : Fragment() {
                     this.drawerLayout.tag = "Close"
                 }
                 R.id.logout -> {
-                    Toast.makeText(
-                        context,
-                        "Aaj yeh chhod k chla jainga...kl baithke use kr roinga...han meri jaaan",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                   firebaseAuth.signOut()
+                    startActivity(Intent(context, LoginOthers::class.java))
                     this.drawerLayout.closeDrawer(GravityCompat.START)
                     this.drawerLayout.tag = "Close"
                 }
@@ -161,7 +168,27 @@ class Profile : Fragment() {
             }
         })
 
+        getInfo()
+
         return layout
+    }
+
+    private fun getInfo() {
+
+        FirebaseDatabase.getInstance().reference.child("Users").child("Student").child(firebaseAuth.currentUser!!.uid)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val user = snapshot.getValue(User::class.java)
+                   name.text = user?.Name
+                   type.text = "Student"
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+            })
+
+
     }
 
 
