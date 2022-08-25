@@ -1,6 +1,7 @@
 package com.code.pragati.ui.upload
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.code.pragati.R
 import com.code.pragati.model.Video
+import com.code.pragati.model.VideoInfo
 
 class UploadPitchFinal : AppCompatActivity() {
 
@@ -17,7 +19,8 @@ class UploadPitchFinal : AppCompatActivity() {
     private lateinit var cardUpload: CardView
     private lateinit var uploadVideoView: VideoView
     private lateinit var continueBtn: Button
-    private lateinit var video: Video
+
+    var videoUri: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,8 +32,13 @@ class UploadPitchFinal : AppCompatActivity() {
         continueBtn = findViewById(R.id.btnContinueUpload)
 
         continueBtn.setOnClickListener {
+            val videoInfo = intent.getParcelableExtra<VideoInfo>("videoInfo")
+            val video = intent.getParcelableExtra<Video>("video")
+            video!!.uri = videoUri
+
             val intent = Intent(this, UploadYourPitch::class.java)
-            intent.putExtra("a", video)
+            intent.putExtra("videoInfo",videoInfo)
+            intent.putExtra("video",video)
             startActivity(intent)
         }
 
@@ -50,9 +58,7 @@ class UploadPitchFinal : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 1) {
-            val videoUri = data?.data
-            video = Video(videoUri!!, null)
-//            video.uri = videoUri!!
+            videoUri = data?.data
 
             cardUpload.visibility = View.INVISIBLE
 

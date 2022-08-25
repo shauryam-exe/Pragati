@@ -3,15 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/custom_button.xml" value="0.199" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/custom_button_2.xml" value="0.199" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/custom_tag_button.xml" value="0.1995" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_add.xml" value="0.2005" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.193" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.199" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_cross.xml" value="0.2015" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_cross_primary.xml" value="0.2015" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_drawer.xml" value="0.199" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_ellipse_19.xml" value="0.104" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_green_online.xml" value="0.193" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_grey_offline.xml" value="0.193" />
@@ -23,29 +17,17 @@
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_investor_black.xml" value="0.2015" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_investor_clicked.xml" value="0.2015" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_iphone.xml" value="0.2015" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_link.xml" value="0.1995" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_linkedin.xml" value="0.2005" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_linkedin_small.xml" value="0.1995" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_person.xml" value="0.2015" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_saved.xml" value="0.2005" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_search.xml" value="0.2005" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_search_better.xml" value="0.2005" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_search_clicked.xml" value="0.2005" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_search_grey.xml" value="0.2005" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_send.xml" value="0.2005" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_settings.xml" value="0.1995" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/ic_student.xml" value="0.2015" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/drawable/round_button_bg.xml" value="0.2015" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_applicant_details.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_chat_inside.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_contact_us.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_edit_profile.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_fellow_credentials.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_fellow_credentials2.xml" value="0.21822916666666667" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_forgot_pass.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_founder_details.xml" value="0.21822916666666667" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_home.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_idea_details.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_invest.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_login_leyman.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_login_others.xml" value="0.23229166666666667" />
@@ -59,27 +41,21 @@
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_signup_student.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_signup_vc.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_splash.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_uplaod_psfinal.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_upload_pitch.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_upload_pitch_final.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_upload_your_pitch.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/activity_who_are_you.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/custom_inbox_item.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/custom_message_item.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/custom_notification_item.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/fragment_inbox.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/fragment_notification.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/fragment_profile.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/fragment_search.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/intro_screen_container.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/tag_layout.xml" value="0.264" />
         <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/layout/ustom_search_item.xml" value="0.1905982905982906" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/menu/bottom_menu.xml" value="0.1905982905982906" />
-        <entry key="..\:/Users/abans/AndroidStudioProjects/PragatiB/app/src/main/res/menu/drawer_menu.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/drawable/bubble_bottom_left.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/drawable/bubble_bottom_right.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/drawable/curve_top_left.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/drawable/curve_top_right.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/drawable/custom_tag_button.xml" value="0.149" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/drawable/ic_bottom_wave.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/drawable/ic_logo.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/drawable/ic_pragati_text.xml" value="0.26614583333333336" />
@@ -87,24 +63,32 @@
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/drawable/logo.xml" value="0.264" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/drawable/round_button_bg.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/font/poppins.xml" value="0.15729166666666666" />
+        <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_applicant_details.xml" value="0.264" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_chat_inside.xml" value="0.17798913043478262" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_contact_us.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_idea_details.xml" value="0.264" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_invest.xml" value="0.264" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_login_leyman.xml" value="0.17798913043478262" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_login_others.xml" value="0.2" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_on_boarding.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_signup_angels.xml" value="0.264" />
+        <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_signup_fellow2.xml" value="0.264" />
+        <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_signup_vc.xml" value="0.4" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_splash.xml" value="0.264" />
+        <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_upload_pitch_final.xml" value="0.6" />
+        <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_upload_your_pitch.xml" value="0.16530797101449277" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/activity_who_are_you.xml" value="0.176" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/fragment_on_boarding.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/intro_layout1.xml" value="0.17798913043478262" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/intro_layout2.xml" value="0.25" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/intro_screen_container.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/splash_screen_container.xml" value="0.264" />
+        <entry key="..\:/Users/saxen/AndroidStudioProjects/Pragati/app/src/main/res/layout/tag_layout.xml" value="0.5901639344262295" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

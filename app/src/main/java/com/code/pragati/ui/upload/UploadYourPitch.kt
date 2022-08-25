@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.cloudinary.android.MediaManager
@@ -34,6 +35,7 @@ class UploadYourPitch : AppCompatActivity() {
         applicantDetails.setOnClickListener {
             startActivity(Intent(this, ApplicantDetails::class.java))
         }
+        shareIdea.isEnabled = false
 
 //        founderDetails.setOnClickListener {
 //            startActivity(Intent(this, FounderDetails::class.java))
@@ -54,6 +56,11 @@ class UploadYourPitch : AppCompatActivity() {
             uploadPitchFinal.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_white_tick, 0)
             ideaDetails.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_white_tick, 0)
             shareIdea.visibility = View.VISIBLE
+
+            shareIdea.isEnabled = true
+            shareIdea.setOnClickListener {
+                Toast.makeText(this,"Sharing your idea with the world",Toast.LENGTH_SHORT).show()
+            }
         } else {
             shareIdea.visibility = View.GONE
         }
