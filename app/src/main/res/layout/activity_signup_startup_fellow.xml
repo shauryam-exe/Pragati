@@ -79,7 +79,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tvCreate2"
+        android:id="@+id/uploadPitchVideoView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvCreate"
@@ -90,7 +90,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardFullNameStartupFellow"
-        android:layout_below="@id/tvCreate2"
+        android:layout_below="@id/uploadPitchVideoView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
