@@ -41,7 +41,7 @@ class HomeActivity : AppCompatActivity() {
 
             return@setOnNavigationItemSelectedListener true
         }
-        supportFragmentManager.beginTransaction().replace(R.id.container, Search()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.container, HomeFragment()).commit()
 
     }
 }
