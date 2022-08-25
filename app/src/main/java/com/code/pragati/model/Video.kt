@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Video(
     var uri: Uri? = null,
-    var tags: Array<String>? = null,
+//    var tags: Array<String>? = null,
     var ask: String = "",
     var name: String = "",
 ) : Parcelable

@@ -38,11 +38,11 @@ class FellowCredentials : AppCompatActivity() {
         }
 
         social.setOnClickListener {
-            openApp(Uri.parse("https://www.twitter.com/axtbansal/"))
+            openApp(Uri.parse("https://www.twitter.com/Pragati56784953"))
         }
 
         linkedIn.setOnClickListener {
-            openApp(Uri.parse("https://www.linkedin.com/in/axtbansal/"))
+            openApp(Uri.parse("https://www.linkedin.com/in/pragati-app-34b0aa24a"))
         }
 
         email.setOnClickListener {
