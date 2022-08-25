@@ -5,4 +5,4 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Video(var uri: Uri, var tags: Array<String>) : Parcelable
+data class Video(var uri: Uri? = null, var tags: Array<String>? = null) : Parcelable

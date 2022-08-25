@@ -76,9 +76,9 @@
         android:fontFamily="@font/poppins"
         android:gravity="center"
         android:letterSpacing="0.07"
-        android:text="Uplaod Your\nProblem Statements"
+        android:text="Upload Your\nProblem Statements"
         android:textColor="@color/white"
-        android:textSize="33sp"
+        android:textSize="32sp"
         android:textStyle="bold" />
 
     <TextView

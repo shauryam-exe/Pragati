@@ -31,6 +31,7 @@ class UploadPitchFinal : AppCompatActivity() {
         continueBtn.setOnClickListener {
             val intent = Intent(this, UploadYourPitch::class.java)
             intent.putExtra("a", video)
+            startActivity(intent)
         }
 
         cardUpload.setOnClickListener {
@@ -39,19 +40,21 @@ class UploadPitchFinal : AppCompatActivity() {
 
     }
 
-    fun videoPickDialog() {
+    private fun videoPickDialog() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "video/*"
         startActivityForResult(intent, 1)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 1) {
             val videoUri = data?.data
-            video.uri = videoUri!!
+            video = Video(videoUri!!, null)
+//            video.uri = videoUri!!
 
-            cardUpload.visibility = View.GONE
+            cardUpload.visibility = View.INVISIBLE
 
             uploadVideoView.visibility = View.VISIBLE
             uploadVideoView.setVideoURI(videoUri)
