@@ -1,12 +1,20 @@
 package com.code.pragati.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.code.pragati.R
+import com.code.pragati.adapters.PSAdapter
+import com.code.pragati.model.PS
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -23,8 +31,11 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private lateinit var search : ImageView
-    private lateinit var options : ImageView
+    private lateinit var search: ImageView
+    private lateinit var options: ImageView
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var psAdapter: PSAdapter
+    private lateinit var list: ArrayList<PS>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,7 +45,19 @@ class HomeFragment : Fragment() {
 
         search = layout.findViewById(R.id.ivSearchHome)
         options = layout.findViewById(R.id.ivOptionsHome)
+        recyclerView = layout.findViewById(R.id.rvPSHomeFragment)
+        list = ArrayList()
+        psAdapter = PSAdapter(requireContext(), list)
 
+        recyclerView.adapter = psAdapter
+        val llLayout = LinearLayoutManager(requireContext())
+
+        //To get the latest entry on top.
+        llLayout.stackFromEnd = true
+        llLayout.reverseLayout = true
+        recyclerView.layoutManager = llLayout
+
+        fetchPS()
 
         search.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()
@@ -45,23 +68,21 @@ class HomeFragment : Fragment() {
         return layout
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    private fun fetchPS() {
+        FirebaseDatabase.getInstance().reference.child("PS")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    for (dataSnap in snapshot.children){
+                        val ps: PS? = dataSnap.getValue(PS::class.java)
+                        list.add(ps!!)
+                    }
+                    psAdapter?.notifyDataSetChanged()
                 }
-            }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+
+            })
     }
 }
