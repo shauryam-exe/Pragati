@@ -60,6 +60,17 @@
                     android:layout_marginEnd="10sp"
                     android:src="@drawable/ic_search_grey" />
 
+                <ImageView
+                    android:id="@+id/ivSearchFragmentCross"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:visibility="gone"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="7sp"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_cross" />
+
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>

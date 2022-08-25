@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pragati">
         <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
             android:name=".ui.upload.IdeaDetails"
             android:exported="false" />
         <activity
@@ -22,7 +25,7 @@
             android:name=".ui.upload.ApplicantDetails"
             android:exported="false" />
         <activity
-            android:name=".ui.intro.SplashActivity"
+            android:name=".ui.upload.UploadYourPitch"
             android:exported="false" />
         <activity
             android:name=".ui.login.ForgotPass"
@@ -82,7 +85,7 @@
             android:name=".ui.signUp.LoginLayman"
             android:exported="false" />
         <activity
-            android:name=".ui.upload.UploadYourPitch"
+            android:name=".ui.intro.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

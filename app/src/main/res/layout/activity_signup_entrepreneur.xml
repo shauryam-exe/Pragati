@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-15dp"
+        android:layout_marginBottom="-58dp"
         android:adjustViewBounds="true"
         android:src="@drawable/ic_wave" />
 
@@ -51,10 +51,10 @@
         android:id="@+id/bubbleBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/bubble_bottom_right"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="-8dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-38dp"
+        android:src="@drawable/bubble_bottom_right" />
 
     <ImageView
         android:layout_alignParentBottom="true"
@@ -62,7 +62,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginBottom="48dp"
         android:src="@drawable/bubble_bottom" />
 
     <TextView
@@ -95,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginHorizontal="30sp"
-        android:layout_marginTop="50sp"
+        android:layout_marginTop="30sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
         app:cardCornerRadius="15sp"
@@ -181,9 +180,9 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardGSTEntrepreneur"
+        android:id="@+id/cardCINEntrepreneur"
         android:layout_below="@id/cardEmailEntrepreneur"
-        android:layout_width="170sp"
+        android:layout_width="match_parent"
         android:layout_alignParentStart="true"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -208,13 +207,13 @@
                 android:src="@drawable/ic_taxes" />
 
             <EditText
-                android:id="@+id/etGSTEntrepreneur"
+                android:id="@+id/etCINEntrepreneur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:ems="15"
                 android:fontFamily="@font/poppins"
-                android:hint="GSTIN No."
+                android:hint="CIN Number / LLPIN Number"
                 android:inputType="text"
                 android:maxLines="1"
                 android:paddingVertical="12sp"
@@ -228,58 +227,11 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardPANEntrepreneur"
-        android:layout_below="@id/cardEmailEntrepreneur"
-        android:layout_alignParentEnd="true"
-        android:layout_width="150sp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginEnd="30sp"
-        android:layout_marginTop="15sp"
-        android:outlineAmbientShadowColor="@color/black"
-        android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="15sp"
-        app:cardElevation="20sp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="13sp"
-                android:layout_marginEnd="5sp"
-                android:src="@drawable/ic_cards" />
-
-            <EditText
-                android:id="@+id/etPanEntrepreneur"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:ems="15"
-                android:fontFamily="@font/poppins"
-                android:hint="PAN Card"
-                android:inputType="text"
-                android:maxLines="1"
-                android:paddingVertical="12sp"
-                android:paddingHorizontal="6sp"
-                android:textSize="16sp"
-                android:textColor="@color/grey"
-                android:textColorHint="@color/grey" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardSetPassEntrepreneur"
+        android:id="@+id/cardRegDateEntrepreneur"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_below="@id/cardGSTEntrepreneur"
+        android:layout_below="@id/cardCINEntrepreneur"
         android:layout_marginHorizontal="30sp"
         android:layout_marginVertical="15sp"
         android:outlineAmbientShadowColor="@color/black"
@@ -298,18 +250,17 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="13sp"
                 android:layout_marginEnd="10sp"
-                android:src="@drawable/ic_lock" />
+                android:src="@drawable/ic_calendar" />
 
             <EditText
-                android:id="@+id/etSetPassEntrepreneur"
+                android:id="@+id/etRegDateEntrepreneur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:ems="15"
                 android:fontFamily="@font/poppins"
-                android:hint="Set Password"
-                android:inputType="textPassword"
-                android:autofillHints="password"
+                android:hint="Registration Date"
+                android:inputType="date"
                 android:maxLines="1"
                 android:textSize="16sp"
                 android:padding="12sp"
@@ -321,46 +272,60 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardConfirmPassEntrepreneur"
+        android:id="@+id/cardDomainsEntrepreneur"
+        android:layout_below="@id/cardRegDateEntrepreneur"
+        android:layout_alignParentEnd="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_below="@id/cardSetPassEntrepreneur"
         android:layout_marginHorizontal="30sp"
-        android:layout_marginBottom="30sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
         app:cardCornerRadius="15sp"
         app:cardElevation="20sp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
-            <ImageView
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="13sp"
+                    android:layout_marginEnd="5sp"
+                    android:src="@drawable/ic_xdomain_tags" />
+
+                <EditText
+                    android:id="@+id/etDomainsEntrepreneur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:ems="15"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Relevant Domains"
+                    android:maxLines="7"
+                    android:paddingVertical="12sp"
+                    android:paddingHorizontal="6sp"
+                    android:textSize="16sp"
+                    android:textColor="@color/grey"
+                    android:textColorHint="@color/grey" />
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/tagEntrepreneur"
+                layout="@layout/tag_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="13sp"
-                android:layout_marginEnd="10sp"
-                android:src="@drawable/ic_lock" />
-
-            <EditText
-                android:id="@+id/etConfirmPassEntrepreneur"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:ems="15"
-                android:fontFamily="@font/poppins"
-                android:hint="Confirm Password"
-                android:inputType="textPassword"
-                android:autofillHints="password"
-                android:maxLines="1"
-                android:padding="12sp"
-                android:textSize="16sp"
-                android:textColor="@color/grey"
-                android:textColorHint="@color/grey" />
+                android:layout_marginBottom="10dp" />
 
         </LinearLayout>
 
@@ -371,8 +336,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/imageView"
+        android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="30sp"
-        android:layout_marginTop="108dp"
+        android:layout_marginBottom="65dp"
         android:background="@drawable/custom_button_2"
         android:elevation="20sp"
         android:fontFamily="@font/poppins"

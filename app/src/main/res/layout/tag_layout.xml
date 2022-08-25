@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="finance"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="education"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="healthcare"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="energy"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="automobile"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="manufacturing"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="robotics"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="IOT"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="cloud"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="banking"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="tele-communication"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="logistic"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="ecommerce"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="insurance"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="web3"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="AI"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/custom_tag_button"
+                android:textColor="@color/black"
+                android:text="mixed reality"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
