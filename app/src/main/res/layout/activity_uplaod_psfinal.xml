@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary"
-    tools:context=".ui.upload.FounderDetails">
+    tools:context=".ui.upload.UploadPSFinal">
 
     <ImageView
         android:id="@+id/bubbleTopLeft"
@@ -71,14 +71,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginHorizontal="15dp"
+        android:layout_marginHorizontal="5dp"
         android:layout_marginTop="60sp"
         android:fontFamily="@font/poppins"
         android:gravity="center"
         android:letterSpacing="0.07"
-        android:text="Founder Details"
+        android:text="Uplaod Your\nProblem Statements"
         android:textColor="@color/white"
-        android:textSize="35sp"
+        android:textSize="33sp"
         android:textStyle="bold" />
 
     <TextView
@@ -94,7 +94,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btnContinueFounder"
+        android:layout_above="@id/btnShareProblemPSFinal"
         android:layout_below="@id/uploadPitchVideoView"
         android:layout_marginVertical="15dp">
 
@@ -103,12 +103,12 @@
             android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardApplicantDetailsFounder"
+                android:id="@+id/cardSelectDomain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:outlineSpotShadowColor="@color/black"
                 app:cardCornerRadius="15dp"
@@ -128,13 +128,13 @@
                         android:src="@drawable/ic_person" />
 
                     <EditText
-                        android:id="@+id/etApplicantDetailsFounder"
+                        android:id="@+id/etSelectDomainPSFinal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@null"
                         android:ems="15"
                         android:fontFamily="@font/poppins"
-                        android:hint="Applicant Details"
+                        android:hint="Select Your Domain"
                         android:inputType="text"
                         android:maxLines="1"
                         android:padding="12sp"
@@ -147,315 +147,154 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardDOBFounder"
-                android:layout_width="140sp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cardApplicantDetailsFounder"
-                android:layout_alignParentStart="true"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="30sp"
-                android:layout_marginTop="15sp"
-                android:outlineAmbientShadowColor="@color/black"
-                android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="15sp"
-                app:cardElevation="20sp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="13sp"
-                        android:layout_marginEnd="10sp"
-                        android:src="@drawable/ic_calendar" />
-
-                    <EditText
-                        android:id="@+id/etDOBFounder"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:ems="15"
-                        android:fontFamily="@font/poppins"
-                        android:hint="DOB"
-                        android:inputType="date"
-                        android:maxLines="1"
-                        android:paddingHorizontal="6sp"
-                        android:paddingVertical="12sp"
-                        android:textColor="@color/grey"
-                        android:textColorHint="@color/grey"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardPhoneFounder"
-                android:layout_width="180sp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cardApplicantDetailsFounder"
-                android:layout_alignParentEnd="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="15sp"
-                android:layout_marginEnd="30sp"
-                android:outlineAmbientShadowColor="@color/black"
-                android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="15sp"
-                app:cardElevation="20sp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="13sp"
-                        android:layout_marginEnd="5sp"
-                        android:src="@drawable/ic_iphone" />
-
-                    <EditText
-                        android:id="@+id/etPhoneFounder"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:autofillHints="phone"
-                        android:background="@null"
-                        android:ems="15"
-                        android:fontFamily="@font/poppins"
-                        android:hint="XXXX XXX XXX"
-                        android:inputType="phone"
-                        android:maxLines="1"
-                        android:paddingHorizontal="6sp"
-                        android:paddingVertical="12sp"
-                        android:textColor="@color/grey"
-                        android:textColorHint="@color/grey"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardEmailFounder"
-                android:layout_width="200sp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cardDOBFounder"
-                android:layout_alignParentStart="true"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="30sp"
-                android:layout_marginTop="15sp"
-                android:outlineAmbientShadowColor="@color/black"
-                android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="15sp"
-                app:cardElevation="20sp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="13sp"
-                        android:layout_marginEnd="10sp"
-                        android:src="@drawable/ic_message" />
-
-                    <EditText
-                        android:id="@+id/etEmailFounder"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:autofillHints="emailAddress"
-                        android:background="@null"
-                        android:ems="15"
-                        android:fontFamily="@font/poppins"
-                        android:hint="Official Email"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1"
-                        android:paddingHorizontal="6sp"
-                        android:paddingVertical="12sp"
-                        android:scrollHorizontally="true"
-                        android:textColor="@color/grey"
-                        android:textColorHint="@color/grey"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardGenderFounder"
-                android:layout_width="120sp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cardPhoneFounder"
-                android:layout_alignParentEnd="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="15sp"
-                android:layout_marginEnd="30sp"
-                android:outlineAmbientShadowColor="@color/black"
-                android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="15sp"
-                app:cardElevation="20sp">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <EditText
-                        android:id="@+id/etGenderFounder"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerInParent="true"
-                        android:layout_toStartOf="@id/ivGenderDrop"
-                        android:background="@null"
-                        android:ems="15"
-                        android:fontFamily="@font/poppins"
-                        android:hint="Gender"
-                        android:inputType="text"
-                        android:maxLines="1"
-                        android:paddingVertical="12sp"
-                        android:paddingStart="12sp"
-                        android:textColor="@color/grey"
-                        android:textColorHint="@color/grey"
-                        android:textSize="16sp" />
-
-                    <ImageView
-                        android:id="@+id/ivGenderDrop"
-                        android:layout_width="19dp"
-                        android:layout_height="19dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerInParent="true"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="13dp"
-                        android:src="@drawable/ic_drop_down" />
-
-                </RelativeLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardSchoolFounder"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cardEmailFounder"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="30sp"
-                android:layout_marginTop="15sp"
-                android:outlineAmbientShadowColor="@color/black"
-                android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="15sp"
-                app:cardElevation="20sp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="13sp"
-                        android:layout_marginEnd="10sp"
-                        android:src="@drawable/ic_education" />
-
-                    <EditText
-                        android:id="@+id/etSchoolFounder"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:ems="15"
-                        android:fontFamily="@font/poppins"
-                        android:hint="Where did you attend your school?"
-                        android:inputType="text"
-                        android:maxLines="1"
-                        android:paddingHorizontal="4sp"
-                        android:paddingVertical="12sp"
-                        android:scrollHorizontally="true"
-                        android:textColor="@color/grey"
-                        android:textColorHint="@color/grey"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardCollegeFounder"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cardSchoolFounder"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="30sp"
-                android:layout_marginTop="15sp"
-                android:outlineAmbientShadowColor="@color/black"
-                android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="15sp"
-                app:cardElevation="20sp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="13sp"
-                        android:layout_marginEnd="10sp"
-                        android:src="@drawable/ic_education" />
-
-                    <EditText
-                        android:id="@+id/etCollegeFounder"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:ems="15"
-                        android:fontFamily="@font/poppins"
-                        android:hint="Which college did you attend / still do?"
-                        android:inputType="text"
-                        android:maxLines="1"
-                        android:paddingHorizontal="4sp"
-                        android:paddingVertical="12sp"
-                        android:scrollHorizontally="true"
-                        android:textColor="@color/grey"
-                        android:textColorHint="@color/grey"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/tvAddCoFounder"
+                android:id="@+id/cardFieldPSFinal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cardCollegeFounder"
-                android:layout_marginStart="37dp"
-                android:layout_marginTop="15dp"
-                android:drawableLeft="@drawable/ic_add"
-                android:drawablePadding="10dp"
-                android:text="Add a co-founder"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:layout_below="@id/cardSelectDomain"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="15sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="15sp"
+                app:cardElevation="20sp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="13sp"
+                        android:layout_marginEnd="10sp"
+                        android:src="@drawable/ic_location_square" />
+
+                    <EditText
+                        android:id="@+id/etFieldPSFinal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="15"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Select Your Field (e.g IT, fintech)"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingHorizontal="6sp"
+                        android:paddingVertical="12sp"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTitlePSFinal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardFieldPSFinal"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="15sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="15sp"
+                app:cardElevation="20sp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="13sp"
+                        android:layout_marginEnd="10sp"
+                        android:src="@drawable/ic_t" />
+
+                    <EditText
+                        android:id="@+id/etTitlePSFinal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="15"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Problem Statement Title"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingHorizontal="6sp"
+                        android:paddingVertical="12sp"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardDescribePSFinal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardTitlePSFinal"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="15sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="15sp"
+                app:cardElevation="20sp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="13sp"
+                        android:layout_marginEnd="10sp"
+                        android:src="@drawable/ic_profile" />
+
+                    <EditText
+                        android:id="@+id/etDescribePSFinal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="15"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Describe your problem statement\nin as much detail as possible."
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingStart="6sp"
+                        android:paddingEnd="10dp"
+                        android:paddingVertical="12sp"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
 
     </ScrollView>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnContinueFounder"
+        android:id="@+id/btnShareProblemPSFinal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/imageView"
@@ -468,7 +307,7 @@
         android:outlineSpotShadowColor="@color/black"
         android:padding="8sp"
         android:shadowColor="@color/black"
-        android:text="Continue"
+        android:text="Share your problem"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="19sp" />

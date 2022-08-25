@@ -14,6 +14,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.code.pragati.EditProfile
 import com.code.pragati.R
+import com.code.pragati.ui.upload.UploadPSFinal
 import com.code.pragati.ui.upload.UploadYourPitch
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
@@ -41,6 +42,8 @@ class Profile : Fragment() {
     private lateinit var tabLayout: TabLayout
     private lateinit var scrollBar: HorizontalScrollView
     private lateinit var addFab: FloatingActionButton
+    private lateinit var uploadPS: FloatingActionButton
+    private lateinit var uploadPitch: FloatingActionButton
     private lateinit var linearLayout: LinearLayout
 
     override fun onCreateView(
@@ -56,8 +59,18 @@ class Profile : Fragment() {
         scrollBar = layout.findViewById(R.id.scrollTabs)
         addFab = layout.findViewById(R.id.fabShowLayoutProfile)
         linearLayout = layout.findViewById(R.id.llLayoutProfile)
+        uploadPS = layout.findViewById(R.id.fabUploadPS)
+        uploadPitch = layout.findViewById(R.id.fabUploadPitch)
 
         linearLayout.tag = "close"
+
+        uploadPS.setOnClickListener {
+            startActivity(Intent(context, UploadPSFinal::class.java))
+        }
+
+        uploadPitch.setOnClickListener {
+            startActivity(Intent(context, UploadYourPitch::class.java))
+        }
 
         addFab.setOnClickListener {
             if (linearLayout.tag.equals("close")) {

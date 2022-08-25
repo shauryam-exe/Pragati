@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pragati">
         <activity
+            android:name=".ui.upload.UploadPSFinal"
+            android:exported="false" />
+        <activity
             android:name=".EditProfile"
             android:exported="false" />
         <activity

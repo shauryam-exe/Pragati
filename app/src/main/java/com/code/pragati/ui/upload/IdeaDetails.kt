@@ -13,11 +13,6 @@ class IdeaDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_idea_details)
 
-        head = findViewById(R.id.tvCreateIdea)
-
-        head.setOnClickListener {
-            onBackPressed()
-        }
 
     }
 }

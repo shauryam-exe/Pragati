@@ -13,12 +13,6 @@ class FounderDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_founder_details)
 
-        head = findViewById(R.id.tvCreateFounder)
-
-        head.setOnClickListener {
-            onBackPressed()
-        }
-
 
     }
 }
