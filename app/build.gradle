@@ -37,6 +37,8 @@ dependencies {
 
     implementation 'com.cloudinary:cloudinary-android:1.24.0'
 
+    implementation 'com.google.android:flexbox:2.0.1'
+
     implementation 'com.google.firebase:firebase-storage:19.1.0'
     implementation 'com.google.firebase:firebase-database:20.0.0'
 
