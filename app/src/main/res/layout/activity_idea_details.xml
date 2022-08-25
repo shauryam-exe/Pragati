@@ -73,7 +73,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="55dp"
         android:layout_marginTop="60sp"
-        android:drawableRight="@drawable/ic_drop_up"
         android:fontFamily="@font/poppins"
         android:gravity="center"
         android:letterSpacing="0.07"

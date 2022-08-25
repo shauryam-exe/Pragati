@@ -1,21 +1,19 @@
 package com.code.pragati.ui.upload
 
 import android.content.Intent
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.VideoView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.code.pragati.R
 import com.code.pragati.model.Video
-import java.net.URI
 
 class UploadPitchFinal : AppCompatActivity() {
 
-    private lateinit var head : TextView
+    private lateinit var head: TextView
     private lateinit var cardUpload: CardView
     private lateinit var uploadVideoView: VideoView
     private lateinit var continueBtn: Button
@@ -31,16 +29,12 @@ class UploadPitchFinal : AppCompatActivity() {
         continueBtn = findViewById(R.id.btnContinueUpload)
 
         continueBtn.setOnClickListener {
-            val intent = Intent(this,UploadYourPitch::class.java)
-            intent.putExtra("a",video)
+            val intent = Intent(this, UploadYourPitch::class.java)
+            intent.putExtra("a", video)
         }
 
         cardUpload.setOnClickListener {
             videoPickDialog()
-        }
-
-        head.setOnClickListener {
-            onBackPressed()
         }
 
     }
