@@ -93,7 +93,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tvCreate2"
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvCreateUpload"
@@ -106,7 +106,7 @@
         android:id="@+id/cardUploadPitch"
         android:layout_width="250sp"
         android:layout_height="300sp"
-        android:layout_below="@id/tvCreate2"
+        android:layout_below="@id/text"
         android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="60sp"
         android:layout_marginTop="50sp"
@@ -175,5 +175,14 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="19sp" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_below="@id/text"
+        android:visibility="gone"
+        android:layout_marginTop="50dp"
+        android:layout_width="250sp"
+        android:layout_height="300sp"
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>
