@@ -114,18 +114,7 @@ class UploadYourPitch : AppCompatActivity() {
 
         val filePath = "Videos/video_$timestamp"
 
-//        val storageReference = FirebaseStorage.getInstance().getReference(filePath)
-//        storageReference.putFile(video.uri!!)
-//            .addOnSuccessListener(object: OnSuccessListener<UploadTask.TaskSnapshot> {
-//                override fun onSuccess(p0: UploadTask.TaskSnapshot?) {
-//                   Log.d("done", "done")
-//                }
-//            }).addOnFailureListener(object: OnFailureListener{
-//                override fun onFailure(p0: Exception) {
-//                    Log.d("done", "done")
-//                }
-//
-//            })
+
 
         val reference = FirebaseStorage.getInstance()
             .reference.child("/videos/" + System.currentTimeMillis() + "." + getfiletype(video.uri))
