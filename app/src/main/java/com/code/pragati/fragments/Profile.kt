@@ -2,18 +2,22 @@ package com.code.pragati.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.HorizontalScrollView
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
 import com.code.pragati.EditProfile
 import com.code.pragati.R
 import com.code.pragati.ui.upload.UploadYourPitch
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.tabs.TabLayout
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -34,6 +38,11 @@ class Profile : Fragment() {
     private lateinit var drawer: ImageView
     private lateinit var navView: NavigationView
 
+    private lateinit var tabLayout: TabLayout
+    private lateinit var scrollBar: HorizontalScrollView
+    private lateinit var addFab: FloatingActionButton
+    private lateinit var linearLayout: LinearLayout
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -44,6 +53,23 @@ class Profile : Fragment() {
         drawerLayout = layout.findViewById(R.id.drawerLayout)
         drawer = layout.findViewById(R.id.ivDrawer)
         navView = layout.findViewById(R.id.navView)
+        scrollBar = layout.findViewById(R.id.scrollTabs)
+        addFab = layout.findViewById(R.id.fabShowLayoutProfile)
+        linearLayout = layout.findViewById(R.id.llLayoutProfile)
+
+        linearLayout.tag = "close"
+
+        addFab.setOnClickListener {
+            if (linearLayout.tag.equals("close")) {
+                linearLayout.visibility = View.VISIBLE
+                addFab.setImageResource(R.drawable.ic_cross)
+                linearLayout.tag = "open"
+            } else {
+                linearLayout.visibility = View.INVISIBLE
+                addFab.setImageResource(R.drawable.ic_add)
+                linearLayout.tag = "close"
+            }
+        }
 
         drawerLayout.tag = "Close"
 
@@ -56,17 +82,29 @@ class Profile : Fragment() {
                 }
                 R.id.settingsDrawer -> {
                     startActivity(Intent(context, UploadYourPitch::class.java))
-                    Toast.makeText(context, "Aaj settings bnaega...kl baithke use kr painga...han meri jaaan", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        context,
+                        "Aaj settings bnaega...kl baithke use kr painga...han meri jaaan",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     this.drawerLayout.closeDrawer(GravityCompat.START)
                     this.drawerLayout.tag = "Close"
                 }
                 R.id.aboutDrawer -> {
-                    Toast.makeText(context, "Aaj hmare baare mein jaanlega...kl bline mein khde hke photo khicaheinga...han meri jaaan", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        context,
+                        "Aaj hmare baare mein jaanlega...kl bline mein khde hke photo khicaheinga...han meri jaaan",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     this.drawerLayout.closeDrawer(GravityCompat.START)
                     this.drawerLayout.tag = "Close"
                 }
                 R.id.logout -> {
-                    Toast.makeText(context, "Aaj yeh chhod k chla jainga...kl baithke use kr roinga...han meri jaaan", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        context,
+                        "Aaj yeh chhod k chla jainga...kl baithke use kr roinga...han meri jaaan",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     this.drawerLayout.closeDrawer(GravityCompat.START)
                     this.drawerLayout.tag = "Close"
                 }
@@ -82,7 +120,50 @@ class Profile : Fragment() {
                 this.drawerLayout.tag = "Open"
             }
         }
+        tabLayout = layout.findViewById(R.id.tabs)
+
+        //To set different width for a tab.
+        setTabWidth(0, 1.0f, tabLayout)
+        setTabWidth(1, 1.0f, tabLayout)
+        setTabWidth(2, 1.0f, tabLayout)
+        setTabWidth(3, 1.0f, tabLayout)
+
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab) {
+                when (tab.position) {
+                    0 -> Toast.makeText(context, "This is timeline", Toast.LENGTH_SHORT).show()
+                    1 -> Toast.makeText(context, "This is photo", Toast.LENGTH_SHORT).show()
+                    2 -> Toast.makeText(context, "This is friends", Toast.LENGTH_SHORT).show()
+                    3 -> Toast.makeText(context, "This is groups", Toast.LENGTH_SHORT).show()
+                }
+
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab) {
+
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab) {
+
+            }
+        })
 
         return layout
+    }
+
+
+    //Function to set different width for a tab.
+    private fun setTabWidth(tabPosition: Int, weight: Float, tabLayout: TabLayout) {
+        val layout: LinearLayout =
+            (tabLayout.getChildAt(0) as LinearLayout).getChildAt(tabPosition) as LinearLayout
+        val layoutParams: LinearLayout.LayoutParams =
+            layout.layoutParams as LinearLayout.LayoutParams
+        layoutParams.weight = weight
+        layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
+        layout.layoutParams = layoutParams
+
+        val tabLayoutParams: ViewGroup.LayoutParams? = tabLayout.layoutParams
+        tabLayoutParams?.width = ViewGroup.LayoutParams.MATCH_PARENT
+        tabLayout.layoutParams = tabLayoutParams
     }
 }
