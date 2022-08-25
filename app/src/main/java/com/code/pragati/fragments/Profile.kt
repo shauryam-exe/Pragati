@@ -104,7 +104,6 @@ class Profile : Fragment() {
                     this.drawerLayout.tag = "Close"
                 }
                 R.id.settingsDrawer -> {
-                    startActivity(Intent(context, UploadYourPitch::class.java))
                     Toast.makeText(
                         context,
                         "Aaj settings bnaega...kl baithke use kr painga...han meri jaaan",

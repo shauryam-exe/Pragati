@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="15dp"
     android:id="@+id/cardPS"
-    android:backgroundTint="@color/lightGrey"
     android:layout_marginHorizontal="10sp"
     android:layout_marginVertical="8sp"
     android:layout_height="wrap_content">
@@ -13,29 +12,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/civPhotoPS"
-        android:layout_width="80sp"
-        android:layout_height="80sp"
-        android:layout_centerVertical="true"
-        android:layout_marginVertical="10sp"
-        android:layout_marginStart="8sp"
-        android:layout_marginEnd="15sp"
-        android:elevation="15sp"
-        android:outlineAmbientShadowColor="@color/black"
-        android:outlineSpotShadowColor="@color/black"
-        android:src="@drawable/pic" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civPhotoPS"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="10sp"
+            android:layout_marginStart="8sp"
+            android:layout_marginEnd="15sp"
+            android:elevation="15sp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:src="@drawable/image" />
 
-    <TextView
-        android:id="@+id/tvTitlePS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
-        android:textColor="@color/primary"
-        android:layout_toEndOf="@id/civPhotoPS"
-        android:fontFamily="@font/poppins"
-        android:text="NCERT"
-        android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/tvTitlePS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginTop="20sp"
+            android:layout_toEndOf="@id/civPhotoPS"
+            android:fontFamily="@font/poppins"
+            android:text="NCERT"
+            android:textColor="@color/primary"
+            android:textSize="13sp" />
 
         <TextView
             android:id="@+id/tvDescriptionPS"
@@ -43,11 +43,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tvTitlePS"
             android:layout_marginTop="-3sp"
+            android:maxLines="2"
             android:layout_marginBottom="5dp"
             android:layout_toEndOf="@id/civPhotoPS"
             android:fontFamily="@font/poppins"
             android:text="sdjfgcjsgulgfnsdhfnuegsfbjdbjfgbceslfjgzjgfjefjbaegflbsdvbuesgfbvsjbviulervbhjdjhd"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
     </RelativeLayout>
 

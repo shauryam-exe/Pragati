@@ -4,7 +4,6 @@ import android.app.ProgressDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.webkit.MimeTypeMap
 import android.widget.TextView
@@ -13,14 +12,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.code.pragati.R
 import com.code.pragati.model.Video
-import com.google.android.gms.tasks.OnFailureListener
-import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageReference
-import com.google.firebase.storage.UploadTask
-import java.lang.Exception
 
 
 class UploadYourPitch : AppCompatActivity() {
@@ -92,14 +86,12 @@ class UploadYourPitch : AppCompatActivity() {
             ideaDetails.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_white_tick, 0)
             shareIdea.visibility = View.VISIBLE
 
-
             val video = intent.getParcelableExtra<Video>("video")
 
             shareIdea.isEnabled = true
             shareIdea.setOnClickListener {
-
                 Toast.makeText(this, "Sharing your idea with the world", Toast.LENGTH_SHORT).show()
-                uploadVideo(video!!)
+               uploadVideo(video = video!!)
             }
         } else {
             shareIdea.visibility = View.GONE
@@ -121,17 +113,24 @@ class UploadYourPitch : AppCompatActivity() {
 //        reference.putFile(video.uri!!).addOnSuccessListener {
             reference.putFile(video.uri!!).addOnSuccessListener { taskSnapshot ->
                 val uriTask: Task<Uri> = taskSnapshot.storage.downloadUrl
+                uriTask.addOnCompleteListener {
+                    val downloadUri: String = it.result.toString()
+
+                    val reference1 = FirebaseDatabase.getInstance().reference.child("Video")
+                    val map: HashMap<String, Any> = HashMap()
+                    map["uri"] = downloadUri
+                    map["ask"] = "ksdhvjsgd"
+                    map["name"] = "dnfbebgfruygerugfuyegu"
+                    reference1.child("" + System.currentTimeMillis()).setValue(map)
+                    // Video uploaded successfully
+                    // Dismiss dialog
+                    progressDialog.dismiss()
+                    Toast.makeText(this@UploadYourPitch, "Video Uploaded!!", Toast.LENGTH_SHORT).show()
+                }
 //                while (!uriTask.isSuccessful);
                 // get the link of video
-                val downloadUri: String = uriTask.result.toString()
-                val reference1 = FirebaseDatabase.getInstance().getReference("Video")
-                val map: HashMap<String, String> = HashMap()
-                map["videolink"] = downloadUri
-                reference1.child("" + System.currentTimeMillis()).setValue(map)
-                // Video uploaded successfully
-                // Dismiss dialog
-                progressDialog.dismiss()
-                Toast.makeText(this@UploadYourPitch, "Video Uploaded!!", Toast.LENGTH_SHORT).show()
+
+
             }.addOnFailureListener { e -> // Error, Image not uploaded
                 progressDialog.dismiss()
                 Toast.makeText(this@UploadYourPitch, "Failed " + e.message, Toast.LENGTH_SHORT)
