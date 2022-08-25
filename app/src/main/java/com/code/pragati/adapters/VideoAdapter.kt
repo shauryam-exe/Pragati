@@ -12,6 +12,10 @@ import com.code.pragati.R
 import com.code.pragati.model.Video
 import com.code.pragati.model.VideoInfo
 import com.code.pragati.model.VideoItem
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class VideoAdapter(val videoItems: ArrayList<VideoItem>) :
     RecyclerView.Adapter<VideoAdapter.VideoViewHolder>() {
@@ -33,6 +37,8 @@ class VideoAdapter(val videoItems: ArrayList<VideoItem>) :
     override fun getItemCount(): Int {
         return videoItems.size
     }
+
+    var list = arrayListOf<VideoItem>()
 
     class VideoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val videoView = itemView.findViewById<VideoView>(R.id.pitchVideo)
@@ -75,4 +81,25 @@ class VideoAdapter(val videoItems: ArrayList<VideoItem>) :
 
         }
     }
+
+    private fun showVideo(videoView : VideoView){
+
+        FirebaseDatabase.getInstance().reference.child("Video")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    for (dataSnaps in snapshot.children){
+                        val video = snapshot.getValue(Video::class.java)
+                        val url = video?.uri.toString()
+                        videoView.setVideoPath(url)
+                        val videoItem = VideoItem(url, "nothing", "ahvckajc", "student")
+                        videoItems.add(videoItem)
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+            })
+    }
+
 }
