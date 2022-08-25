@@ -14,7 +14,6 @@ import com.code.pragati.EditProfile
 import com.code.pragati.R
 import com.code.pragati.ui.upload.UploadYourPitch
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.tabs.TabLayout
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"

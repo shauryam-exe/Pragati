@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-15dp"
+        android:layout_marginBottom="-55dp"
         android:adjustViewBounds="true"
         android:src="@drawable/ic_wave" />
 
@@ -51,10 +51,10 @@
         android:id="@+id/bubbleBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/bubble_bottom_right"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="-8dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-38dp"
+        android:src="@drawable/bubble_bottom_right" />
 
     <ImageView
         android:layout_alignParentBottom="true"
@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/bubble_bottom" />
 
     <TextView
@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginHorizontal="30sp"
-        android:layout_marginTop="110sp"
+        android:layout_marginTop="30sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
         app:cardCornerRadius="15sp"
@@ -181,60 +181,13 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardGSTAngels"
-        android:layout_below="@id/cardEmailAngels"
-        android:layout_width="170sp"
-        android:layout_alignParentStart="true"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="30sp"
-        android:layout_marginTop="30sp"
-        android:outlineAmbientShadowColor="@color/black"
-        android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="15sp"
-        app:cardElevation="20sp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="13sp"
-                android:layout_marginEnd="10sp"
-                android:src="@drawable/ic_taxes" />
-
-            <EditText
-                android:id="@+id/etGSTAngels"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:ems="15"
-                android:fontFamily="@font/poppins"
-                android:hint="GSTIN No."
-                android:maxEms="20"
-                android:maxLines="7"
-                android:paddingVertical="12sp"
-                android:paddingHorizontal="6sp"
-                android:textSize="16sp"
-                android:textColor="@color/grey"
-                android:textColorHint="@color/grey" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
         android:id="@+id/cardPANAngels"
         android:layout_below="@id/cardEmailAngels"
         android:layout_alignParentEnd="true"
-        android:layout_width="150sp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginEnd="30sp"
+        android:layout_marginHorizontal="30sp"
         android:layout_marginTop="30sp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
@@ -261,7 +214,7 @@
                 android:background="@null"
                 android:ems="15"
                 android:fontFamily="@font/poppins"
-                android:hint="PAN Card"
+                android:hint="PAN Card (AAAA-0000-A)"
                 android:maxLines="7"
                 android:paddingVertical="12sp"
                 android:paddingHorizontal="6sp"
@@ -273,13 +226,75 @@
 
     </androidx.cardview.widget.CardView>
 
+  <androidx.cardview.widget.CardView
+        android:id="@+id/cardDomainsAngels"
+        android:layout_below="@id/cardPANAngels"
+        android:layout_alignParentEnd="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="30sp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardCornerRadius="15sp"
+        app:cardElevation="20sp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical" >
+
+      <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13sp"
+                android:layout_marginEnd="5sp"
+                android:src="@drawable/ic_xdomain_tags" />
+
+            <EditText
+                android:id="@+id/etDomainsAngels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="15"
+                android:fontFamily="@font/poppins"
+                android:hint="Relevant Domains"
+                android:maxLines="7"
+                android:paddingVertical="12sp"
+                android:paddingHorizontal="6sp"
+                android:textSize="16sp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+          <include
+              android:id="@+id/tagAngels"
+              layout="@layout/tag_layout"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginBottom="10dp" />
+
+      </LinearLayout>
+
+  </androidx.cardview.widget.CardView>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnContinueSignAngels"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/imageView"
+        android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="30sp"
-        android:layout_marginBottom="20sp"
+        android:layout_marginBottom="80dp"
         android:background="@drawable/custom_button_2"
         android:elevation="20sp"
         android:fontFamily="@font/poppins"

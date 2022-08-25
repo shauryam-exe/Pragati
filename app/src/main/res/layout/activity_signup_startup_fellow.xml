@@ -168,7 +168,7 @@
                 android:autofillHints="emailAddress"
                 android:ems="15"
                 android:fontFamily="@font/poppins"
-                android:hint="College Email ID"
+                android:hint="Email Address"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:textSize="16sp"
