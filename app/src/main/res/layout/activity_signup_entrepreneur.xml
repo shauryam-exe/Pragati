@@ -90,7 +90,7 @@
     <ScrollView
         android:layout_below="@id/uploadPitchVideoView"
         android:layout_width="wrap_content"
-        android:layout_height="450dp" >
+        android:layout_height="500dp" >
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -280,73 +280,12 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardDomainsEntrepreneur"
-                android:layout_below="@id/cardRegDateEntrepreneur"
-                android:layout_alignParentEnd="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="30sp"
-                android:outlineAmbientShadowColor="@color/black"
-                android:outlineSpotShadowColor="@color/black"
-                app:cardCornerRadius="15sp"
-                app:cardElevation="20sp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical" >
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="13sp"
-                            android:layout_marginEnd="5sp"
-                            android:src="@drawable/ic_xdomain_tags" />
-
-                        <EditText
-                            android:id="@+id/etDomainsEntrepreneur"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@null"
-                            android:ems="15"
-                            android:fontFamily="@font/poppins"
-                            android:hint="Relevant Domains"
-                            android:maxLines="7"
-                            android:paddingVertical="12sp"
-                            android:paddingHorizontal="6sp"
-                            android:textSize="16sp"
-                            android:textColor="@color/grey"
-                            android:textColorHint="@color/grey" />
-
-                    </LinearLayout>
-
-                    <include
-                        android:id="@+id/tagEntrepreneur"
-                        layout="@layout/tag_layout"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="10dp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
                 android:id="@+id/cardSetPassEntre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_below="@id/cardDomainsEntrepreneur"
+                android:layout_below="@id/cardRegDateEntrepreneur"
                 android:layout_marginHorizontal="30sp"
-                android:layout_marginVertical="15sp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:outlineSpotShadowColor="@color/black"
                 app:cardCornerRadius="15sp"
@@ -392,7 +331,7 @@
                 android:layout_gravity="center"
                 android:layout_below="@id/cardSetPassEntre"
                 android:layout_marginHorizontal="30sp"
-                android:layout_marginBottom="30sp"
+                android:layout_marginTop="15sp"
                 android:outlineAmbientShadowColor="@color/black"
                 android:outlineSpotShadowColor="@color/black"
                 app:cardCornerRadius="15sp"
@@ -431,29 +370,30 @@
 
             </androidx.cardview.widget.CardView>
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnContinueSignEntrepreneur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardConfirmPassEntre"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginBottom="65dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_button_2"
+                android:elevation="20sp"
+                android:fontFamily="@font/poppins"
+                android:letterSpacing="0.13"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                android:padding="8sp"
+                android:shadowColor="@color/black"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+
         </RelativeLayout>
 
     </ScrollView>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnContinueSignEntrepreneur"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/imageView"
-        android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="30sp"
-        android:layout_marginBottom="65dp"
-        android:background="@drawable/custom_button_2"
-        android:elevation="20sp"
-        android:fontFamily="@font/poppins"
-        android:letterSpacing="0.13"
-        android:outlineAmbientShadowColor="@color/black"
-        android:outlineSpotShadowColor="@color/black"
-        android:padding="8sp"
-        android:shadowColor="@color/black"
-        android:text="Continue"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="19sp" />
 
 </RelativeLayout>
