@@ -54,9 +54,9 @@ class VideoAdapter(val videoItems: ArrayList<VideoItem>) :
             ideaName.text = video.ideaName
             founderName.text = video.founderName
             when (video.founderType) {
-                "student" -> {userIdentifyImage.setImageResource(R.drawable.ic_student)}
-                "founder" -> {userIdentifyImage.setImageResource(R.drawable.ic_founder)}
-                "fellow" -> {userIdentifyImage.setImageResource(R.drawable.ic_fellow)}
+                "student" -> {userIdentifyImage.setImageResource(R.drawable.student_identifier)}
+                "founder" -> {userIdentifyImage.setImageResource(R.drawable.founder_identifier)}
+                "fellow" -> {userIdentifyImage.setImageResource(R.drawable.ic_startup_indentifier)}
             }
 
             videoView.setVideoPath(video.url)
