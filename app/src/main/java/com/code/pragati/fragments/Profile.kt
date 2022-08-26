@@ -181,11 +181,18 @@ class Profile : Fragment() {
 
         val videoItem1 = VideoItem(
             url = "https://res.cloudinary.com/dz9lxwqgj/video/upload/v1647809475/WhatsApp_Video_2022-03-21_at_1.56.14_AM_qwnrg7.mp4",
-            ideaName = "Sugar Cosmetics",
-            founderName = "Jenifer",
+            ideaName = "SpaceX",
+            founderName = "Elon Musk",
             "student"
         )
+        val videoItem2 = VideoItem(
+            url = "https://res.cloudinary.com/dz9lxwqgj/video/upload/v1647809456/WhatsApp_Video_2022-03-21_at_1.56.28_AM_y0mydf.mp4",
+            ideaName = "Radio",
+            founderName = "Marie Curie",
+            "fellow"
+        )
         videoItems.add(videoItem1)
+        videoItems.add(videoItem2)
 
         val params = FlexboxLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT)
         params.setMargins(24)
@@ -196,7 +203,8 @@ class Profile : Fragment() {
             videoView.seekTo(1)
             flexBox.addView(videoView)
             videoView.setOnClickListener {
-
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.container,ProfilePitchFragment()).commit()
             }
         }
     }
