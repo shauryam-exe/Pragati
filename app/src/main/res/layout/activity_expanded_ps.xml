@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpandedPS">
+
+    <RelativeLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/ivBackLoginLayman"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="20sp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Problem Statement"
+            android:textColor="@color/primary"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/lightGrey"
+        android:elevation="9dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civPSEXpanded"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/pic2" />
+
+            <TextView
+                android:id="@+id/tvNamePSEXpanded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/civPSEXpanded"
+                android:text="Union Grant Commision"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="23dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTagsPSEXpanded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvNamePSEXpanded"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/civPSEXpanded"
+                android:text="Tags : #fintech, #ecommmerce, #foodchain"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_below="@id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/lightGrey"
+        android:elevation="9dp"
+        app:cardCornerRadius="15dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDescriptionPSExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:padding="5dp"
+                android:text="Innovation and entrepreneurship is a part of “Make in India” campaign of Govt of India. There are several innovations happening across HEIs in India, which can be referred and could be taken further for implementation with appropriate permissions.\n\nAccordingly, a portal shall give facility to all HEIs and their students to share details on innovation and start-ups with copy right issues addressed as appropriate"
+                android:textSize="18dp" />
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:text="Mentors"
+        android:textColor="@color/primary"
+        android:textSize="18dp"
+        android:layout_below="@id/card2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -87,198 +87,300 @@
         android:text="Please enter your details"
         android:textColor="@color/white" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardFullNameVC"
+    <ScrollView
         android:layout_below="@id/uploadPitchVideoView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="30sp"
-        android:layout_marginTop="30sp"
-        android:outlineAmbientShadowColor="@color/black"
-        android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="15sp"
-        app:cardElevation="20sp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="13sp"
-                android:layout_marginEnd="10sp"
-                android:src="@drawable/ic_person" />
-
-            <EditText
-                android:id="@+id/etFullNameVC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:ems="15"
-                android:autofillHints="name"
-                android:fontFamily="@font/poppins"
-                android:hint="Fund Name"
-                android:inputType="text"
-                android:textSize="16sp"
-                android:maxLines="1"
-                android:padding="12sp"
-                android:textColor="@color/grey"
-                android:textColorHint="@color/grey" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardRegVC"
-        android:layout_below="@id/cardFullNameVC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="30sp"
-        android:layout_marginTop="15sp"
-        android:outlineAmbientShadowColor="@color/black"
-        android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="15sp"
-        app:cardElevation="20sp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="13sp"
-                android:layout_marginEnd="6sp"
-                android:src="@drawable/ic_calc" />
-
-            <EditText
-                android:id="@+id/etRegVC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:ems="15"
-                android:fontFamily="@font/poppins"
-                android:hint="Reg. No. (IN/VCF/XX-XX/XXXX)"
-                android:inputType="text"
-                android:maxLines="1"
-                android:textSize="15.5sp"
-                android:paddingVertical="12sp"
-                android:paddingHorizontal="6sp"
-                android:textColor="@color/grey"
-                android:textColorHint="@color/grey" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardEmailVC"
-        android:layout_below="@id/cardRegVC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="30sp"
-        android:layout_marginTop="15sp"
-        android:outlineAmbientShadowColor="@color/black"
-        android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="15sp"
-        app:cardElevation="20sp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="13sp"
-                android:layout_marginEnd="10sp"
-                android:src="@drawable/ic_message" />
-
-            <EditText
-                android:id="@+id/etEmailVC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:ems="15"
-                android:fontFamily="@font/poppins"
-                android:hint="Official Email Address"
-                android:autofillHints="emailAddress"
-                android:inputType="textEmailAddress"
-                android:maxLines="1"
-                android:textSize="16sp"
-                android:padding="12sp"
-                android:textColor="@color/grey"
-                android:textColorHint="@color/grey" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardAddressVC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_below="@id/cardEmailVC"
-        android:layout_marginHorizontal="30sp"
-        android:layout_marginBottom="15sp"
-        android:layout_marginTop="15sp"
-        android:outlineAmbientShadowColor="@color/black"
-        android:outlineSpotShadowColor="@color/black"
-        app:cardCornerRadius="15sp"
-        app:cardElevation="20sp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="13sp"
-                android:layout_marginEnd="10sp"
-                android:src="@drawable/ic_marker" />
-
-            <EditText
-                android:id="@+id/etAddressVC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:ems="15"
-                android:fontFamily="@font/poppins"
-                android:hint="Complete Address"
-                android:autofillHints="postalAddress"
-                android:inputType="textPostalAddress"
-                android:padding="12sp"
-                android:textSize="16sp"
-                android:textColor="@color/grey"
-                android:textColorHint="@color/grey" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/tagsTextVC"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:layout_below="@id/cardAddressVC"
-        android:layout_marginStart="32dp"
-        android:text="Add tags you are interested in" />
+        android:layout_height="450dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardFullNameVC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="30sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="15sp"
+                app:cardElevation="20sp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="13sp"
+                        android:layout_marginEnd="10sp"
+                        android:src="@drawable/ic_person" />
+
+                    <EditText
+                        android:id="@+id/etFullNameVC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="15"
+                        android:autofillHints="name"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Fund Name"
+                        android:inputType="text"
+                        android:textSize="16sp"
+                        android:maxLines="1"
+                        android:padding="12sp"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/grey" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardRegVC"
+                android:layout_below="@id/cardFullNameVC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="15sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="15sp"
+                app:cardElevation="20sp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="13sp"
+                        android:layout_marginEnd="6sp"
+                        android:src="@drawable/ic_calc" />
+
+                    <EditText
+                        android:id="@+id/etRegVC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="15"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Reg. No. (IN/VCF/XX-XX/XXXX)"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textSize="15.5sp"
+                        android:paddingVertical="12sp"
+                        android:paddingHorizontal="6sp"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/grey" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardEmailVC"
+                android:layout_below="@id/cardRegVC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="15sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="15sp"
+                app:cardElevation="20sp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="13sp"
+                        android:layout_marginEnd="10sp"
+                        android:src="@drawable/ic_message" />
+
+                    <EditText
+                        android:id="@+id/etEmailVC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="15"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Official Email Address"
+                        android:autofillHints="emailAddress"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textSize="16sp"
+                        android:padding="12sp"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/grey" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardAddressVC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@id/cardEmailVC"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginBottom="15sp"
+                android:layout_marginTop="15sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="15sp"
+                app:cardElevation="20sp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="13sp"
+                        android:layout_marginEnd="10sp"
+                        android:src="@drawable/ic_marker" />
+
+                    <EditText
+                        android:id="@+id/etAddressVC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="15"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Complete Address"
+                        android:autofillHints="postalAddress"
+                        android:inputType="textPostalAddress"
+                        android:padding="12sp"
+                        android:textSize="16sp"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/grey" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSetPassVC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@id/cardAddressVC"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginBottom="15sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="15sp"
+                app:cardElevation="20sp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="13sp"
+                        android:layout_marginEnd="10sp"
+                        android:src="@drawable/ic_lock" />
+
+                    <EditText
+                        android:id="@+id/etSetPassVC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="15"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Set Password"
+                        android:autofillHints="password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textSize="16sp"
+                        android:padding="12sp"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/grey" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardConfirmPassVC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@id/cardSetPassVC"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginBottom="30sp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                app:cardCornerRadius="15sp"
+                app:cardElevation="20sp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="13sp"
+                        android:layout_marginEnd="10sp"
+                        android:src="@drawable/ic_lock" />
+
+                    <EditText
+                        android:id="@+id/etConfirmPassVC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="15"
+                        android:fontFamily="@font/poppins"
+                        android:autofillHints="password"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:padding="12sp"
+                        android:textSize="16sp"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/grey" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tagsTextVC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_below="@id/cardConfirmPassVC"
+            android:layout_marginStart="32dp"
+            android:text="Add tags you are interested in" />
 
         <ScrollView
             android:id="@+id/scrollViewVC"
@@ -298,6 +400,8 @@
                 android:layout_height="wrap_content"
                 />
         </ScrollView>
+
+    </ScrollView>
 
 
     <androidx.appcompat.widget.AppCompatButton
