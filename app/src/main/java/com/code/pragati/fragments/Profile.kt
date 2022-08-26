@@ -3,11 +3,11 @@ package com.code.pragati.fragments
 import android.app.ActionBar
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.core.view.GravityCompat
 import androidx.core.view.setMargins
 import androidx.drawerlayout.widget.DrawerLayout
@@ -15,8 +15,6 @@ import androidx.fragment.app.Fragment
 import com.code.pragati.EditProfile
 import com.code.pragati.R
 import com.code.pragati.model.User
-import com.code.pragati.model.Video
-import com.code.pragati.model.VideoD
 import com.code.pragati.model.VideoItem
 import com.code.pragati.ui.login.LoginOthers
 import com.code.pragati.ui.upload.UploadPSFinal
@@ -127,8 +125,17 @@ class Profile : Fragment() {
                     this.drawerLayout.tag = "Close"
                 }
                 R.id.logout -> {
-                    firebaseAuth.signOut()
-                    startActivity(Intent(context, LoginOthers::class.java))
+                    val alert = AlertDialog.Builder(requireContext())
+                    alert.setTitle("Logout requested!!")
+                        .setMessage("You sure you want to logout?")
+                        .setPositiveButton("Okay") { _, _ ->
+                            firebaseAuth.signOut()
+                            startActivity(Intent(context, LoginOthers::class.java))
+                        }
+                        .setNegativeButton("No") { _, _ -> }
+                        .create()
+                        .show()
+
                     this.drawerLayout.closeDrawer(GravityCompat.START)
                     this.drawerLayout.tag = "Close"
                 }
@@ -153,7 +160,7 @@ class Profile : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var videoItems = ArrayList<VideoItem>()
+        val videoItems = ArrayList<VideoItem>()
 //        FirebaseDatabase.getInstance().reference.child("Video")
 //            .addValueEventListener(object : ValueEventListener {
 //                override fun onDataChange(snapshot: DataSnapshot) {
@@ -187,7 +194,10 @@ class Profile : Fragment() {
         )
         videoItems.add(videoItem1)
 
-        val params = FlexboxLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT)
+        val params = FlexboxLayout.LayoutParams(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ActionBar.LayoutParams.WRAP_CONTENT
+        )
         params.setMargins(24)
         for (i in videoItems.indices) {
             val videoView = VideoView(activity)
