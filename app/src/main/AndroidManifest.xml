@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/vector"
@@ -13,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pragati">
+        <activity
+            android:name=".ExpandedPS"
+            android:exported="false" />
         <activity
             android:name=".ui.upload.UploadPSFinal"
             android:exported="false" />
@@ -33,11 +35,10 @@
             android:exported="false" />
         <activity
             android:name=".ui.upload.UploadYourPitch"
-            android:exported="false" >
-
-            <meta-data android:name="CLOUDINARY_URL"
+            android:exported="false">
+            <meta-data
+                android:name="CLOUDINARY_URL"
                 android:value="cloudinary://@dhbe64qfn" />
-
         </activity>
         <activity
             android:name=".ui.login.ForgotPass"
@@ -111,9 +112,7 @@
             android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="CLOUDINARY_URL"
-            android:value="cloudinary://@dhbe64qfn"/>
+            android:value="cloudinary://@dhbe64qfn" />
     </application>
-
-
 
 </manifest>

@@ -87,6 +87,7 @@ class SignupStudent : AppCompatActivity() {
                             map["Password"] = setPass
 
                             val map2 = HashMap<String, Any>()
+                            map2["id"] = firebaseAuth.currentUser!!.uid
                             map2["Type"] = "Student"
 
                             //Updating user's info to realtime database
