@@ -36,7 +36,7 @@ class ResourcesAdapter(private var context: Context, private var data : ArrayLis
         holder.text.text = resources.text
         holder.card.setOnClickListener {
             val intent =
-               Intent(Intent.ACTION_VIEW, Uri.parse(resources.text))
+               Intent(Intent.ACTION_VIEW, Uri.parse(resources.link))
             try {
                 context.startActivity(intent)
             } catch (e: ActivityNotFoundException) {

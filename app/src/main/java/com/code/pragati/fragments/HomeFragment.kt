@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -83,17 +82,17 @@ class HomeFragment : Fragment() {
         recyclerViewResources.adapter = resourcesAdapter
         val llLayoutR = LinearLayoutManager(requireContext())
 
-        //To get the latest entry on top.
-        llLayoutR.stackFromEnd = true
-        llLayoutR.reverseLayout = true
+//        //To get the latest entry on top.
+//        llLayoutR.stackFromEnd = true
+//        llLayoutR.reverseLayout = true
         recyclerViewResources.layoutManager = llLayoutR
 
         recyclerViewReport.adapter = reportsAdapter
         val llLayoutRe = LinearLayoutManager(requireContext())
 
-        //To get the latest entry on top.
-        llLayoutRe.stackFromEnd = true
-        llLayoutRe.reverseLayout = true
+//        //To get the latest entry on top.
+//        llLayoutRe.stackFromEnd = true
+//        llLayoutRe.reverseLayout = true
         recyclerViewReport.layoutManager = llLayoutRe
 
         fetchPS()
