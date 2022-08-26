@@ -40,10 +40,6 @@ class UploadYourPitch : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upload_your_pitch)
-//
-//        val config = mutableMapOf<String,String>()
-//        config["dhbe64qfn"] = "myCloudName"
-//        MediaManager.init(this)
 
         firebaseAuth = FirebaseAuth.getInstance()
         applicantDetails = findViewById(R.id.tvApplicantDetails)
@@ -72,18 +68,6 @@ class UploadYourPitch : AppCompatActivity() {
             startActivity(Intent(this, ApplicantDetails::class.java))
         }
         shareIdea.isEnabled = false
-
-//        founderDetails.setOnClickListener {
-//            startActivity(Intent(this, FounderDetails::class.java))
-//        }
-//
-//        ideaDetails.setOnClickListener {
-//            startActivity(Intent(this, IdeaDetails::class.java))
-//        }
-//
-//        uploadPitchFinal.setOnClickListener {
-//            startActivity(Intent(this, UploadPitchFinal::class.java))
-//        }
 
         val intent1 = intent.extras
         if (intent1 != null) {

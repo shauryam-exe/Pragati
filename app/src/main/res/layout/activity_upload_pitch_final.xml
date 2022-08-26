@@ -155,14 +155,23 @@
         android:text="Add Relevant Domain Tags (e.g #fintech, etc.)"
         android:textColor="@color/white" />
 
-    <include
-        android:id="@+id/tagsPitchFinal"
-        layout="@layout/tag_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/btnContinueUpload"
         android:layout_below="@id/tvCreate3"
         android:layout_centerHorizontal="true"
-        android:layout_marginVertical="10dp" />
+        android:layout_marginVertical="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="28dp">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/tagsFlexbox"
+        app:flexWrap="wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    </ScrollView>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnContinueUpload"
@@ -171,7 +180,7 @@
         android:layout_above="@id/imageView"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="30sp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="18dp"
         android:layout_marginBottom="60dp"
         android:background="@drawable/custom_button_2"
         android:elevation="20sp"

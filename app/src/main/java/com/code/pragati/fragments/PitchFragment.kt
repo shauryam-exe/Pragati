@@ -1,6 +1,7 @@
 package com.code.pragati.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -59,6 +60,7 @@ class PitchFragment : Fragment() {
                     for (dataSnap in snapshot.children){
                         val video: VideoD? = dataSnap.getValue(VideoD::class.java)
                         videoItems.add(VideoItem(video!!.uri, video.ideaName, video.name, video.type))
+                        Log.d("check url",video.uri)
                     }
                 }
 
@@ -70,7 +72,7 @@ class PitchFragment : Fragment() {
 
 
         val videoItem2 = VideoItem(
-            url = "https://firebasestorage.googleapis.com/v0/b/pragati-a904c.appspot.com/o/videos%2F1661455797702.mp4?alt=media&token=3218b71c-aac0-41df-8d2f-87f1c351f699",
+            url = "https://res.cloudinary.com/dz9lxwqgj/video/upload/v1647809475/WhatsApp_Video_2022-03-21_at_1.56.14_AM_qwnrg7.mp4",
             ideaName = "Sugar Cosmetics",
             founderName = "Jenifer",
             "student"
