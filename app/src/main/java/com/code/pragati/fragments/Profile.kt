@@ -1,23 +1,27 @@
 package com.code.pragati.fragments
 
+import android.app.ActionBar
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.core.view.GravityCompat
+import androidx.core.view.setMargins
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.code.pragati.EditProfile
 import com.code.pragati.R
 import com.code.pragati.model.User
+import com.code.pragati.model.Video
+import com.code.pragati.model.VideoD
+import com.code.pragati.model.VideoItem
 import com.code.pragati.ui.login.LoginOthers
 import com.code.pragati.ui.upload.UploadPSFinal
 import com.code.pragati.ui.upload.UploadYourPitch
+import com.google.android.flexbox.FlexboxLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -50,8 +54,9 @@ class Profile : Fragment() {
     private lateinit var uploadPitch: FloatingActionButton
     private lateinit var linearLayout: LinearLayout
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var name : TextView
-    private lateinit var type : TextView
+    private lateinit var name: TextView
+    private lateinit var type: TextView
+    private lateinit var flexBox: FlexboxLayout
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -70,6 +75,7 @@ class Profile : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
         name = layout.findViewById(R.id.tvNameProfile)
         type = layout.findViewById(R.id.tvTypeProfile)
+        flexBox = layout.findViewById(R.id.flexBoxProfile)
 
         linearLayout.tag = "close"
 
@@ -121,7 +127,7 @@ class Profile : Fragment() {
                     this.drawerLayout.tag = "Close"
                 }
                 R.id.logout -> {
-                   firebaseAuth.signOut()
+                    firebaseAuth.signOut()
                     startActivity(Intent(context, LoginOthers::class.java))
                     this.drawerLayout.closeDrawer(GravityCompat.START)
                     this.drawerLayout.tag = "Close"
@@ -144,14 +150,66 @@ class Profile : Fragment() {
         return layout
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        var videoItems = ArrayList<VideoItem>()
+//        FirebaseDatabase.getInstance().reference.child("Video")
+//            .addValueEventListener(object : ValueEventListener {
+//                override fun onDataChange(snapshot: DataSnapshot) {
+//                    for (dataSnap in snapshot.children) {
+//                        val video: VideoD? = dataSnap.getValue(VideoD::class.java)
+//                        if (video?.uid == firebaseAuth.currentUser?.uid) {
+//                            videoItems.add(
+//                                VideoItem(
+//                                    video!!.uri,
+//                                    video.ideaName,
+//                                    video.name,
+//                                    video.type
+//                                )
+//                            )
+//                            Log.d("check url", video.uri)
+//                        }
+//                    }
+//                }
+//
+//                override fun onCancelled(error: DatabaseError) {
+//                    TODO("Not yet implemented")
+//                }
+//
+//            })
+
+        val videoItem1 = VideoItem(
+            url = "https://res.cloudinary.com/dz9lxwqgj/video/upload/v1647809475/WhatsApp_Video_2022-03-21_at_1.56.14_AM_qwnrg7.mp4",
+            ideaName = "Sugar Cosmetics",
+            founderName = "Jenifer",
+            "student"
+        )
+        videoItems.add(videoItem1)
+
+        val params = FlexboxLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT)
+        params.setMargins(24)
+        for (i in videoItems.indices) {
+            val videoView = VideoView(activity)
+            videoView.layoutParams = params
+            videoView.setVideoPath(videoItems[i].url)
+            videoView.seekTo(1)
+            flexBox.addView(videoView)
+            videoView.setOnClickListener {
+
+            }
+        }
+    }
+
     private fun getInfo() {
 
-        FirebaseDatabase.getInstance().reference.child("Users").child("Student").child(firebaseAuth.currentUser!!.uid)
+        FirebaseDatabase.getInstance().reference.child("Users").child("Student")
+            .child(firebaseAuth.currentUser!!.uid)
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val user = snapshot.getValue(User::class.java)
-                   name.text = user?.Name
-                   type.text = "Student"
+                    name.text = user?.Name
+                    type.text = "Student"
                 }
 
                 override fun onCancelled(error: DatabaseError) {
