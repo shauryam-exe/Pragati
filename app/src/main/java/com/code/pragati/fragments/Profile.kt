@@ -3,6 +3,7 @@ package com.code.pragati.fragments
 import android.app.ActionBar
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +16,7 @@ import androidx.fragment.app.Fragment
 import com.code.pragati.EditProfile
 import com.code.pragati.R
 import com.code.pragati.model.User
+import com.code.pragati.model.UserType
 import com.code.pragati.model.VideoItem
 import com.code.pragati.ui.login.LoginOthers
 import com.code.pragati.ui.upload.UploadPSFinal
@@ -56,6 +58,8 @@ class Profile : Fragment() {
     private lateinit var type: TextView
     private lateinit var flexBox: FlexboxLayout
 
+    private lateinit var userType: String
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -78,7 +82,9 @@ class Profile : Fragment() {
         linearLayout.tag = "close"
 
         uploadPS.setOnClickListener {
-            startActivity(Intent(context, UploadPSFinal::class.java))
+            val intent = Intent(activity,UploadYourPitch::class.java)
+            intent.putExtra("userType",userType)
+            startActivity(intent)
         }
 
         uploadPitch.setOnClickListener {
@@ -221,13 +227,28 @@ class Profile : Fragment() {
 
     private fun getInfo() {
 
+        FirebaseDatabase.getInstance().getReference("UsersID")
+            .child(firebaseAuth.currentUser!!.uid)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val user = snapshot.getValue(UserType::class.java)
+                    userType = user!!.Type
+                    Log.d("user",userType)
+                    Log.d("userID",firebaseAuth.currentUser!!.uid)
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+            })
+
         FirebaseDatabase.getInstance().reference.child("Users").child("Student")
             .child(firebaseAuth.currentUser!!.uid)
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val user = snapshot.getValue(User::class.java)
                     name.text = user?.Name
-                    type.text = "Student"
+                    type.text = userType
                 }
 
                 override fun onCancelled(error: DatabaseError) {

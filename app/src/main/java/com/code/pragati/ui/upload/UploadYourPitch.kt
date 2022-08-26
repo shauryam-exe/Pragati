@@ -10,11 +10,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.code.pragati.HomeActivity
 import com.code.pragati.R
-import com.code.pragati.model.PS
-import com.code.pragati.model.User
-import com.code.pragati.model.UserType
-import com.code.pragati.model.Video
+import com.code.pragati.model.*
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -32,10 +30,9 @@ class UploadYourPitch : AppCompatActivity() {
     private lateinit var uploadPitchFinal: TextView
     private lateinit var shareIdea: AppCompatButton
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var name: String
-    private lateinit var type: String
 
-    private lateinit var progressDialog: ProgressDialog
+    private lateinit var type: String
+    private lateinit var name: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,24 +45,13 @@ class UploadYourPitch : AppCompatActivity() {
         uploadPitchFinal = findViewById(R.id.tvVideoPresent)
         shareIdea = findViewById(R.id.btnShareIdea)
 
-        progressDialog = ProgressDialog(this)
-        progressDialog.setTitle("Please Wait")
-        progressDialog.setMessage("Video Uploading")
-        progressDialog.setCanceledOnTouchOutside(false)
-        FirebaseDatabase.getInstance().reference.child("UsersID").child(firebaseAuth.currentUser!!.uid)
-            .addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    val user: UserType? = snapshot.getValue(UserType::class.java)
-                    this@UploadYourPitch.type = user?.Type.toString()
-                }
+        type = intent.getStringExtra("userType").toString()
 
-                override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
-                }
 
-            })
         applicantDetails.setOnClickListener {
-            startActivity(Intent(this, ApplicantDetails::class.java))
+            val intent = Intent(this,ApplicantDetails::class.java)
+            intent.putExtra("type",type)
+            startActivity(intent)
         }
         shareIdea.isEnabled = false
 
@@ -93,6 +79,8 @@ class UploadYourPitch : AppCompatActivity() {
             shareIdea.visibility = View.VISIBLE
 
             val video = intent.getParcelableExtra<Video>("video")
+            val videoInfo = intent.getParcelableExtra<VideoInfo>("videoInfo")
+
 
             shareIdea.isEnabled = true
             shareIdea.setOnClickListener {
@@ -104,29 +92,10 @@ class UploadYourPitch : AppCompatActivity() {
         }
 
 
-        if (type == "Student"){
-            FirebaseDatabase.getInstance().reference.child("Users").child("Student")
-                .child(firebaseAuth.currentUser!!.uid)
-                .addValueEventListener(object : ValueEventListener {
-                    override fun onDataChange(snapshot: DataSnapshot) {
-                        val user = snapshot.getValue(User::class.java)
-                        name = user?.Name.toString()
-                    }
-
-                    override fun onCancelled(error: DatabaseError) {
-                        TODO("Not yet implemented")
-                    }
-                })
-        } else {
-            Toast.makeText(this, "not studnt", Toast.LENGTH_SHORT).show()
-        }
-
-
 
     }
 
     private fun uploadVideo(video: Video) {
-        progressDialog.show()
 
         val timestamp = System.currentTimeMillis()
 
@@ -147,20 +116,19 @@ class UploadYourPitch : AppCompatActivity() {
                 map["uid"] = firebaseAuth.currentUser?.uid.toString()
                 map["ideaName"] = video.ideaName
                 map["likes"] = video.likes.toString()
-                map["name"] = name
-                map["type"] = type
+                map["name"] = video.name
+                map["type"] = video.type
                 reference1.child("" + System.currentTimeMillis()).setValue(map)
                 // Video uploaded successfully
                 // Dismiss dialog
-                progressDialog.dismiss()
                 Toast.makeText(this@UploadYourPitch, "Video Uploaded!!", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this@UploadYourPitch,HomeActivity::class.java))
             }
 //                while (!uriTask.isSuccessful);
             // get the link of video
 
 
         }.addOnFailureListener { e -> // Error, Image not uploaded
-            progressDialog.dismiss()
             Toast.makeText(this@UploadYourPitch, "Failed " + e.message, Toast.LENGTH_SHORT)
                 .show()
         }.addOnProgressListener { taskSnapshot ->
@@ -168,8 +136,6 @@ class UploadYourPitch : AppCompatActivity() {
             // percentage on the dialog box
             // show the progress bar
             val progress = 100.0 * taskSnapshot.bytesTransferred / taskSnapshot.totalByteCount
-            progressDialog.setMessage("Uploaded " + progress.toInt() + "%")
-            progressDialog.dismiss()
         }
 //        }
     }

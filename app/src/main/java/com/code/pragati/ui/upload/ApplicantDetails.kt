@@ -18,6 +18,8 @@ class ApplicantDetails : AppCompatActivity() {
 
     private lateinit var idea: String
     private lateinit var website: String
+    private lateinit var name: String
+    private lateinit var type: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,13 +28,15 @@ class ApplicantDetails : AppCompatActivity() {
         continueBtn = findViewById(R.id.btnContinueApplicant)
         ideaName = findViewById(R.id.etIdeaApplicant)
         websiteURL = findViewById(R.id.etWesbiteURLApplicant)
+        applicantName = findViewById(R.id.etApplicantDetails)
+
 
 
 
         continueBtn.setOnClickListener {
             getDetails()
             val videoInfo = VideoInfo(website = website)
-            val video = Video(ideaName = idea)
+            val video = Video(ideaName = idea,name = name, type = type)
             intent = Intent(this,IdeaDetails::class.java)
             intent.putExtra("videoInfo",videoInfo)
             intent.putExtra("video",video)
@@ -44,5 +48,7 @@ class ApplicantDetails : AppCompatActivity() {
     private fun getDetails() {
         idea = ideaName.text.toString().trim()
         website = websiteURL.text.toString().trim()
+        name = applicantName.text.toString().trim()
+        type = intent.getStringExtra("type").toString()
     }
 }
