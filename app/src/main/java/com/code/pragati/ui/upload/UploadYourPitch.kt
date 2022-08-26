@@ -10,11 +10,17 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
-import androidx.core.net.toUri
 import com.code.pragati.R
+import com.code.pragati.model.PS
+import com.code.pragati.model.User
+import com.code.pragati.model.UserType
 import com.code.pragati.model.Video
 import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
 
 
@@ -25,6 +31,9 @@ class UploadYourPitch : AppCompatActivity() {
     private lateinit var ideaDetails: TextView
     private lateinit var uploadPitchFinal: TextView
     private lateinit var shareIdea: AppCompatButton
+    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var name: String
+    private lateinit var type: String
 
     private lateinit var progressDialog: ProgressDialog
 
@@ -36,6 +45,7 @@ class UploadYourPitch : AppCompatActivity() {
 //        config["dhbe64qfn"] = "myCloudName"
 //        MediaManager.init(this)
 
+        firebaseAuth = FirebaseAuth.getInstance()
         applicantDetails = findViewById(R.id.tvApplicantDetails)
         founderDetails = findViewById(R.id.tvFounderDetails)
         ideaDetails = findViewById(R.id.tvBusinessDetails)
@@ -46,7 +56,18 @@ class UploadYourPitch : AppCompatActivity() {
         progressDialog.setTitle("Please Wait")
         progressDialog.setMessage("Video Uploading")
         progressDialog.setCanceledOnTouchOutside(false)
+        FirebaseDatabase.getInstance().reference.child("UsersID").child(firebaseAuth.currentUser!!.uid)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val user: UserType? = snapshot.getValue(UserType::class.java)
+                    this@UploadYourPitch.type = user?.Type.toString()
+                }
 
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+
+            })
         applicantDetails.setOnClickListener {
             startActivity(Intent(this, ApplicantDetails::class.java))
         }
@@ -92,11 +113,31 @@ class UploadYourPitch : AppCompatActivity() {
             shareIdea.isEnabled = true
             shareIdea.setOnClickListener {
                 Toast.makeText(this, "Sharing your idea with the world", Toast.LENGTH_SHORT).show()
-               uploadVideo(video = video!!)
+                uploadVideo(video = video!!)
             }
         } else {
             shareIdea.visibility = View.GONE
         }
+
+
+        if (type == "Student"){
+            FirebaseDatabase.getInstance().reference.child("Users").child("Student")
+                .child(firebaseAuth.currentUser!!.uid)
+                .addValueEventListener(object : ValueEventListener {
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        val user = snapshot.getValue(User::class.java)
+                        name = user?.Name.toString()
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        TODO("Not yet implemented")
+                    }
+                })
+        } else {
+            Toast.makeText(this, "not studnt", Toast.LENGTH_SHORT).show()
+        }
+
+
 
     }
 
@@ -108,42 +149,44 @@ class UploadYourPitch : AppCompatActivity() {
         val filePath = "Videos/video_$timestamp"
 
 
-
         val reference = FirebaseStorage.getInstance()
             .reference.child("/videos/" + System.currentTimeMillis() + "." + getfiletype(video.uri))
 //        reference.putFile(video.uri!!).addOnSuccessListener {
-            reference.putFile(video.uri!!).addOnSuccessListener { taskSnapshot ->
-                val uriTask: Task<Uri> = taskSnapshot.storage.downloadUrl
-                uriTask.addOnCompleteListener {
-                    val downloadUri: String = it.result.toString()
+        reference.putFile(video.uri!!).addOnSuccessListener { taskSnapshot ->
+            val uriTask: Task<Uri> = taskSnapshot.storage.downloadUrl
+            uriTask.addOnCompleteListener {
+                val downloadUri: String = it.result.toString()
 
-                    val reference1 = FirebaseDatabase.getInstance().reference.child("Video")
-                    val map: HashMap<String, Any> = HashMap()
-                    map["uri"] = downloadUri
-                    map["ask"] = "ksdhvjsgd"
-                    map["name"] = "dnfbebgfruygerugfuyegu"
-                    reference1.child("" + System.currentTimeMillis()).setValue(map)
-                    // Video uploaded successfully
-                    // Dismiss dialog
-                    progressDialog.dismiss()
-                    Toast.makeText(this@UploadYourPitch, "Video Uploaded!!", Toast.LENGTH_SHORT).show()
-                }
-//                while (!uriTask.isSuccessful);
-                // get the link of video
-
-
-            }.addOnFailureListener { e -> // Error, Image not uploaded
+                val reference1 = FirebaseDatabase.getInstance().reference.child("Video")
+                val map: HashMap<String, Any> = HashMap()
+                map["uri"] = downloadUri
+                map["uid"] = firebaseAuth.currentUser?.uid.toString()
+                map["ideaName"] = video.ideaName
+                map["likes"] = video.likes.toString()
+                map["name"] = name
+                map["type"] = type
+                reference1.child("" + System.currentTimeMillis()).setValue(map)
+                // Video uploaded successfully
+                // Dismiss dialog
                 progressDialog.dismiss()
-                Toast.makeText(this@UploadYourPitch, "Failed " + e.message, Toast.LENGTH_SHORT)
-                    .show()
-            }.addOnProgressListener { taskSnapshot ->
-                // Progress Listener for loading
-                // percentage on the dialog box
-                // show the progress bar
-                val progress = 100.0 * taskSnapshot.bytesTransferred / taskSnapshot.totalByteCount
-                progressDialog.setMessage("Uploaded " + progress.toInt() + "%")
-                progressDialog.dismiss()
+                Toast.makeText(this@UploadYourPitch, "Video Uploaded!!", Toast.LENGTH_SHORT).show()
             }
+//                while (!uriTask.isSuccessful);
+            // get the link of video
+
+
+        }.addOnFailureListener { e -> // Error, Image not uploaded
+            progressDialog.dismiss()
+            Toast.makeText(this@UploadYourPitch, "Failed " + e.message, Toast.LENGTH_SHORT)
+                .show()
+        }.addOnProgressListener { taskSnapshot ->
+            // Progress Listener for loading
+            // percentage on the dialog box
+            // show the progress bar
+            val progress = 100.0 * taskSnapshot.bytesTransferred / taskSnapshot.totalByteCount
+            progressDialog.setMessage("Uploaded " + progress.toInt() + "%")
+            progressDialog.dismiss()
+        }
 //        }
     }
 

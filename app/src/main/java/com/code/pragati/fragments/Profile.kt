@@ -5,7 +5,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -17,7 +20,6 @@ import com.code.pragati.ui.upload.UploadPSFinal
 import com.code.pragati.ui.upload.UploadYourPitch
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.tabs.TabLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -43,8 +45,6 @@ class Profile : Fragment() {
     private lateinit var drawer: ImageView
     private lateinit var navView: NavigationView
 
-    private lateinit var tabLayout: TabLayout
-    private lateinit var scrollBar: HorizontalScrollView
     private lateinit var addFab: FloatingActionButton
     private lateinit var uploadPS: FloatingActionButton
     private lateinit var uploadPitch: FloatingActionButton
@@ -63,7 +63,6 @@ class Profile : Fragment() {
         drawerLayout = layout.findViewById(R.id.drawerLayout)
         drawer = layout.findViewById(R.id.ivDrawer)
         navView = layout.findViewById(R.id.navView)
-        scrollBar = layout.findViewById(R.id.scrollTabs)
         addFab = layout.findViewById(R.id.fabShowLayoutProfile)
         linearLayout = layout.findViewById(R.id.llLayoutProfile)
         uploadPS = layout.findViewById(R.id.fabUploadPS)
@@ -139,33 +138,6 @@ class Profile : Fragment() {
                 this.drawerLayout.tag = "Open"
             }
         }
-        tabLayout = layout.findViewById(R.id.tabs)
-
-        //To set different width for a tab.
-        setTabWidth(0, 1.0f, tabLayout)
-        setTabWidth(1, 1.0f, tabLayout)
-        setTabWidth(2, 1.0f, tabLayout)
-        setTabWidth(3, 1.0f, tabLayout)
-
-        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab) {
-                when (tab.position) {
-                    0 -> Toast.makeText(context, "This is timeline", Toast.LENGTH_SHORT).show()
-                    1 -> Toast.makeText(context, "This is photo", Toast.LENGTH_SHORT).show()
-                    2 -> Toast.makeText(context, "This is friends", Toast.LENGTH_SHORT).show()
-                    3 -> Toast.makeText(context, "This is groups", Toast.LENGTH_SHORT).show()
-                }
-
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab) {
-
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab) {
-
-            }
-        })
 
         getInfo()
 
@@ -188,21 +160,5 @@ class Profile : Fragment() {
             })
 
 
-    }
-
-
-    //Function to set different width for a tab.
-    private fun setTabWidth(tabPosition: Int, weight: Float, tabLayout: TabLayout) {
-        val layout: LinearLayout =
-            (tabLayout.getChildAt(0) as LinearLayout).getChildAt(tabPosition) as LinearLayout
-        val layoutParams: LinearLayout.LayoutParams =
-            layout.layoutParams as LinearLayout.LayoutParams
-        layoutParams.weight = weight
-        layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
-        layout.layoutParams = layoutParams
-
-        val tabLayoutParams: ViewGroup.LayoutParams? = tabLayout.layoutParams
-        tabLayoutParams?.width = ViewGroup.LayoutParams.MATCH_PARENT
-        tabLayout.layoutParams = tabLayoutParams
     }
 }

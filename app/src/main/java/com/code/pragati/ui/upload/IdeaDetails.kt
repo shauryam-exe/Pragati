@@ -8,7 +8,6 @@ import androidx.appcompat.widget.AppCompatButton
 import com.code.pragati.R
 import com.code.pragati.model.Video
 import com.code.pragati.model.VideoInfo
-import com.code.pragati.ui.signUp.UploadPitch
 
 class IdeaDetails : AppCompatActivity() {
 
@@ -100,7 +99,6 @@ class IdeaDetails : AppCompatActivity() {
             videoInfo.q = q
 
             val video = intent.getParcelableExtra<Video>("video")
-            video!!.ask = askText
 
             val intent1 = Intent(this, UploadPitchFinal::class.java)
             intent1.putExtra("videoInfo",videoInfo)
