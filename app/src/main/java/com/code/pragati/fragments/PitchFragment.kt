@@ -10,10 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.code.pragati.R
 import com.code.pragati.adapters.VideoAdapter
-import com.code.pragati.model.PS
-import com.code.pragati.model.Video
-import com.code.pragati.model.VideoD
-import com.code.pragati.model.VideoItem
+import com.code.pragati.model.*
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -46,10 +44,13 @@ class PitchFragment : Fragment() {
         return layout
     }
 
+    private lateinit var firebaseAuth: FirebaseAuth
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         videoViewPager = view.findViewById(R.id.videoViewPager)
+        firebaseAuth = FirebaseAuth.getInstance()
 
         val videoItems = arrayListOf<VideoItem>()
 
@@ -58,7 +59,7 @@ class PitchFragment : Fragment() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     for (dataSnap in snapshot.children){
                         val video: VideoD? = dataSnap.getValue(VideoD::class.java)
-                        videoItems.add(VideoItem(video!!.uri, "skjbdcklscd", "sccklnscs", "cgkjswcw"))
+                        videoItems.add(VideoItem(video!!.uri, video.ideaName, video.name, video.type))
                         Log.d("check url",video.uri)
                     }
                 }

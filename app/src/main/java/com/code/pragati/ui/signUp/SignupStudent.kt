@@ -86,6 +86,9 @@ class SignupStudent : AppCompatActivity() {
                             map["Phone"] = phone
                             map["Password"] = setPass
 
+                            val map2 = HashMap<String, Any>()
+                            map2["Type"] = "Student"
+
                             //Updating user's info to realtime database
                             FirebaseDatabase.getInstance().reference.child("Users").child("Student")
                                 .child(firebaseAuth.currentUser!!.uid).updateChildren(map)
@@ -93,6 +96,8 @@ class SignupStudent : AppCompatActivity() {
                                     progressBar.dismiss()
                                     if (task1.isSuccessful) {
                                         sendVerificationMail()
+                                        FirebaseDatabase.getInstance().reference.child("UsersID")
+                                            .child(firebaseAuth.currentUser!!.uid).updateChildren(map2)
                                     } else {
                                         Toast.makeText(
                                             this,

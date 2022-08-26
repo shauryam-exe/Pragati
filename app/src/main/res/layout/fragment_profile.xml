@@ -31,6 +31,7 @@
                 android:src="@drawable/bnda" />
 
             <LinearLayout
+                android:id="@+id/ll"
                 android:layout_toStartOf="@id/civPhotoProfile"
                 android:orientation="vertical"
                 android:gravity="end"
@@ -140,49 +141,24 @@
                 android:layout_marginBottom="20dp"
                 android:src="@drawable/ic_menu_options_image" />
 
-            <HorizontalScrollView
-                android:id="@+id/scrollTabs"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textPitches"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/civPhotoProfile"
-                android:layoutDirection="ltr">
-
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tabs"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:tabTextAppearance="@style/tab_text">
-
-                    <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pitches" />
-
-                    <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Problem Statements" />
-
-                    <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Analytics" />
-
-                    <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Investments" />
-
-                </com.google.android.material.tabs.TabLayout>
-
-            </HorizontalScrollView>
+                android:layout_below="@id/ll"
+                android:layout_centerHorizontal="true"
+                android:text="Pitches"
+                android:textStyle="bold"
+                android:layout_marginVertical="10dp"
+                android:textColor="@color/primary"
+                android:textSize="20dp" />
 
             <FrameLayout
                 android:id="@+id/container"
-                android:layout_marginTop="5dp"
-                android:layout_below="@id/scrollTabs"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_below="@id/textPitches"
+                android:layout_marginTop="5dp" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fabShowLayoutProfile"
