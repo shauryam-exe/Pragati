@@ -36,7 +36,7 @@
             android:exported="false" >
 
             <meta-data android:name="CLOUDINARY_URL"
-                android:value="cloudinary://@dhbe64qfn" />
+                android:value="cloudinary://962532631779619:wbbMUvlPElPNlKDgsqJ-znYRJx4@dhbe64qfn" />
 
         </activity>
         <activity

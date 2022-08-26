@@ -11,4 +11,21 @@
     <string name="text">Elvis Presley commented \"Such a wonderful idea\"</string>
     <string name="ReachOut">Our pool of students and entrepreneurs are actively looking for their next startup ideas. If you\'re a private or government organisation,\nReach Us Out at our</string>
     <string name="also_connect_with_us_on">Also connect with us on</string>
+    <string name="question1">Describe in detail what your business or product is. What does it do? Provide as much detail as possible.</string>
+    <string name="question2">Where is the company situated?</string>
+    <string name="q3">Have you ever raised funding from outside? if yes, please provide all the details (when, how much and at what valuation).\nAnd how much have you raised in total ?</string>
+    <string name="q4">How much money have you invested in the company and in what time frame? What was that money used for?</string>
+    <string name="q5">What investment amount are you seeking, and what percentage of equity are you willing to give in exchange?\n(“I\'m seeking $_______ and I\'m willing to give up ______%”)</string>
+    <string name="q6">What do you intend to do with the investment funds? Where will the money go?</string>
+    <string name="q7">Please enlist all the founding members name with the equity distribution among them and founder title (e.g. CEO) .</string>
+    <string name="q8">How long have each of you been working on this?</string>
+    <string name="q9">Why did you pick this idea to work on? Do you have domain expertise in this area? How do you know people need what you\'re making?</string>
+    <string name="q10">How do or will you make money?</string>
+    <string name="q11">How far along are you? Any MVP or Market validation you have done so far, elaborate.</string>
+    <string name="q12">How long have each of you been working on this? How much of that has been full-time? Please explain.</string>
+    <string name="q13">What are your business’s total lifetime sales since starting?</string>
+    <string name="q14">What was the Gross income from your income last year?</string>
+    <string name="q15">What was Net income from your business last year</string>
+    <string name="q16">What are your sales projections for next calender year</string>
+    <string name="q17">How do or will you make money? How much could you make?</string>
 </resources>
