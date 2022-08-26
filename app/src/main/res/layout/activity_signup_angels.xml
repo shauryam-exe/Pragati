@@ -90,7 +90,7 @@
 
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="450dp"
+        android:layout_height="500dp"
         android:layout_below="@id/uploadPitchVideoView">
 
         <RelativeLayout
@@ -221,7 +221,7 @@
                         android:background="@null"
                         android:ems="15"
                         android:fontFamily="@font/poppins"
-                        android:hint="Reg. No. (IN/VCF/XX-XX/XXXX)"
+                        android:hint="Reg. No. (IN/AIF/XX-XX/XXXX)"
                         android:maxLines="7"
                         android:paddingHorizontal="6sp"
                         android:paddingVertical="12sp"
@@ -349,29 +349,32 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:flexWrap="wrap"></com.google.android.flexbox.FlexboxLayout>
+
             </ScrollView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnContinueSignAngels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scrollViewAngels"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/custom_button_2"
+                android:elevation="20sp"
+                android:fontFamily="@font/poppins"
+                android:letterSpacing="0.13"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                android:padding="8sp"
+                android:shadowColor="@color/black"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+
         </RelativeLayout>
+
     </ScrollView>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnContinueSignAngels"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/imageView"
-        android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="30sp"
-        android:layout_marginBottom="80dp"
-        android:background="@drawable/custom_button_2"
-        android:elevation="20sp"
-        android:fontFamily="@font/poppins"
-        android:letterSpacing="0.13"
-        android:outlineAmbientShadowColor="@color/black"
-        android:outlineSpotShadowColor="@color/black"
-        android:padding="8sp"
-        android:shadowColor="@color/black"
-        android:text="Continue"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="19sp" />
 
 </RelativeLayout>
