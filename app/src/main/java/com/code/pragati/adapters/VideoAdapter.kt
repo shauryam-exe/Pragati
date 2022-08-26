@@ -12,6 +12,7 @@ import com.code.pragati.R
 import com.code.pragati.model.Video
 import com.code.pragati.model.VideoInfo
 import com.code.pragati.model.VideoItem
+import com.google.api.Context
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -57,6 +58,10 @@ class VideoAdapter(val videoItems: ArrayList<VideoItem>) :
                 "student" -> {userIdentifyImage.setImageResource(R.drawable.student_identifier)}
                 "founder" -> {userIdentifyImage.setImageResource(R.drawable.founder_identifier)}
                 "fellow" -> {userIdentifyImage.setImageResource(R.drawable.ic_startup_indentifier)}
+            }
+
+            infoButton.setOnClickListener {
+
             }
 
             videoView.setVideoPath(video.url)

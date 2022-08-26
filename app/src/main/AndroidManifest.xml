@@ -35,10 +35,9 @@
             android:exported="false" />
         <activity
             android:name=".ui.upload.UploadYourPitch"
-            android:exported="false">
-            <meta-data
-                android:name="CLOUDINARY_URL"
-                android:value="cloudinary://@dhbe64qfn" />
+            android:exported="false" >
+            <meta-data android:name="CLOUDINARY_URL"
+                android:value="cloudinary://962532631779619:wbbMUvlPElPNlKDgsqJ-znYRJx4@dhbe64qfn" />
         </activity>
         <activity
             android:name=".ui.login.ForgotPass"

@@ -107,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
-                android:text="Describe in detail what your business or product is. What does it do? Provide as much detail as possible."
+                android:text="@string/question1"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -146,7 +146,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="Where is the company situated?"
+                android:text="@string/question2"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -183,7 +183,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="Have you ever raised funding from outside? if yes, please provide all the details (when, how much and at what valuation).\nAnd how much have you raised in total ?"
+                android:text="@string/q3"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -220,7 +220,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="How much money have you invested in the company and in what time frame? What was that money used for?"
+                android:text="@string/q4"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -257,7 +257,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="What investment amount are you seeking, and what percentage of equity are you willing to give in exchange?\n(“I'm seeking $_______ and I'm willing to give up ______%”)"
+                android:text="@string/q5"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -294,7 +294,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="What do you intend to do with the investment funds? Where will the money go?"
+                android:text="@string/q6"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -331,7 +331,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="Please enlist all the founding members name with the equity distribution among them and founder title (e.g. CEO) ."
+                android:text="@string/q7"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -368,7 +368,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="How long have each of you been working on this? "
+                android:text="@string/q8"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -405,7 +405,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="Why did you pick this idea to work on? Do you have domain expertise in this area? How do you know people need what you're making?"
+                android:text="@string/q9"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -442,7 +442,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="How do or will you make money?"
+                android:text="@string/q10"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -479,7 +479,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="How far along are you? Any MVP or Market validation you have done so far, elaborate."
+                android:text="@string/q11"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -516,7 +516,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="How long have each of you been working on this? How much of that has been full-time? Please explain."
+                android:text="@string/q12"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -553,7 +553,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="What are your business’s total lifetime sales since starting?"
+                android:text="@string/q13"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -590,7 +590,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="What was the Gross income from your income last year?"
+                android:text="@string/q14"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -627,7 +627,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="What was Net income from your business last year"
+                android:text="@string/q15"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -664,7 +664,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="What are your sales projections for next calender year "
+                android:text="@string/q16"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -701,7 +701,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="37dp"
                 android:layout_marginTop="15dp"
-                android:text="How do or will you make money? How much could you make?"
+                android:text="@string/q17"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
