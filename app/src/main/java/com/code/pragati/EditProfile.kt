@@ -58,6 +58,7 @@ class EditProfile : AppCompatActivity() {
             onBackPressed()
         }
 
+        correctPass.visibility = View.INVISIBLE
         val map = HashMap<String, String>()
 
         FirebaseDatabase.getInstance().reference.child("Users").child(intent.getStringExtra("type").toString())
