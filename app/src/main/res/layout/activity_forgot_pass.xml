@@ -92,22 +92,22 @@
 
             <EditText
                 android:id="@+id/etEnterOTPForgot"
-                android:layout_toEndOf="@id/ivStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="15"
-                android:maxLength="6"
-                android:background="@null"
-                android:textSize="16sp"
                 android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/ivCorrectOTPForgot"
+                android:layout_toEndOf="@id/ivStart"
+                android:background="@null"
+                android:ems="15"
                 android:fontFamily="@font/poppins"
                 android:hint="Enter the OTP"
                 android:inputType="number"
-                android:layout_toStartOf="@id/ivCorrectOTPForgot"
+                android:maxLength="6"
                 android:maxLines="1"
                 android:padding="12dp"
                 android:textColor="@color/grey"
-                android:textColorHint="@color/grey" />
+                android:textColorHint="@color/grey"
+                android:textSize="16sp" />
 
             <ImageView
                 android:layout_alignParentEnd="true"
