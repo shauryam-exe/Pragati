@@ -108,7 +108,9 @@ class Profile : Fragment() {
         navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.editProfileDrawer -> {
-                    startActivity(Intent(context, EditProfile::class.java))
+                    val intentEdit = Intent(context, EditProfile::class.java)
+                    intentEdit.putExtra("type", userType)
+                    startActivity(intentEdit)
                     this.drawerLayout.closeDrawer(GravityCompat.START)
                     this.drawerLayout.tag = "Close"
                 }

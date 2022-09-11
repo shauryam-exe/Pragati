@@ -1,6 +1,5 @@
 package com.code.pragati.ui.upload
 
-import android.app.ProgressDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -12,15 +11,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.code.pragati.HomeActivity
 import com.code.pragati.R
-import com.code.pragati.model.*
+import com.code.pragati.model.Video
+import com.code.pragati.model.VideoInfo
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
-
 
 class UploadYourPitch : AppCompatActivity() {
 
@@ -103,7 +99,7 @@ class UploadYourPitch : AppCompatActivity() {
 
 
         val reference = FirebaseStorage.getInstance()
-            .reference.child("/videos/" + System.currentTimeMillis() + "." + getfiletype(video.uri))
+            .reference.child("/videos/" + System.currentTimeMillis() + "." + getFiletype(video.uri))
 //        reference.putFile(video.uri!!).addOnSuccessListener {
         reference.putFile(video.uri!!).addOnSuccessListener { taskSnapshot ->
             val uriTask: Task<Uri> = taskSnapshot.storage.downloadUrl
@@ -140,7 +136,7 @@ class UploadYourPitch : AppCompatActivity() {
 //        }
     }
 
-    private fun getfiletype(uri: Uri?): String {
+    private fun getFiletype(uri: Uri?): String {
         val r = contentResolver
         // get the file type ,in this case its mp4
         // get the file type ,in this case its mp4
