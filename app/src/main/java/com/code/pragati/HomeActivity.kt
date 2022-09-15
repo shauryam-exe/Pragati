@@ -1,7 +1,6 @@
 package com.code.pragati
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.code.pragati.fragments.*
@@ -41,7 +40,14 @@ class HomeActivity : AppCompatActivity() {
 
             return@setOnNavigationItemSelectedListener true
         }
-        supportFragmentManager.beginTransaction().replace(R.id.container, HomeFragment()).commit()
+        selectorFragment = HomeFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.container, selectorFragment!!).commit()
 
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+       finishAffinity()
+    }
+
 }
