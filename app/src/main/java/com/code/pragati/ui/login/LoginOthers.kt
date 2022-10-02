@@ -44,11 +44,11 @@ class LoginOthers : AppCompatActivity() {
         }
 
         forgotPass.setOnClickListener {
-
-//            val otp = (100000..999999).random().toString()
-//            Toast.makeText(this, "OTP is : $otp", Toast.LENGTH_SHORT).show()
-//
-//
+            if(TextUtils.isEmpty(email.text.toString())){
+                Toast.makeText(this, "Enter the registered email id first.", Toast.LENGTH_SHORT).show()
+            } else {
+                val otp = (100000..999999).random().toString()
+                Toast.makeText(this, "OTP is : $otp", Toast.LENGTH_SHORT).show()
 //
 //            val intent = Intent(Intent.ACTION_SEND)
 //            intent.putExtra(Intent.EXTRA_EMAIL, email.text.toString())
@@ -60,9 +60,10 @@ class LoginOthers : AppCompatActivity() {
 //            intent.type = "message/rfc882"
 //            startActivity(intent)
 
-            val intent2 = Intent(this, ForgotPass::class.java)
-//            intent2.putExtra("otp", otp)
-            startActivity(intent2)
+                val intent2 = Intent(this, ForgotPass::class.java)
+                intent2.putExtra("otp", otp)
+                startActivity(intent2)
+            }
         }
 
     }

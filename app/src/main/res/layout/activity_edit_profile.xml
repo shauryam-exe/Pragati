@@ -44,11 +44,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/civProfile"
-        android:background="@drawable/ic_edit_circled"
-        android:alpha="0.4"
         android:layout_marginStart="-50dp"
         android:layout_marginTop="-50dp"
         android:layout_toEndOf="@id/civProfile"
+        android:alpha="0.4"
+        android:background="@drawable/ic_edit_circled"
         app:borderWidth="3dp" />
 
     <LinearLayout
@@ -99,7 +99,6 @@
                     android:fontFamily="@font/poppins"
                     android:hint="Enter your current password"
                     android:inputType="text"
-                    android:maxLength="6"
                     android:maxLines="1"
                     android:padding="12dp"
                     android:textColor="@color/grey"
@@ -122,6 +121,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -183,6 +183,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardEmailEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -244,6 +245,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardNewPassEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
